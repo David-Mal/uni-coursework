@@ -1,0 +1,4 @@
+PS C:\Users\David\desktop\s02PPD> ./sol.exe
+Sequential Sum: 25498827547.13 | Time: 0.05 s
+Linear Sum:     25498827547.13 | Time: 0.02 s
+Cyclic Sum:     25498827547.13 | Time: 0.03 s

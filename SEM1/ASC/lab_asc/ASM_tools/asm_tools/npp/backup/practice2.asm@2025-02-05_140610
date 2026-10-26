@@ -1,0 +1,24 @@
+bits 32
+global start
+
+extern exit, printf
+import exit msvcrt.dll
+import printf msvcrt.dll
+
+; functie vocale care primeste un sire de octeti si returneaza numarul de octeti egali cu vocale in ascii
+segment data use32 class=data
+
+    s db 65, 69, 73, 79, 85 ; A, E, I, O, U
+    
+segment code use32 class=code
+
+vowels:
+
+
+    start:
+    
+    push s
+    
+    
+    push dword 0
+    call [exit]

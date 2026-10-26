@@ -1,0 +1,71 @@
+
+<letter>         ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+<digit>          ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<non_zero_digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<identifier>      ::= <letter> <identifier_rest>
+<identifier_rest> ::= <identifier_char> <identifier_rest> | epsilon
+<identifier_char> ::= <letter> | <digit> | "_"
+
+<keyword> ::= "Squad" | "if" | "else" | "end" | "for" | "in"
+            | "and" | "announce" | "scout"
+
+<number>          ::= "0" | <optional_minus> <non_zero_digit> <digits>
+<optional_minus>  ::= "-" | epsilon
+<digits>          ::= <digit> <digits> | epsilon
+
+<string>          ::= '"' <string_chars> '"'
+<string_chars>    ::= <string_char> <string_chars> | epsilon
+<string_char>     ::= <letter> | <digit> | " " | "_" | "." | "-" | ","
+
+<operator>   ::= "==" | "!=" | ">" | "<" | ">=" | "<="
+<symbol>     ::= "=" | "?" | "+" | "-" | "->" | "(" | ")" | "[" | "]"
+               | "{" | "}" | "," | ":"
+
+<program>    ::= <statement> <statements>
+<statements> ::= <statement> <statements> | epsilon
+<statement>  ::= <assignment>
+               | <input_statement>
+               | <print_statement>
+               | <if_statement>
+               | <for_loop>
+
+<assignment>      ::= <identifier> "=" <expression>
+<input_statement> ::= "scout" <identifier>
+<print_statement> ::= "announce" <expression>
+
+<expression>      ::= <literal> | <list_expression>
+<literal>         ::= <number> | <string>
+<value>           ::= <literal> | <identifier>
+
+<list_expression> ::= <list_source> <operations>
+<list_source>     ::= <list_creation> | <identifier>
+<list_creation>   ::= "Squad" "(" <record_list> ")"
+
+<operations>      ::= <operation> <operations> | epsilon
+<operation>       ::= <filter_op> | <add_op> | <remove_op> | <select_op>
+
+<filter_op>       ::= "?" <condition>
+<add_op>          ::= "+" <identifier> "=" <value>
+<remove_op>       ::= "-" <identifier>
+<select_op>       ::= "->" "(" <identifier_list> ")"
+
+<identifier_list> ::= <identifier> <more_identifiers>
+<more_identifiers>::= "," <identifier> <more_identifiers> | epsilon
+
+<record_list>         ::= "[" <record_list_content> "]"
+<record_list_content> ::= <record> <more_records> | epsilon
+<more_records>        ::= "," <record> <more_records> | epsilon
+<record>              ::= "{" <pair> <more_pairs> "}"
+<more_pairs>          ::= "," <pair> <more_pairs> | epsilon
+<pair>                ::= <identifier> ":" <literal>
+
+<condition>        ::= <primary_condition> <condition_rest>
+<condition_rest>   ::= "and" <primary_condition> <condition_rest> | epsilon
+<primary_condition>::= <simple_condition> | "(" <condition> ")"
+<simple_condition> ::= <identifier> <operator> <value>
+
+<if_statement>    ::= "if" <list_expression> <statement_block> <optional_else> "end"
+<optional_else>   ::= "else" <statement_block> | epsilon
+<for_loop>        ::= "for" <identifier> "in" <list_expression> <statement_block> "end"
+<statement_block> ::= <statement> <statements>

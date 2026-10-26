@@ -1,0 +1,32 @@
+.container {
+    margin: 5%;
+    background-color: cadetblue;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-wrapper {
+    display: grid;
+    grid-template-columns: 25% 25%;
+    padding: 10px;
+}
+
+#dragul {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    height: 25px;
+    width: auto;
+    padding: 10px;
+    background: #E6F1FB;
+    color:      #0C447C;
+    border-color: #B5D4F4;
+}

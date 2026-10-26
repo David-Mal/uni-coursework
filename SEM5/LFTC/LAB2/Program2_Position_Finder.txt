@@ -1,0 +1,86 @@
+BarcaScript - Program 2: Position finder
+=========================================
+
+1. PURPOSE
+A small program (18 statements) that asks for a position code, looks for
+players on that position, tags them and prints them; if nobody plays there it
+prints the whole roster instead. It also exercises the constructs that
+Program 1 does not use: string input, an empty Squad, a negative number and
+the "or" inside parentheses combined with "and".
+
+2. SOURCE CODE (grammar: Barca_DSL_BNF_v2.txt)
+# Program 2 - Position finder (illustrative data)
+roster = Squad([
+  { name: "Ter Stegen", pos: "GK", goals: 0, assists: 0 },
+  { name: "Araujo",     pos: "DF", goals: 2, assists: 1 },
+  { name: "Pedri",      pos: "MF", goals: 5, assists: 8 },
+  { name: "Yamal",      pos: "FW", goals: 12, assists: 9 }
+])
+benchPlayers = Squad([])
+trend = -2
+scout wanted
+found = roster ? pos == wanted
+if found
+  tagged = found + checked = "yes" - assists
+  for p in tagged -> (name, checked)
+    announce p
+  end
+else
+  announce "No players in that position."
+  everyone = roster -> (name, pos)
+  announce everyone
+end
+attackers = roster ? (pos == "FW" or pos == "MF") and goals > 3
+announce attackers -> (name, goals)
+if benchPlayers
+  announce benchPlayers
+else
+  announce "The bench list is empty."
+end
+announce trend
+
+3. STATEMENT COUNT
+  assignment ..... 7      input (scout) ..... 1     output (announce) ... 7
+  for loop ....... 1      if statement ...... 2     TOTAL ............... 18
+
+4. COVERAGE OF THE LANGUAGE CONSTRUCTS
+  Construct                    Where it appears
+  ---------------------------  ---------------------------------------------
+  Assignment of a list         roster = Squad([...]); found = roster ? ...
+  Assignment of a number       trend = -2   (negative literal)
+  Empty list                   benchPlayers = Squad([])
+  Input of a string            scout wanted   (user types DF)
+  Filter with a variable       found = roster ? pos == wanted
+  Add + remove in one chain    tagged = found + checked = "yes" - assists
+  Select                       roster -> (name, pos)
+  Condition (or) and (...)     (pos == "FW" or pos == "MF") and goals > 3
+  if / else, if on a list      if found ... else ... end
+  if on an empty list          if benchPlayers ... else ... end
+  for loop                     for p in tagged -> (name, checked)
+  Output of literal / list / variable
+                               announce "..." ; announce everyone ; announce trend
+
+5. EXAMPLE RUNS
+Run A - input typed: DF
+  {name: "Araujo", checked: "yes"}
+  {name: "Pedri", goals: 5}
+  {name: "Yamal", goals: 12}
+  The bench list is empty.
+  -2
+
+Run B - input typed: CB   (no such position, the else branch is executed)
+  No players in that position.
+  {name: "Ter Stegen", pos: "GK"}
+  {name: "Araujo", pos: "DF"}
+  {name: "Pedri", pos: "MF"}
+  {name: "Yamal", pos: "FW"}
+  {name: "Pedri", goals: 5}
+  {name: "Yamal", goals: 12}
+  The bench list is empty.
+  -2
+
+6. SYNTAX CHECK
+Parsed successfully with the grammar version 2 checker (18 statements).
+Together, Program 1 and Program 2 use every statement and operator of the
+language: assignment, input, output, if / else, for, filter, add, remove,
+select, and, or, parentheses, comments.

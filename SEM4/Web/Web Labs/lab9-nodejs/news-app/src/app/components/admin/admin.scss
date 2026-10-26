@@ -1,0 +1,85 @@
+.admin-page { }
+
+h2 { text-align: center; color: #2c3e50; }
+.welcome { text-align: center; color: #666; margin-bottom: 20px; }
+
+.form-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
+
+  h3 { color: #2c3e50; margin-bottom: 14px; }
+
+  input, textarea, select {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-family: inherit;
+    &:focus { outline: none; border-color: #3498db; }
+  }
+
+  textarea { resize: vertical; }
+}
+
+.form-actions {
+  display: flex; gap: 10px;
+
+  .btn-save {
+    background: #3498db; color: #fff; border: none; padding: 10px 24px;
+    border-radius: 4px; cursor: pointer; font-weight: 600;
+    &:hover:not(:disabled) { background: #2980b9; }
+    &:disabled { opacity: 0.5; cursor: not-allowed; }
+  }
+
+  .btn-cancel {
+    background: #95a5a6; color: #fff; border: none; padding: 10px 24px;
+    border-radius: 4px; cursor: pointer;
+    &:hover { background: #7f8c8d; }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+th {
+  background: #2c3e50; color: #fff;
+  text-align: left; padding: 12px 14px; font-size: 0.9rem;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.92rem;
+}
+
+.cap { text-transform: capitalize; }
+
+tr:hover td { background: #f8f9fa; }
+
+.actions { display: flex; gap: 6px; }
+
+.btn-edit {
+  background: #f39c12; color: #fff; border: none;
+  padding: 5px 12px; border-radius: 3px; cursor: pointer; font-size: 0.82rem;
+  &:hover { background: #e67e22; }
+}
+
+.btn-del {
+  background: #e74c3c; color: #fff; border: none;
+  padding: 5px 12px; border-radius: 3px; cursor: pointer; font-size: 0.82rem;
+  &:hover { background: #c0392b; }
+}
+
+.empty { text-align: center; color: #999; padding: 30px !important; }

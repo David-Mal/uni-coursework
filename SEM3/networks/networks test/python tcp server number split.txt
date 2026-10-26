@@ -1,0 +1,29 @@
+import socket
+
+s = socket.socket()
+s.bind(('127.0.0.1', 1276))
+s.listen(1)
+
+print("Waiting for clients...")
+while True:
+    conn, addr = s.accept()
+
+    len1 = int.from_bytes(conn.recv(4), 'big')
+    arr1 = conn.recv(len1).decode()
+
+    len2 = int.from_bytes(conn.recv(4), 'big')
+    arr2 = conn.recv(len2).decode()
+
+    print("Received:", arr1, arr2)
+
+    tok1 = arr1.split(" ")
+    tok2 = arr2.split(" ")
+
+
+    tot = ''
+    for x in tok1:
+        for y in tok2:
+            if x == y and x != ' ' and x != '':
+                tot = tot + x + " "
+    conn.send(tot.encode())
+    conn.close()

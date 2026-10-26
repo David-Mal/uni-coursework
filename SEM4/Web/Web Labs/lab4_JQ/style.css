@@ -1,0 +1,125 @@
+body {
+    background-color: #1a1a18;
+
+}
+
+.mytasks {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0 0 1.25rem;
+    color: rgb(250 249 245);
+    margin: 0 0 1.25rem;
+}
+
+.general {
+    padding: 30px;
+    max-width: 500px;
+    margin: 1.5rem auto;
+}
+
+#input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #cccccc00;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: rgb(48 48 46);
+    caret-color: white;
+    flex: 1;
+    color: #ccc;
+}
+
+#input:hover {
+    border: 1px solid #cccccc30;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    border: 0.5px solid;
+    border-color: #cccccc70;
+    cursor: pointer;
+    padding: 10px 20px;
+
+}
+
+button:hover {
+    background-color: #444;
+    color: white;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.todo-item.drag-over {
+    border-color: #888;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.todo-text {
+    flex: 1;
+    color: rgb(250 249 245);
+}
+
+.del-btn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.del-btn:hover {
+    background-color: #444;
+    color: white;
+}
+
+.drag-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    cursor: grab;
+    padding: 0 8px;
+    transition: color 0.2s;
+}
+
+#counter {
+    color: #ccc;
+    display: flex;
+    justify-content: flex-start;
+}

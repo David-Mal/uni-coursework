@@ -1,0 +1,28 @@
+import socket
+import sys
+
+HOST = '127.0.0.1'
+PORT = 6000
+
+if len(sys.argv) < 2:
+    print("Usage: python client.py <command>")
+    sys.exit(1)
+
+command = " ".join(sys.argv[1:])
+
+with socket.socket() as s:
+    s.connect((HOST, PORT))
+
+    # Send command length and command
+    s.send(len(command).to_bytes(4, 'big'))
+    s.send(command.encode())
+
+    # Receive output length and output
+    data_len = int.from_bytes(s.recv(4), 'big')
+    output = s.recv(data_len).decode()
+
+    # Receive exit code
+    exit_code = int.from_bytes(s.recv(4), 'big', signed=True)
+
+    print(f"Command output:\n{output}")
+    print(f"Exit code: {exit_code}")

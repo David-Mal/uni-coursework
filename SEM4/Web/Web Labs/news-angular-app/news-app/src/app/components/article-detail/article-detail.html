@@ -1,0 +1,20 @@
+<div class="article-page">
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+
+  @if (loading) {
+    <p class="loading">Loading article...</p>
+  }
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+  @if (article) {
+    <span class="category-badge">{{ article.category }}</span>
+    <h2>{{ article.title }}</h2>
+    <div class="meta">
+      By <strong>{{ article.producer }}</strong> &mdash; {{ article.date }}
+    </div>
+    <div class="body">{{ article.text }}</div>
+  }
+
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+</div>

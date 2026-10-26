@@ -1,0 +1,67 @@
+import socket
+import select
+import sys
+import time
+import random
+
+# ---------------- CONFIGURATION ----------------
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 5000
+SEND_INTERVAL = 2  # seconds
+# ------------------------------------------------
+
+
+def main():
+    # Choose data mode
+    mode = input("Choose mode: [A]uto or [M]anual? ").strip().lower()
+    auto_mode = mode != "m"
+
+    even_num = random.choice([2, 4, 6, 8])
+    odd_num = random.choice([1, 3, 5, 7, 9])
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.setblocking(False)
+    server = (SERVER_IP, SERVER_PORT)
+
+    print(f"Connected to UDP server at {SERVER_IP}:{SERVER_PORT}")
+
+    current_state = "standby"
+    last_send = 0
+
+    while True:
+        readable, _, _ = select.select([sock], [], [], 0.5)
+
+        for s in readable:
+            data, _ = s.recvfrom(1024)
+            msg = data.decode().strip()
+            if msg.startswith("STATE:"):
+                new_state = msg.split(":")[1]
+                if new_state != current_state:
+                    print(f"Server state changed to: {new_state.upper()}")
+                    current_state = new_state
+                if new_state == "stop":
+                    print("Server stopped collection. Exiting.")
+                    sock.close()
+                    return
+
+        now = time.time()
+        if current_state in ("even", "odd") and now - last_send >= SEND_INTERVAL:
+            last_send = now
+            if auto_mode:
+                num = even_num if current_state == "even" else odd_num
+            else:
+                num = input(f"Enter a {current_state} number (1–9): ").strip()
+                if not num.isdigit():
+                    print("Not a number!")
+                    continue
+                num = int(num)
+            sock.sendto(str(num).encode(), server)
+            print(f"Sent {num} to server.")
+
+        elif current_state == "standby":
+            # wait for server to start collecting
+            pass
+
+
+if __name__ == "__main__":
+    main()

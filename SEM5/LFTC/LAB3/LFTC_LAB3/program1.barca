@@ -1,0 +1,43 @@
+# Program 1 - Season scouting report for FC Barcelona (illustrative data)
+squad = Squad([
+  { name: "Yamal",       pos: "FW", goals: 12, assists: 9, matches: 30 },
+  { name: "Lewandowski", pos: "FW", goals: 20, assists: 4, matches: 31 },
+  { name: "Raphinha",    pos: "FW", goals: 9,  assists: 8, matches: 28 },
+  { name: "Pedri",       pos: "MF", goals: 5,  assists: 8, matches: 29 },
+  { name: "Gavi",        pos: "MF", goals: 3,  assists: 7, matches: 25 },
+  { name: "De Jong",     pos: "MF", goals: 2,  assists: 6, matches: 27 },
+  { name: "Araujo",      pos: "DF", goals: 2,  assists: 1, matches: 26 },
+  { name: "Kounde",      pos: "DF", goals: 1,  assists: 3, matches: 30 }
+])
+scout minGoals
+scout minAssists
+announce "=== Squad report ==="
+forwards = squad ? pos == "FW"
+midfielders = squad ? pos == "MF"
+defenders = squad ? pos == "DF"
+scorers = forwards ? goals >= minGoals
+creators = midfielders ? assists >= minAssists
+stars = squad ? (goals >= minGoals and assists >= minAssists) or goals >= 20
+announce "Top scorers:"
+for player in scorers -> (name, goals)
+  announce player
+end
+announce "Creative midfielders:"
+names = creators -> (name, assists)
+for m in names
+  announce m
+end
+if stars
+  announce "Players with outstanding numbers:"
+  announce stars -> (name)
+else
+  announce "Nobody reached the level."
+end
+labeled = squad + club = "FCB" - matches
+report = labeled -> (name, club, pos)
+announce report
+if minGoals > 15
+  announce "High goal threshold chosen."
+else
+  announce "Moderate goal threshold chosen."
+end

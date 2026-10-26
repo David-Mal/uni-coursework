@@ -1,0 +1,15 @@
+Addition of 2 vectors A and B each containing n real-number element resulting in vector C also with n elements. 
+(Language Java). 
+Array representation: simple arrays (double[]). 
+Explicit creation of "p" threads to share the workload: 
+a) linear distribution (splitting the vectors into p relatively equal segments with a maximum difference of 1 between segment sizes). 
+The vectors are not phisycally split instead each thread sums elements from a start position to an end position (calculated based on the threads number). 
+b) cyclic distribution thread "i" sums elements at indices "i", "i+p", "i + 2p", etc... 
+Testing begins with a verification step (n=10,p=3)), followed by increasing "n" (and varying p: 4,6,8,16) until 
+the time calculated for the parallel sum is less than that of the sequential sum. 
+The challenge of overcoming the overhead associated with thread creation and management should be highlighted. 
+To demonstrate scenarios where parallelization is more efficient, the addition operation should be replaced with a more complex one, 
+such as "sqrt(sqrt(a) + sqrt(b)). 
+To avoid dealing with excessively large numbers, vectors can be initialised with values in the 1-100 range. 
+File I/O is not required for the in-class assignment; simple initialization via a dedicated function suffices. 
+Optional: change the vector representation from simple arrays to ArrayList and check for any changes in execution time.

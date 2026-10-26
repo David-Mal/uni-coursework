@@ -1,0 +1,1320 @@
+PrgState{
+id=0,
+ exeStack=[(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 0, (repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 0, (repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[((fork((print(v);v = v - 1));v = v + 1);while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }), (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[((fork((print(v);v = v - 1));v = v + 1);while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }), (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(exp.RelExp@71e7df11 ! exp.RelExp@71e7df11) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@14c9aef8;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[v = v - 1],
+ symTable={v=0},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[v = v - 1],
+ symTable={v=0},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 0, (repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 0, (repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@71e7df11, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[((fork((print(v);v = v - 1));v = v + 1);while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }), (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[((fork((print(v);v = v - 1));v = v + 1);while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }), (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=0},
+ output=[],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[v = v - 1],
+ symTable={v=0},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[v = v - 1],
+ symTable={v=0},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=1,
+ exeStack=[],
+ symTable={v=-1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=1},
+ output=[0],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[v = v - 1],
+ symTable={v=1},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(fork((print(v);v = v - 1));v = v + 1), while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[v = v - 1],
+ symTable={v=1},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={v=0},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[fork((print(v);v = v - 1)), v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={v=0},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=2,
+ exeStack=[],
+ symTable={v=0},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = v + 1, while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[(print(v);v = v - 1)],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=3},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[while(!(exp.RelExp@71e7df11)) { (fork((print(v);v = v - 1));v = v + 1) }, (Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=3},
+ output=[0, 1],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[print(v), v = v - 1],
+ symTable={v=2},
+ output=[0, 1],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[v = v - 1],
+ symTable={v=2},
+ output=[0, 1, 2],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))],
+ symTable={v=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[v = v - 1],
+ symTable={v=2},
+ output=[0, 1, 2],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int x, (x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))],
+ symTable={v=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[],
+ symTable={v=1},
+ output=[0, 1, 2],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int x, (x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))],
+ symTable={v=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[],
+ symTable={v=1},
+ output=[0, 1, 2],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))],
+ symTable={v=3, x=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=3,
+ exeStack=[],
+ symTable={v=1},
+ output=[0, 1, 2],
+ originalProgram=(print(v);v = v - 1),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))))],
+ symTable={v=3, x=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[x = 1, (Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))],
+ symTable={v=3, x=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[x = 1, (Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))],
+ symTable={v=3, x=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))],
+ symTable={v=3, x=1},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))],
+ symTable={v=3, x=1},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int y, (y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))],
+ symTable={v=3, x=1},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int y, (y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))],
+ symTable={v=3, x=1},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))],
+ symTable={v=3, x=1, y=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10))))))],
+ symTable={v=3, x=1, y=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[y = 2, (Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))],
+ symTable={v=3, x=1, y=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[y = 2, (Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))],
+ symTable={v=3, x=1, y=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))],
+ symTable={v=3, x=1, y=2},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))],
+ symTable={v=3, x=1, y=2},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int z, (z = 3;(Int w;(w = 4;print(v * 10))))],
+ symTable={v=3, x=1, y=2},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int z, (z = 3;(Int w;(w = 4;print(v * 10))))],
+ symTable={v=3, x=1, y=2},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(z = 3;(Int w;(w = 4;print(v * 10))))],
+ symTable={v=3, x=1, y=2, z=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(z = 3;(Int w;(w = 4;print(v * 10))))],
+ symTable={v=3, x=1, y=2, z=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[z = 3, (Int w;(w = 4;print(v * 10)))],
+ symTable={v=3, x=1, y=2, z=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[z = 3, (Int w;(w = 4;print(v * 10)))],
+ symTable={v=3, x=1, y=2, z=0},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int w;(w = 4;print(v * 10)))],
+ symTable={v=3, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int w;(w = 4;print(v * 10)))],
+ symTable={v=3, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int w, (w = 4;print(v * 10))],
+ symTable={v=3, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int w, (w = 4;print(v * 10))],
+ symTable={v=3, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(w = 4;print(v * 10))],
+ symTable={v=3, w=0, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(w = 4;print(v * 10))],
+ symTable={v=3, w=0, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[w = 4, print(v * 10)],
+ symTable={v=3, w=0, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[w = 4, print(v * 10)],
+ symTable={v=3, w=0, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=3, w=4, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=3, w=4, x=1, y=2, z=3},
+ output=[0, 1, 2],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=3, w=4, x=1, y=2, z=3},
+ output=[0, 1, 2, 30],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=3, w=4, x=1, y=2, z=3},
+ output=[0, 1, 2, 30],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=3, w=4, x=1, y=2, z=3},
+ output=[0, 1, 2, 30],
+ originalProgram=(Int v;(v = 0;(repeat((fork((print(v);v = v - 1));v = v + 1)) until exp.RelExp@186f0f59;(Int x;(x = 1;(Int y;(y = 2;(Int z;(z = 3;(Int w;(w = 4;print(v * 10)))))))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}

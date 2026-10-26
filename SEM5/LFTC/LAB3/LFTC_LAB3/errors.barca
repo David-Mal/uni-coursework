@@ -1,0 +1,11 @@
+# Program with lexical errors (one of each kind)
+squad = Squad([ { name: "Yamal", goals: 12 } ])
+2player = 5
+count = 007
+note = "unterminated
+price = 5 @ 3
+x = "caf" + "é"
+total = goals;
+if goals != 5
+  announce "ok: done"
+end

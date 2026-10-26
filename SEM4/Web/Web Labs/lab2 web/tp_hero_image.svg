@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340">
+  <defs>
+    <!-- Subtle gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fffe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8f5e9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- Node gradient -->
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e7d32;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary node -->
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#81c784;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bgGrad)"/>
+  <rect width="1200" height="340" fill="url(#grid)" opacity="0.4"/>
+  
+  <!-- LEFT SIDE: Punchline with gradient -->
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e7d32"/>
+      <stop offset="100%" style="stop-color:#4CAF50"/>
+    </linearGradient>
+  </defs>
+  
+  <g transform="translate(60, 55)">
+    <text x="0" y="0" fill="url(#textGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700">Simple and Easy Learning</text>
+    <text x="0" y="40" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400">DSA, Algorithms using C, C++, Java, Python</text>
+  </g>
+  
+  <!-- Decorative circles (subtle) -->
+  <circle cx="100" cy="290" r="150" fill="#4CAF50" opacity="0.03"/>
+  <circle cx="1100" cy="50" r="200" fill="#4CAF50" opacity="0.03"/>
+  
+  <!-- TutorialsPoint T Logo at top right -->
+  <g transform="translate(1120, 20) scale(1.2)">
+    <path d="M27.3002 39.5829C33.1626 39.4561 38.4072 35.87 40.8842 30.5568C42.3208 27.4829 43.0444 24.013 42.8542 20.3582C42.2785 9.30395 33.1521 0.394029 22.082 0.0718569C9.95038 -0.282005 0 9.44655 0 21.5043C0 30.7099 5.80439 38.5583 13.9485 41.6004C13.1721 40.7871 12.6017 39.7941 12.2531 38.6217C11.7091 36.8101 11.725 34.6711 12.2954 32.2046L15.2319 19.8881H9.16343L10.1564 15.5837L10.4257 14.4429H16.5259L16.6368 13.9411L18.0628 7.76175L26.9727 6.05582L25.1506 13.9411L23.8408 19.8881L20.8197 33.2609C20.3602 35.2626 20.5398 36.8101 21.3743 37.8928C21.3743 37.8928 22.6207 39.6832 27.3002 39.5829ZM29.4128 13.4605C31.8951 12.9904 34.0288 15.1242 33.5588 17.6065C33.2947 18.9902 32.1803 20.1099 30.7912 20.374C28.3089 20.8441 26.1752 18.7103 26.6453 16.228C26.9093 14.8443 28.0237 13.7246 29.4128 13.4605Z" fill="#40A944" opacity="0.2"/>
+  </g>
+  
+  <!-- CENTER-LEFT: Binary Tree Structure -->
+  <g transform="translate(320, 50)">
+    <!-- Tree edges -->
+    <line x1="120" y1="50" x2="60" y2="120" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="120" y1="50" x2="180" y2="120" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="60" y1="120" x2="30" y2="190" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="60" y1="120" x2="90" y2="190" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="180" y1="120" x2="150" y2="190" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="180" y1="120" x2="210" y2="190" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Tree nodes -->
+    <circle cx="120" cy="50" r="22" fill="url(#nodeGrad)" />
+    <text x="120" y="56" text-anchor="middle" fill="white" font-family="monospace" font-size="14" font-weight="bold">8</text>
+    
+    <circle cx="60" cy="120" r="20" fill="url(#nodeGrad2)" />
+    <text x="60" y="126" text-anchor="middle" fill="white" font-family="monospace" font-size="13" font-weight="bold">4</text>
+    
+    <circle cx="180" cy="120" r="20" fill="url(#nodeGrad2)" />
+    <text x="180" y="126" text-anchor="middle" fill="white" font-family="monospace" font-size="13" font-weight="bold">12</text>
+    
+    <circle cx="30" cy="190" r="16" fill="#81c784" />
+    <text x="30" y="195" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">2</text>
+    
+    <circle cx="90" cy="190" r="16" fill="#81c784" />
+    <text x="90" y="195" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">6</text>
+    
+    <circle cx="150" cy="190" r="16" fill="#81c784" />
+    <text x="150" y="195" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">10</text>
+    
+    <circle cx="210" cy="190" r="16" fill="#81c784" />
+    <text x="210" y="195" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">14</text>
+    
+    <!-- Label -->
+    <text x="120" y="260" text-anchor="middle" fill="#555" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Binary Search Tree</text>
+  </g>
+  
+  <!-- CENTER: Array with Two Pointers -->
+  <g transform="translate(680, 50)">
+    <!-- Array boxes -->
+    <g>
+      <rect x="0" y="0" width="50" height="50" rx="6" fill="white" stroke="#4CAF50" stroke-width="2"/>
+      <text x="25" y="32" text-anchor="middle" fill="#333" font-family="monospace" font-size="16" font-weight="bold">2</text>
+      
+      <rect x="55" y="0" width="50" height="50" rx="6" fill="white" stroke="#4CAF50" stroke-width="2"/>
+      <text x="80" y="32" text-anchor="middle" fill="#333" font-family="monospace" font-size="16" font-weight="bold">7</text>
+      
+      <rect x="110" y="0" width="50" height="50" rx="6" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2"/>
+      <text x="135" y="32" text-anchor="middle" fill="#2e7d32" font-family="monospace" font-size="16" font-weight="bold">11</text>
+      
+      <rect x="165" y="0" width="50" height="50" rx="6" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2"/>
+      <text x="190" y="32" text-anchor="middle" fill="#2e7d32" font-family="monospace" font-size="16" font-weight="bold">15</text>
+      
+      <rect x="220" y="0" width="50" height="50" rx="6" fill="white" stroke="#4CAF50" stroke-width="2"/>
+      <text x="245" y="32" text-anchor="middle" fill="#333" font-family="monospace" font-size="16" font-weight="bold">20</text>
+      
+      <rect x="275" y="0" width="50" height="50" rx="6" fill="white" stroke="#4CAF50" stroke-width="2"/>
+      <text x="300" y="32" text-anchor="middle" fill="#333" font-family="monospace" font-size="16" font-weight="bold">25</text>
+    </g>
+    
+    <!-- Two pointers -->
+    <polygon points="135,60 130,75 140,75" fill="#4CAF50"/>
+    <text x="135" y="92" text-anchor="middle" fill="#4CAF50" font-family="monospace" font-size="11" font-weight="bold">left</text>
+    
+    <polygon points="190,60 185,75 195,75" fill="#2e7d32"/>
+    <text x="190" y="92" text-anchor="middle" fill="#2e7d32" font-family="monospace" font-size="11" font-weight="bold">right</text>
+    
+    <!-- Sum indicator -->
+    <text x="162" y="130" text-anchor="middle" fill="#666" font-family="system-ui, sans-serif" font-size="12">11 + 15 = 26 ✓</text>
+    
+    <!-- Label -->
+    <text x="162" y="160" text-anchor="middle" fill="#555" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Two Pointers Technique</text>
+  </g>
+  
+  <!-- RIGHT SIDE: Graph/Network -->
+  <g transform="translate(980, 80)">
+    <!-- Graph edges -->
+    <line x1="80" y1="40" x2="160" y2="40" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="80" y1="40" x2="40" y2="110" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="80" y1="40" x2="120" y2="110" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="160" y1="40" x2="120" y2="110" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="160" y1="40" x2="200" y2="110" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="40" y1="110" x2="120" y2="110" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="120" y1="110" x2="80" y2="180" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="120" y1="110" x2="160" y2="180" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    <line x1="200" y1="110" x2="160" y2="180" stroke="#4CAF50" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Graph nodes -->
+    <circle cx="80" cy="40" r="18" fill="url(#nodeGrad)" />
+    <text x="80" y="45" text-anchor="middle" fill="white" font-family="monospace" font-size="12" font-weight="bold">A</text>
+    
+    <circle cx="160" cy="40" r="18" fill="url(#nodeGrad)" />
+    <text x="160" y="45" text-anchor="middle" fill="white" font-family="monospace" font-size="12" font-weight="bold">B</text>
+    
+    <circle cx="40" cy="110" r="18" fill="url(#nodeGrad2)" />
+    <text x="40" y="115" text-anchor="middle" fill="white" font-family="monospace" font-size="12" font-weight="bold">C</text>
+    
+    <circle cx="120" cy="110" r="18" fill="url(#nodeGrad2)" />
+    <text x="120" y="115" text-anchor="middle" fill="white" font-family="monospace" font-size="12" font-weight="bold">D</text>
+    
+    <circle cx="200" cy="110" r="18" fill="url(#nodeGrad2)" />
+    <text x="200" y="115" text-anchor="middle" fill="white" font-family="monospace" font-size="12" font-weight="bold">E</text>
+    
+    <circle cx="80" cy="180" r="16" fill="#81c784" />
+    <text x="80" y="185" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">F</text>
+    
+    <circle cx="160" cy="180" r="16" fill="#81c784" />
+    <text x="160" y="185" text-anchor="middle" fill="white" font-family="monospace" font-size="11" font-weight="bold">G</text>
+    
+    <!-- Label -->
+    <text x="120" y="230" text-anchor="middle" fill="#555" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Graph Traversal</text>
+  </g>
+  
+  <!-- TUTORIALS LIBRARY TINT: Floating book/document icons -->
+  <g opacity="0.25">
+    <!-- Book icon 1 -->
+    <g transform="translate(60, 140)">
+      <rect x="0" y="0" width="32" height="40" rx="3" fill="#4CAF50"/>
+      <rect x="3" y="3" width="26" height="34" rx="2" fill="white"/>
+      <line x1="16" y1="6" x2="16" y2="34" stroke="#4CAF50" stroke-width="1.5"/>
+      <line x1="6" y1="12" x2="14" y2="12" stroke="#4CAF50" stroke-width="1"/>
+      <line x1="18" y1="12" x2="26" y2="12" stroke="#4CAF50" stroke-width="1"/>
+      <line x1="6" y1="18" x2="14" y2="18" stroke="#4CAF50" stroke-width="1"/>
+      <line x1="18" y1="18" x2="26" y2="18" stroke="#4CAF50" stroke-width="1"/>
+    </g>
+    
+    <!-- Book icon 2 -->
+    <g transform="translate(220, 160)">
+      <rect x="0" y="0" width="28" height="35" rx="2" fill="#4CAF50"/>
+      <rect x="2" y="2" width="22" height="31" rx="1" fill="white"/>
+      <line x1="6" y1="10" x2="20" y2="10" stroke="#4CAF50" stroke-width="1.5"/>
+      <line x1="6" y1="16" x2="20" y2="16" stroke="#4CAF50" stroke-width="1.5"/>
+      <line x1="6" y1="22" x2="14" y2="22" stroke="#4CAF50" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Document icon -->
+    <g transform="translate(130, 200)">
+      <rect x="0" y="0" width="30" height="38" rx="2" fill="#4CAF50"/>
+      <polygon points="20,0 30,10 20,10" fill="#2e7d32"/>
+      <rect x="4" y="15" width="22" height="3" fill="white"/>
+      <rect x="4" y="21" width="22" height="3" fill="white"/>
+      <rect x="4" y="27" width="16" height="3" fill="white"/>
+    </g>
+    
+    <!-- Code file icon -->
+    <g transform="translate(300, 140)">
+      <rect x="0" y="0" width="34" height="42" rx="3" fill="#4CAF50"/>
+      <text x="17" y="28" text-anchor="middle" fill="white" font-family="monospace" font-size="14" font-weight="bold">&lt;/&gt;</text>
+    </g>
+  </g>
+  
+  <!-- TUTORIALS LIBRARY TINT: Language badges floating -->
+  <g opacity="0.25">
+    <g transform="translate(70, 260)">
+      <rect x="0" y="0" width="42" height="24" rx="5" fill="#306998"/>
+      <text x="21" y="17" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">Py</text>
+    </g>
+    
+    <g transform="translate(125, 260)">
+      <rect x="0" y="0" width="36" height="24" rx="5" fill="#f7df1e"/>
+      <text x="18" y="17" text-anchor="middle" fill="#333" font-family="system-ui" font-size="11" font-weight="bold">JS</text>
+    </g>
+    
+    <g transform="translate(175, 260)">
+      <rect x="0" y="0" width="45" height="24" rx="5" fill="#00599C"/>
+      <text x="22" y="17" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">C++</text>
+    </g>
+    
+    <g transform="translate(235, 260)">
+      <rect x="0" y="0" width="45" height="24" rx="5" fill="#b07219"/>
+      <text x="22" y="17" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">Java</text>
+    </g>
+    
+    <g transform="translate(295, 260)">
+      <rect x="0" y="0" width="32" height="24" rx="5" fill="#A8B9CC"/>
+      <text x="16" y="17" text-anchor="middle" fill="#333" font-family="system-ui" font-size="11" font-weight="bold">C</text>
+    </g>
+  </g>
+  
+  <!-- Bottom: Code snippet aesthetic -->
+  <g transform="translate(540, 255)">
+    <rect x="0" y="0" width="360" height="70" rx="8" fill="#263238" opacity="0.95"/>
+    <circle cx="20" cy="15" r="5" fill="#ef5350"/>
+    <circle cx="38" cy="15" r="5" fill="#ffca28"/>
+    <circle cx="56" cy="15" r="5" fill="#66bb6a"/>
+    
+    <text x="20" y="42" fill="#81c784" font-family="monospace" font-size="12">
+      <tspan fill="#82aaff">function</tspan>
+      <tspan fill="#c3e88d"> solve</tspan>
+      <tspan fill="#89ddff">(</tspan>
+      <tspan fill="#ffcb6b">nums</tspan>
+      <tspan fill="#89ddff">) {</tspan>
+    </text>
+    <text x="35" y="58" fill="#c792ea" font-family="monospace" font-size="12">
+      <tspan fill="#89ddff">return</tspan>
+      <tspan fill="#f78c6c"> optimizedSolution</tspan>
+      <tspan fill="#89ddff">();</tspan>
+    </text>
+  </g>
+  
+  <!-- Floating elements for depth -->
+  <g opacity="0.15">
+    <rect x="50" y="240" width="8" height="8" rx="2" fill="#4CAF50" transform="rotate(15)"/>
+    <rect x="1120" y="280" width="12" height="12" rx="2" fill="#4CAF50" transform="rotate(-10)"/>
+    <circle cx="350" cy="310" r="4" fill="#4CAF50"/>
+    <circle cx="850" cy="310" r="6" fill="#4CAF50"/>
+  </g>
+</svg>

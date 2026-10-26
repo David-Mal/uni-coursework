@@ -1,0 +1,60 @@
+Estethis Clothing Store - Software Requirements Specification (Draft)
+
+1. System Roles
+Guest User: Unregistered visitor with catalog browsing capabilities.
+
+Registered Customer: Authenticated user with purchasing, history, and profile features.
+
+Administrator: System manager with restricted backend access.
+
+2. Customer Features (Front-End)
+Authentication: Registration and login flow, including email verification and a forgotten password reset mechanism.
+
+Product Discovery: Browse and search the catalog by name, category, size, and color.
+
+Sorting & Filtering: Filter products by in-stock availability. Sort items by price, newest arrivals, and popularity.
+
+UI Layout: Responsive multi-column grid view for displaying the product catalog.
+
+Product View: Dedicated item pages featuring image galleries, item descriptions, available sizes, and price.
+
+Shopping Cart: Functionality to add, remove, and review items before checkout.
+
+Checkout & Payment: Secure online payment gateway integration (e.g., EuPlatesc).
+
+Order Management: Automated order confirmation emails and a user dashboard to view order history.
+
+Wishlist: Functionality allowing users to save favorite items for later.
+
+Discount Engine: A state-machine-driven coupon system supporting three distinct discount types:
+
+Percentage reduction (e.g., 10% off the first order).
+
+Fixed amount deduction.
+
+Buy One, Get One Free (BOGO).
+
+Customer Support: Integrated live chat window.
+
+Static Pages: Essential information pages including About the Store, Contact, and Terms & Conditions.
+
+3. Administrator Features (Back-End)
+Admin Access: Secure authentication for the management dashboard.
+
+Inventory Management: Add, edit, and delete products, including managing image uploads.
+
+Order Tracking: View a list of all incoming orders and update their fulfillment statuses.
+
+Sales Overview: Basic analytics displaying total orders and generated revenue.
+
+4. Specific Technical Requirements
+REQ-REG-01: Usernames must be strictly between 6 and 20 characters in length.
+
+REQ-REG-02: Passwords require a minimum length of 12 characters and must contain at least 2 uppercase letters and 1 special character.
+
+5. Version Control & QA Guidelines
+Code Comments: Developers must reference requirement IDs directly in the code (e.g., // REQ-REG-01 implementation).
+
+Commit Messages: Git commits must clearly state the specific task or requirement addressed (e.g., "Implemented validation logic for REQ-REG-02").
+
+Traceability Matrix: An Excel spreadsheet must be maintained to map each unique requirement ID to its corresponding test case in the QA testing file to ensure full coverage.

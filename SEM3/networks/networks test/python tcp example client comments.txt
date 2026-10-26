@@ -1,0 +1,81 @@
+import socket
+import select
+import sys
+import time
+import random
+import threading
+import queue
+import msvcrt  # Only available on Windows
+
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 5000
+SEND_INTERVAL = 2  # seconds
+
+def input_thread(q):
+    """Background thread to capture user input."""
+    while True:
+        if msvcrt.kbhit():
+            ch = input()
+            q.put(ch)
+
+def main():
+    mode = input("Choose mode: [A]uto or [M]anual? ").strip().lower()
+    auto_mode = mode != "m"
+
+    even_num = random.choice([2, 4, 6, 8])
+    odd_num = random.choice([1, 3, 5, 7, 9])
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((SERVER_IP, SERVER_PORT))
+    sock.setblocking(False)
+
+    print(f"Connected to server {SERVER_IP}:{SERVER_PORT}")
+
+    current_state = "standby"
+    last_send = 0
+    input_queue = queue.Queue()
+
+    # Start input thread if manual
+    if not auto_mode:
+        threading.Thread(target=input_thread, args=(input_queue,), daemon=True).start()
+
+    while True:
+        readable, _, _ = select.select([sock], [], [], 0.5)
+
+        for s in readable:
+            data = s.recv(1024)
+            if not data:
+                print("Server closed connection.")
+                return
+            msg = data.decode().strip()
+            if msg.startswith("STATE:"):
+                new_state = msg.split(":")[1]
+                if new_state != current_state:
+                    print(f"Server state changed to: {new_state.upper()}")
+                    current_state = new_state
+
+                if current_state == "stop":
+                    print("Server stopped collection. Disconnecting.")
+                    sock.close()
+                    return
+
+        now = time.time()
+        if current_state in ("even", "odd") and now - last_send >= SEND_INTERVAL:
+            last_send = now
+            if auto_mode:
+                num = even_num if current_state == "even" else odd_num
+            else:
+                # Check for manual input
+                if input_queue.empty():
+                    continue
+                user_input = input_queue.get()
+                if not user_input.isdigit():
+                    print("Not a number!")
+                    continue
+                num = int(user_input)
+
+            sock.sendall(str(num).encode())
+            print(f"Sent {num} to server.")
+
+if __name__ == "__main__":
+    main()

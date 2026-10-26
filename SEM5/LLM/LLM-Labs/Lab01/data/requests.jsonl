@@ -1,0 +1,11 @@
+{"text":"When is the project deadline?","intent":"course_question","requires_human":false}
+{"text":"The notebook produces a Python import error.","intent":"technical","requires_human":false}
+{"text":"I need a certificate confirming my enrolment.","intent":"administrative","requires_human":false}
+{"text":"I want to submit a grade appeal.","intent":"administrative","requires_human":true}
+{"text":"Please let me speak to the teacher about a personal situation.","intent":"other","requires_human":true}
+{"text":"Ce subiecte sunt discutate la laborator?","intent":"course_question","requires_human":false}
+{"text":"My local model will not run and I am blocked today.","intent":"technical","requires_human":false}
+{"text":"Is attendance recorded during the labs?","intent":"course_question","requires_human":false}
+{"text":"I was absent and need the administrative procedure.","intent":"administrative","requires_human":false}
+{"text":"Thank you for the explanation.","intent":"other","requires_human":false}
+

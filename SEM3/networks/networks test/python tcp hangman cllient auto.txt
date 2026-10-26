@@ -1,0 +1,57 @@
+import socket
+import select
+import time
+import random
+import string
+
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 7001
+GUESS_INTERVAL = 1  # seconds between guesses
+
+
+def main():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((SERVER_IP, SERVER_PORT))
+    sock.setblocking(False)
+    print(f"🤖 Connected to Hangman server {SERVER_IP}:{SERVER_PORT}")
+
+    letters = list(string.ascii_lowercase)
+    random.shuffle(letters)
+    next_guess_time = time.time()
+    finished = False
+
+    while True:
+        readable, _, _ = select.select([sock], [], [], 0.2)
+
+        for s in readable:
+            data = s.recv(1024)
+            if not data:
+                print("Server closed connection.")
+                return
+
+            msg = data.decode().strip()
+            print("📩", msg)
+
+            if msg.startswith("WIN") or msg.startswith("LOSE"):
+                finished = True
+
+        now = time.time()
+        if not finished and now >= next_guess_time:
+            next_guess_time = now + GUESS_INTERVAL
+            if letters:
+                guess = letters.pop()
+                print(f"🔠 Guessing: {guess}")
+                sock.sendall(guess.encode())
+            else:
+                print("No more letters to guess.")
+                finished = True
+
+        if finished:
+            time.sleep(1)
+            sock.close()
+            print("🎮 Game over, disconnecting.")
+            return
+
+
+if __name__ == "__main__":
+    main()

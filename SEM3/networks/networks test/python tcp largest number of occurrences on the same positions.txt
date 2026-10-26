@@ -1,0 +1,34 @@
+import socket
+from collections import Counter
+
+s = socket.socket()
+s.bind(('127.0.0.1', 1276))
+s.listen(1)
+
+print("Waiting for clients...")
+while True:
+    conn, addr = s.accept()
+
+    # receive first string
+    len1 = int.from_bytes(conn.recv(4), 'big')
+    str1 = conn.recv(len1).decode()
+
+    # receive second string
+    len2 = int.from_bytes(conn.recv(4), 'big')
+    str2 = conn.recv(len2).decode()
+
+    print("Received:", str1, str2)
+
+    # find matching characters at the same positions
+    matches = [c1 for c1, c2 in zip(str1, str2) if c1 == c2]
+
+    if matches:
+        # count frequency of each matching character
+        counter = Counter(matches)
+        char, count = counter.most_common(1)[0]
+        result = f"{char} {count}"
+    else:
+        result = "None 0"  # if no matches
+
+    conn.send(result.encode())
+    conn.close()

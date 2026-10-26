@@ -1,0 +1,19 @@
+import socket
+import sys
+
+server_address = ('127.0.0.1', 1276)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(server_address)
+s.listen(5)
+while True:
+    print('Waiting for clients:')
+    conection, client_address = s.accept()
+    data = conection.recv(4)
+    data2 = int.from_bytes(data, 'big')
+    string = conection.recv(data2).decode("utf-8")
+    print(string)
+    string = string[::-1]
+    conection.send(string.encode())
+
+
+

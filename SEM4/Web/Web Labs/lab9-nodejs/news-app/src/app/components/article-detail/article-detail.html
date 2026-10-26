@@ -1,0 +1,18 @@
+<div class="article-page">
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+
+  @if (loading()) {
+    <p class="loading">Loading article...</p>
+  } @else if (error()) {
+    <p class="error">{{ error() }}</p>
+  } @else if (article(); as a) {
+    <span class="category-badge">{{ a.category }}</span>
+    <h2>{{ a.title }}</h2>
+    <div class="meta">
+      By <strong>{{ a.producer }}</strong> &mdash; {{ a.date }}
+    </div>
+    <div class="body">{{ a.text }}</div>
+  }
+
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+</div>

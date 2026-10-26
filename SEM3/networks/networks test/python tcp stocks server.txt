@@ -1,0 +1,151 @@
+import socket
+import select
+import random
+import time
+
+HOST = "127.0.0.1"
+PORT = 7003
+
+STOCKS = {
+    "ACME": 100.0,
+    "ZENTEK": 80.0,
+    "NEUROCORP": 60.0,
+    "SKYNET": 120.0
+}
+
+MAX_ROUNDS = 15
+BID_WINDOW = 2.0  # seconds to accept bids
+MARKET_DELAY = 1.0  # seconds between rounds
+START_BALANCE = 1000.0
+
+
+def broadcast(clients, msg):
+    for c in clients:
+        try:
+            c.sendall(msg.encode())
+        except:
+            pass
+
+
+def main():
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind((HOST, PORT))
+    server.listen()
+    print(f"🏦 Stock Market Server running on {HOST}:{PORT}")
+
+    sockets = [server]
+    clients = {}
+    bids = []
+    current_round = 0
+    state = "OPEN"
+    last_tick = time.time()
+
+    def update_prices():
+        for s in STOCKS:
+            delta = random.uniform(-5, 5)
+            STOCKS[s] = max(1, STOCKS[s] + delta)
+
+    def total_market_cap():
+        return sum(STOCKS.values())
+
+    while True:
+        readable, _, exceptional = select.select(sockets, [], sockets, 0.5)
+
+        for s in readable:
+            if s is server:
+                conn, addr = server.accept()
+                sockets.append(conn)
+                clients[conn] = {"balance": START_BALANCE, "portfolio": {k: 0 for k in STOCKS}}
+                print(f"💼 Trader joined from {addr}")
+                conn.sendall("WELCOME:Market waiting to open\n".encode())
+                continue
+
+            try:
+                data = s.recv(1024)
+                if not data:
+                    sockets.remove(s)
+                    del clients[s]
+                    s.close()
+                    continue
+
+                msg = data.decode().strip()
+                # Expect: BID:<BUY/SELL>:<STOCK>:<AMOUNT>
+                if msg.startswith("BID:") and state == "OPEN":
+                    _, action, stock, amount = msg.split(":")
+                    bids.append((s, action.upper(), stock.upper(), int(amount)))
+
+            except Exception as e:
+                print("Error:", e)
+                if s in sockets:
+                    sockets.remove(s)
+                if s in clients:
+                    del clients[s]
+                s.close()
+
+        # Every MARKET_DELAY seconds, run a tick
+        now = time.time()
+        if now - last_tick >= MARKET_DELAY:
+            last_tick = now
+            if current_round >= MAX_ROUNDS or total_market_cap() > 800.0:
+                state = "ENDED"
+                print("🏁 Market closed!")
+                break
+
+            if state == "OPEN":
+                # Evaluate bids
+                for c, action, stock, amount in bids:
+                    if stock not in STOCKS or c not in clients:
+                        continue
+                    price = STOCKS[stock]
+                    trader = clients[c]
+                    cost = price * amount
+
+                    if action == "BUY" and trader["balance"] >= cost:
+                        trader["balance"] -= cost
+                        trader["portfolio"][stock] += amount
+                        c.sendall(f"EXECUTED:BOUGHT {amount}x{stock} @ {price:.2f}\n".encode())
+                    elif action == "SELL" and trader["portfolio"][stock] >= amount:
+                        trader["balance"] += cost
+                        trader["portfolio"][stock] -= amount
+                        c.sendall(f"EXECUTED:SOLD {amount}x{stock} @ {price:.2f}\n".encode())
+                    else:
+                        c.sendall("REJECTED:Invalid trade\n".encode())
+
+                bids.clear()
+
+                # Update stock prices
+                update_prices()
+                current_round += 1
+                board = " | ".join([f"{s}:{p:.2f}" for s, p in STOCKS.items()])
+                broadcast(sockets[1:], f"UPDATE:ROUND {current_round}:{board}\n")
+
+        for s in exceptional:
+            sockets.remove(s)
+            if s in clients:
+                del clients[s]
+            s.close()
+
+    # End of market
+    broadcast(sockets[1:], "STATE:END\n")
+
+    # Final scores
+    results = []
+    for c, info in clients.items():
+        value = info["balance"] + sum(info["portfolio"][s] * STOCKS[s] for s in STOCKS)
+        results.append(value)
+        try:
+            c.sendall(f"RESULT:Portfolio Value={value:.2f}\n".encode())
+        except:
+            pass
+
+    print("💰 Final Market Results:")
+    for i, v in enumerate(results, 1):
+        print(f" Trader {i}: {v:.2f}")
+
+    for s in sockets:
+        s.close()
+
+
+if __name__ == "__main__":
+    main()

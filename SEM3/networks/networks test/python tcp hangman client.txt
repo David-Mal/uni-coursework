@@ -1,0 +1,31 @@
+import socket
+import select
+import sys
+
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 7000
+
+def main():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((SERVER_IP, SERVER_PORT))
+    sock.setblocking(False)
+    print(f"🔤 Connected to Hangman server {SERVER_IP}:{SERVER_PORT}")
+    print("Type one letter per guess.")
+
+    while True:
+        readable, _, _ = select.select([sock, sys.stdin], [], [])
+
+        for s in readable:
+            if s is sock:
+                data = s.recv(1024)
+                if not data:
+                    print("Server closed connection.")
+                    return
+                print(data.decode(), end="")
+            else:
+                guess = sys.stdin.readline().strip()
+                if guess:
+                    sock.sendall(guess.encode())
+
+if __name__ == "__main__":
+    main()

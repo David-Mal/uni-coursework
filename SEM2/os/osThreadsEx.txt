@@ -1,0 +1,14 @@
+A binary file containing random integers "/tmp/test-file" is given.
+
+Write a C program that will receive as arguments on the command line, a natural number
+N = {20000, 40000, 80000} and the absolute path to the binary file indicated above.
+
+The program will read from the keyboard a digit C = {2, 3, 4, 5} and then will create
+an appropriate number of threads, which will read N integers from the given file. The
+reading of the N integers will be performed, IN TURNS, into a shared variable that can
+store AT MOST 2000 integers.
+
+Using the most appropriate synchronization objects, the threads must determine the
+ARITHMETIC AVERAGE of all integers which contain C digits.
+
+Calculations and display of results will be done on threads ONLY.

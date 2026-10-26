@@ -1,0 +1,39 @@
+<div class="news-page">
+  <h1>Latest News</h1>
+
+  <div class="filters">
+    <input type="date" [(ngModel)]="filter.start" placeholder="Start date">
+    <input type="date" [(ngModel)]="filter.end" placeholder="End date">
+    <select [(ngModel)]="filter.category">
+      <option value="">All Categories</option>
+      @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat | titlecase }}</option>
+      }
+    </select>
+    <button (click)="loadNews()">Filter</button>
+  </div>
+
+  <p class="prev-filter">{{ prevFilterText() }}</p>
+
+  @if (loading()) {
+    <div class="loading">Loading news...</div>
+  } @else if (error()) {
+    <div class="error">{{ error() }}</div>
+  } @else {
+    <div class="news-list">
+      @for (article of articles(); track article.id) {
+        <div class="news-item">
+          <span class="category-badge">{{ article.category }}</span>
+          <h3><a [routerLink]="['/article', article.id]">{{ article.title }}</a></h3>
+          <p class="excerpt">{{ article.text | slice:0:180 }}{{ article.text.length > 180 ? '…' : '' }}</p>
+          <div class="meta">
+            <span>{{ article.producer }}</span>
+            <span>{{ article.date }}</span>
+          </div>
+        </div>
+      } @empty {
+        <p class="empty">No articles found for the selected filters.</p>
+      }
+    </div>
+  }
+</div>

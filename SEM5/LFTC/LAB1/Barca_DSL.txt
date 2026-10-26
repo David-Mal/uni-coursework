@@ -1,0 +1,98 @@
+BarcaScript - A Domain Specific Language for FC Barcelona squad data
+
+1. DOMAIN AND PURPOSE
+BarcaScript is a small data-filtering language for working with FC Barcelona
+squad data. A squad is a list of player records (name, position, goals,
+assists, ...). The language lets an analyst or coach staff member query that
+list in a few readable lines: pick players that match conditions, add or drop
+information, choose which fields to display, and print the result.
+
+2. DATA TYPES
+- Simple types: number (integer, e.g. 12) and string (e.g. "FW").
+- User defined type: Squad, a list of records. Each record has named fields
+  and literal values, e.g. { name: "Yamal", goals: 12 }.
+
+3. LANGUAGE OVERVIEW
+A list is created with Squad([ ... ]). Operations are chained after a list:
+  ? condition        keep only records that match (supports "and", parentheses)
+  + field = value    add a new field to every record
+  - field            remove a field from every record
+  -> (f1, f2, ...)   keep only the chosen fields
+Control flow uses "if ... else ... end" and "for x in list ... end".
+"announce" prints a value, "scout" reads a value from the keyboard.
+Statements need no delimiters; statement boundaries separate commands.
+
+4. USE CASES: WHY EACH STATEMENT IS NEEDED
+
+4.1 Assignment (x = expression)
+Why: results must be stored to be reused. Without assignment, every query
+would have to be rewritten from scratch.
+Example:
+  forwards = squad ? pos == "FW"
+  minAssists = 6
+The forward list is computed once and reused by later queries; the number is
+a simple-type variable usable inside filter conditions.
+
+4.2 Input (scout x)
+Why: the same program should work for different thresholds without editing
+the code. The analyst types the value at run time.
+Example:
+  scout limit
+  top = squad ? goals > limit
+The coach asks for "players with more than 10 goals" today and "more than 15"
+tomorrow using the same script.
+
+4.3 Output (announce expression)
+Why: a query is useless if the result cannot be seen.
+Example:
+  announce "Top scorers:"
+  announce top
+Prints a heading and the resulting list or record.
+
+4.4 Conditional (if / else / end)
+Why: the program must react to the result of a query, including the case
+where nobody matches.
+Example:
+  if scorers
+    announce scorers
+  else
+    announce "No matching players found."
+  end
+Without if/else, an empty result would print nothing and look like an error.
+
+4.5 Loop (for x in list ... end)
+Why: records often need to be handled one at a time, e.g. a report with one
+line per player.
+Example:
+  for player in selected
+    announce player
+  end
+Each selected player is printed on its own line.
+
+4.6 Filter operator (?)  - core domain operation
+Why: selecting players by position, goals, age, etc. is the most common
+question asked about a squad.
+Example: squad ? (pos == "FW" and goals >= 10)
+
+4.7 Add operator (+ field = value)
+Why: enrich data without changing the source list, e.g. tag players.
+Example: scorers + club = "FCB"
+
+4.8 Remove operator (- field)
+Why: drop information that is irrelevant or should not be shown.
+Example: scorers - assists
+
+4.9 Select operator (-> (fields))
+Why: reports usually need only a few columns.
+Example: scorers -> (name, goals)
+
+5. TYPE JUSTIFICATION
+- number and string cover all values stored in a record and compared in a
+  condition (goals >= 10, pos == "FW").
+- Squad (list of records) models a real squad; a single simple type cannot
+  hold many players with several named properties.
+
+6. FILES
+- Barca_DSL_BNF.txt      lexical and syntactic grammar (BNF)
+- Barca_DSL_Samples.txt  example programs
+- Barca_DSL.txt          this document

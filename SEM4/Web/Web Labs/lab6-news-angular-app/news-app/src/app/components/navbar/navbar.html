@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <a routerLink="/" class="brand">📰 NewsService</a>
+  <span class="backend-badge" [class.php]="backendType === 'php'" [class.node]="backendType === 'node'">
+    <span class="dot"></span>{{ backendLabel }}
+  </span>
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Home</a>
+    <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+    @if (auth.isLoggedIn()) {
+      <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a>
+      <button class="btn-logout" (click)="logout()">Logout ({{ auth.getUsername() }})</button>
+    } @else {
+      <a routerLink="/login" routerLinkActive="active" class="nav-link admin">Admin Login</a>
+    }
+  </div>
+</nav>

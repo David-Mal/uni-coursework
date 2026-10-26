@@ -1,0 +1,3028 @@
+Compiling C++...
+Compiling Java...
+
+====================================
+Testing 10x10_k3
+====================================
+
+C++ - static
+Running sequential...
+Run 1: 0.01425 ms
+Run 2: 0.014709 ms
+Run 3: 0.012041 ms
+Run 4: 0.012333 ms
+Run 5: 0.01175 ms
+Run 6: 0.012667 ms
+Run 7: 0.010958 ms
+Run 8: 0.012 ms
+Run 9: 0.012916 ms
+Run 10: 0.008792 ms
+Running horizontal with 4 threads...
+Run 1: 0.050542 ms
+Run 2: 0.047583 ms
+Run 3: 0.046959 ms
+Run 4: 0.046875 ms
+Run 5: 0.046875 ms
+Run 6: 0.054834 ms
+Run 7: 0.044583 ms
+Run 8: 0.046625 ms
+Run 9: 0.043875 ms
+Run 10: 0.047375 ms
+Running vertical with 4 threads...
+Run 1: 0.046958 ms
+Run 2: 0.049209 ms
+Run 3: 0.042209 ms
+Run 4: 0.043833 ms
+Run 5: 0.048333 ms
+Run 6: 0.042875 ms
+Run 7: 0.043542 ms
+Run 8: 0.044166 ms
+Run 9: 0.03575 ms
+Run 10: 0.046625 ms
+Running block with 4 threads...
+Run 1: 0.038917 ms
+Run 2: 0.039792 ms
+Run 3: 0.035667 ms
+Run 4: 0.041709 ms
+Run 5: 0.041084 ms
+Run 6: 0.052083 ms
+Run 7: 0.034792 ms
+Run 8: 0.042666 ms
+Run 9: 0.042 ms
+Run 10: 0.042917 ms
+Running linear with 4 threads...
+Run 1: 0.043708 ms
+Run 2: 0.045375 ms
+Run 3: 0.042583 ms
+Run 4: 0.042667 ms
+Run 5: 0.056625 ms
+Run 6: 0.051125 ms
+Run 7: 0.034458 ms
+Run 8: 0.039 ms
+Run 9: 0.038375 ms
+Run 10: 0.037209 ms
+Running cyclic with 4 threads...
+Run 1: 0.040125 ms
+Run 2: 0.042917 ms
+Run 3: 0.042041 ms
+Run 4: 0.041167 ms
+Run 5: 0.040791 ms
+Run 6: 0.029542 ms
+Run 7: 0.037917 ms
+Run 8: 0.041375 ms
+Run 9: 0.040291 ms
+Run 10: 0.041083 ms
+
+C++ - dynamic
+Running sequential...
+Run 1: 0.000875 ms
+Run 2: 0.000875 ms
+Run 3: 0.000916 ms
+Run 4: 0.000875 ms
+Run 5: 0.000833 ms
+Run 6: 0.001 ms
+Run 7: 0.000875 ms
+Run 8: 0.000958 ms
+Run 9: 0.001042 ms
+Run 10: 0.000917 ms
+Running horizontal with 4 threads...
+Run 1: 0.036417 ms
+Run 2: 0.037958 ms
+Run 3: 0.034416 ms
+Run 4: 0.033833 ms
+Run 5: 0.036375 ms
+Run 6: 0.033292 ms
+Run 7: 0.03525 ms
+Run 8: 0.033291 ms
+Run 9: 0.032542 ms
+Run 10: 0.037042 ms
+Running vertical with 4 threads...
+Run 1: 0.032291 ms
+Run 2: 0.037208 ms
+Run 3: 0.039125 ms
+Run 4: 0.034875 ms
+Run 5: 0.031916 ms
+Run 6: 0.03575 ms
+Run 7: 0.037417 ms
+Run 8: 0.034708 ms
+Run 9: 0.035292 ms
+Run 10: 0.034917 ms
+Running block with 4 threads...
+Run 1: 0.031625 ms
+Run 2: 0.034792 ms
+Run 3: 0.032875 ms
+Run 4: 0.035166 ms
+Run 5: 0.031417 ms
+Run 6: 0.033042 ms
+Run 7: 0.03225 ms
+Run 8: 0.031125 ms
+Run 9: 0.034792 ms
+Run 10: 0.032708 ms
+Running linear with 4 threads...
+Run 1: 0.037084 ms
+Run 2: 0.039 ms
+Run 3: 0.032 ms
+Run 4: 0.036125 ms
+Run 5: 0.033083 ms
+Run 6: 0.033666 ms
+Run 7: 0.036833 ms
+Run 8: 0.0325 ms
+Run 9: 0.031542 ms
+Run 10: 0.035792 ms
+Running cyclic with 4 threads...
+Run 1: 0.043417 ms
+Run 2: 0.034458 ms
+Run 3: 0.032084 ms
+Run 4: 0.029542 ms
+Run 5: 0.031667 ms
+Run 6: 0.031167 ms
+Run 7: 0.030791 ms
+Run 8: 0.033584 ms
+Run 9: 0.033459 ms
+Run 10: 0.032125 ms
+
+Java
+Running sequential...
+Run 1: 0.088333 ms
+Run 2: 0.092 ms
+Run 3: 0.086833 ms
+Run 4: 0.088208 ms
+Run 5: 0.091 ms
+Run 6: 0.100375 ms
+Run 7: 0.0915 ms
+Run 8: 0.08675 ms
+Run 9: 0.088333 ms
+Run 10: 0.085791 ms
+Running horizontal with 4 threads...
+Run 1: 0.803417 ms
+Run 2: 0.788417 ms
+Run 3: 0.911667 ms
+Run 4: 0.809583 ms
+Run 5: 0.801625 ms
+Run 6: 0.812458 ms
+Run 7: 0.800416 ms
+Run 8: 0.785083 ms
+Run 9: 0.766833 ms
+Run 10: 0.870042 ms
+Running vertical with 4 threads...
+Run 1: 0.784833 ms
+Run 2: 0.791541 ms
+Run 3: 0.842333 ms
+Run 4: 0.7845 ms
+Run 5: 0.7735 ms
+Run 6: 0.776958 ms
+Run 7: 0.781041 ms
+Run 8: 0.78175 ms
+Run 9: 0.778083 ms
+Run 10: 0.812 ms
+Running block with 4 threads...
+Run 1: 2.894083 ms
+Run 2: 1.56275 ms
+Run 3: 1.646375 ms
+Run 4: 1.644708 ms
+Run 5: 1.68625 ms
+Run 6: 1.6415 ms
+Run 7: 1.658042 ms
+Run 8: 1.76125 ms
+Run 9: 1.648959 ms
+Run 10: 1.584875 ms
+Running linear with 4 threads...
+Run 1: 0.7905 ms
+Run 2: 0.77575 ms
+Run 3: 0.895875 ms
+Run 4: 0.778959 ms
+Run 5: 0.808208 ms
+Run 6: 0.855458 ms
+Run 7: 0.810125 ms
+Run 8: 0.80425 ms
+Run 9: 0.790167 ms
+Run 10: 0.768541 ms
+Running cyclic with 4 threads...
+Run 1: 0.761083 ms
+Run 2: 0.837375 ms
+Run 3: 0.837375 ms
+Run 4: 0.75825 ms
+Run 5: 0.771167 ms
+Run 6: 0.849 ms
+Run 7: 0.758791 ms
+Run 8: 1.002709 ms
+Run 9: 0.795084 ms
+Run 10: 0.784583 ms
+
+====================================
+Testing 1000x1000_k3
+====================================
+
+C++ - static
+Running sequential...
+Run 1: 9.24146 ms
+Run 2: 9.16367 ms
+Run 3: 9.29 ms
+Run 4: 9.1945 ms
+Run 5: 9.19363 ms
+Run 6: 9.12842 ms
+Run 7: 9.15788 ms
+Run 8: 9.18379 ms
+Run 9: 9.25267 ms
+Run 10: 9.13758 ms
+Running horizontal with 2 threads...
+Run 1: 5.20992 ms
+Run 2: 5.1155 ms
+Run 3: 5.06308 ms
+Run 4: 5.31958 ms
+Run 5: 5.11421 ms
+Run 6: 5.18879 ms
+Run 7: 5.20417 ms
+Run 8: 5.25225 ms
+Run 9: 5.70667 ms
+Run 10: 5.17383 ms
+Running horizontal with 4 threads...
+Run 1: 2.77904 ms
+Run 2: 2.77254 ms
+Run 3: 2.73283 ms
+Run 4: 2.79554 ms
+Run 5: 2.71942 ms
+Run 6: 2.73454 ms
+Run 7: 2.71513 ms
+Run 8: 2.72029 ms
+Run 9: 2.74788 ms
+Run 10: 2.75942 ms
+Running horizontal with 8 threads...
+Run 1: 2.187 ms
+Run 2: 2.19787 ms
+Run 3: 2.40542 ms
+Run 4: 2.1685 ms
+Run 5: 2.18487 ms
+Run 6: 2.30996 ms
+Run 7: 2.24763 ms
+Run 8: 2.26788 ms
+Run 9: 2.32071 ms
+Run 10: 2.41125 ms
+Running horizontal with 16 threads...
+Run 1: 1.97871 ms
+Run 2: 2.05225 ms
+Run 3: 1.94408 ms
+Run 4: 1.984 ms
+Run 5: 2.09508 ms
+Run 6: 2.059 ms
+Run 7: 2.42729 ms
+Run 8: 1.9705 ms
+Run 9: 2.07196 ms
+Run 10: 2.20337 ms
+Running vertical with 2 threads...
+Run 1: 6.02725 ms
+Run 2: 6.29 ms
+Run 3: 5.98483 ms
+Run 4: 6.23617 ms
+Run 5: 6.02875 ms
+Run 6: 6.04896 ms
+Run 7: 5.777 ms
+Run 8: 6.09467 ms
+Run 9: 6.52121 ms
+Run 10: 6.06825 ms
+Running vertical with 4 threads...
+Run 1: 4.02846 ms
+Run 2: 4.34329 ms
+Run 3: 4.04846 ms
+Run 4: 4.01896 ms
+Run 5: 3.94508 ms
+Run 6: 3.97262 ms
+Run 7: 3.91913 ms
+Run 8: 4.03046 ms
+Run 9: 4.08942 ms
+Run 10: 4.07587 ms
+Running vertical with 8 threads...
+Run 1: 4.54375 ms
+Run 2: 4.47462 ms
+Run 3: 4.72646 ms
+Run 4: 5.19608 ms
+Run 5: 5.05887 ms
+Run 6: 4.77738 ms
+Run 7: 5.57163 ms
+Run 8: 5.80967 ms
+Run 9: 4.55833 ms
+Run 10: 4.835 ms
+Running vertical with 16 threads...
+Run 1: 6.52083 ms
+Run 2: 5.93058 ms
+Run 3: 6.76754 ms
+Run 4: 6.41442 ms
+Run 5: 8.35617 ms
+Run 6: 9.15479 ms
+Run 7: 6.60529 ms
+Run 8: 7.09213 ms
+Run 9: 6.64192 ms
+Run 10: 7.29271 ms
+Running block with 2 threads...
+Run 1: 5.74217 ms
+Run 2: 5.86421 ms
+Run 3: 5.91121 ms
+Run 4: 7.0395 ms
+Run 5: 6.0655 ms
+Run 6: 5.66075 ms
+Run 7: 5.49154 ms
+Run 8: 5.34279 ms
+Run 9: 5.95133 ms
+Run 10: 5.46229 ms
+Running block with 4 threads...
+Run 1: 2.93342 ms
+Run 2: 3.11867 ms
+Run 3: 2.82796 ms
+Run 4: 3.133 ms
+Run 5: 3.073 ms
+Run 6: 2.98367 ms
+Run 7: 2.96479 ms
+Run 8: 3.43583 ms
+Run 9: 3.49054 ms
+Run 10: 3.53596 ms
+Running block with 8 threads...
+Run 1: 2.30508 ms
+Run 2: 2.36846 ms
+Run 3: 2.44679 ms
+Run 4: 2.82892 ms
+Run 5: 2.32479 ms
+Run 6: 2.62329 ms
+Run 7: 2.32242 ms
+Run 8: 2.37733 ms
+Run 9: 2.7185 ms
+Run 10: 2.72512 ms
+Running block with 16 threads...
+Run 1: 2.03012 ms
+Run 2: 2.07063 ms
+Run 3: 2.39233 ms
+Run 4: 2.10033 ms
+Run 5: 2.10029 ms
+Run 6: 2.01617 ms
+Run 7: 2.15946 ms
+Run 8: 1.88471 ms
+Run 9: 2.00775 ms
+Run 10: 2.02783 ms
+Running linear with 2 threads...
+Run 1: 5.54879 ms
+Run 2: 5.70967 ms
+Run 3: 5.64963 ms
+Run 4: 5.50392 ms
+Run 5: 5.52504 ms
+Run 6: 5.62733 ms
+Run 7: 5.60179 ms
+Run 8: 5.55625 ms
+Run 9: 11.3133 ms
+Run 10: 5.61908 ms
+Running linear with 4 threads...
+Run 1: 3.02792 ms
+Run 2: 3.07029 ms
+Run 3: 3.07121 ms
+Run 4: 3.24504 ms
+Run 5: 3.11896 ms
+Run 6: 3.10921 ms
+Run 7: 2.98029 ms
+Run 8: 3.09571 ms
+Run 9: 3.06329 ms
+Run 10: 3.1275 ms
+Running linear with 8 threads...
+Run 1: 2.40175 ms
+Run 2: 2.48767 ms
+Run 3: 2.50204 ms
+Run 4: 2.29917 ms
+Run 5: 2.70325 ms
+Run 6: 2.44679 ms
+Run 7: 2.51463 ms
+Run 8: 2.22258 ms
+Run 9: 2.51238 ms
+Run 10: 2.62133 ms
+Running linear with 16 threads...
+Run 1: 2.25758 ms
+Run 2: 2.45667 ms
+Run 3: 2.14225 ms
+Run 4: 2.22912 ms
+Run 5: 2.13883 ms
+Run 6: 2.21692 ms
+Run 7: 2.12812 ms
+Run 8: 2.35508 ms
+Run 9: 2.17563 ms
+Run 10: 2.19079 ms
+Running cyclic with 2 threads...
+Run 1: 6.50396 ms
+Run 2: 6.53425 ms
+Run 3: 6.36758 ms
+Run 4: 6.37421 ms
+Run 5: 6.39513 ms
+Run 6: 6.63021 ms
+Run 7: 6.43846 ms
+Run 8: 6.30412 ms
+Run 9: 6.80729 ms
+Run 10: 6.79708 ms
+Running cyclic with 4 threads...
+Run 1: 4.03904 ms
+Run 2: 4.46858 ms
+Run 3: 4.25525 ms
+Run 4: 4.18163 ms
+Run 5: 4.53583 ms
+Run 6: 4.36587 ms
+Run 7: 4.36062 ms
+Run 8: 4.33471 ms
+Run 9: 4.38063 ms
+Run 10: 4.15738 ms
+Running cyclic with 8 threads...
+Run 1: 3.17092 ms
+Run 2: 3.525 ms
+Run 3: 3.80825 ms
+Run 4: 3.3455 ms
+Run 5: 3.30146 ms
+Run 6: 3.34292 ms
+Run 7: 3.27729 ms
+Run 8: 3.28238 ms
+Run 9: 3.27646 ms
+Run 10: 3.19125 ms
+Running cyclic with 16 threads...
+Run 1: 5.14179 ms
+Run 2: 4.36071 ms
+Run 3: 5.00533 ms
+Run 4: 5.16871 ms
+Run 5: 5.47579 ms
+Run 6: 5.2705 ms
+Run 7: 4.49087 ms
+Run 8: 5.72004 ms
+Run 9: 5.24208 ms
+Run 10: 5.44163 ms
+
+C++ - dynamic
+Running sequential...
+Run 1: 8.54192 ms
+Run 2: 8.52388 ms
+Run 3: 8.60925 ms
+Run 4: 8.49846 ms
+Run 5: 8.49863 ms
+Run 6: 8.54 ms
+Run 7: 8.57683 ms
+Run 8: 8.50217 ms
+Run 9: 8.585 ms
+Run 10: 8.62229 ms
+Running horizontal with 2 threads...
+Run 1: 4.78829 ms
+Run 2: 4.64567 ms
+Run 3: 4.68742 ms
+Run 4: 4.68567 ms
+Run 5: 4.67829 ms
+Run 6: 4.73621 ms
+Run 7: 4.68262 ms
+Run 8: 4.67425 ms
+Run 9: 4.70229 ms
+Run 10: 7.86929 ms
+Running horizontal with 4 threads...
+Run 1: 2.41825 ms
+Run 2: 2.46467 ms
+Run 3: 2.42383 ms
+Run 4: 2.40362 ms
+Run 5: 2.42142 ms
+Run 6: 2.39087 ms
+Run 7: 2.41867 ms
+Run 8: 2.42988 ms
+Run 9: 2.42275 ms
+Run 10: 2.43392 ms
+Running horizontal with 8 threads...
+Run 1: 1.949 ms
+Run 2: 2.13125 ms
+Run 3: 1.98596 ms
+Run 4: 1.96317 ms
+Run 5: 2.08133 ms
+Run 6: 2.03092 ms
+Run 7: 1.98883 ms
+Run 8: 2.03929 ms
+Run 9: 1.99242 ms
+Run 10: 2.00113 ms
+Running horizontal with 16 threads...
+Run 1: 1.44538 ms
+Run 2: 1.70075 ms
+Run 3: 1.52104 ms
+Run 4: 1.553 ms
+Run 5: 1.54479 ms
+Run 6: 1.83862 ms
+Run 7: 1.48754 ms
+Run 8: 1.65317 ms
+Run 9: 1.51463 ms
+Run 10: 1.54188 ms
+Running vertical with 2 threads...
+Run 1: 5.14908 ms
+Run 2: 4.86942 ms
+Run 3: 5.14187 ms
+Run 4: 5.178 ms
+Run 5: 4.89658 ms
+Run 6: 4.96433 ms
+Run 7: 4.84312 ms
+Run 8: 4.85117 ms
+Run 9: 4.92667 ms
+Run 10: 4.81946 ms
+Running vertical with 4 threads...
+Run 1: 2.88512 ms
+Run 2: 3.00033 ms
+Run 3: 2.96421 ms
+Run 4: 2.86608 ms
+Run 5: 2.93367 ms
+Run 6: 2.91129 ms
+Run 7: 2.83896 ms
+Run 8: 3.04033 ms
+Run 9: 2.92854 ms
+Run 10: 2.94417 ms
+Running vertical with 8 threads...
+Run 1: 2.79062 ms
+Run 2: 3.06579 ms
+Run 3: 3.01512 ms
+Run 4: 2.71979 ms
+Run 5: 2.81429 ms
+Run 6: 2.99458 ms
+Run 7: 5.40346 ms
+Run 8: 2.94387 ms
+Run 9: 2.86829 ms
+Run 10: 2.93521 ms
+Running vertical with 16 threads...
+Run 1: 3.41637 ms
+Run 2: 3.39975 ms
+Run 3: 3.16883 ms
+Run 4: 3.34608 ms
+Run 5: 3.50708 ms
+Run 6: 3.42504 ms
+Run 7: 3.32404 ms
+Run 8: 3.5715 ms
+Run 9: 3.42946 ms
+Run 10: 3.55925 ms
+Running block with 2 threads...
+Run 1: 4.53383 ms
+Run 2: 4.49167 ms
+Run 3: 4.61125 ms
+Run 4: 4.499 ms
+Run 5: 4.50979 ms
+Run 6: 4.489 ms
+Run 7: 4.49417 ms
+Run 8: 4.47254 ms
+Run 9: 4.50633 ms
+Run 10: 4.48546 ms
+Running block with 4 threads...
+Run 1: 2.31342 ms
+Run 2: 2.33779 ms
+Run 3: 2.31417 ms
+Run 4: 2.35821 ms
+Run 5: 2.33233 ms
+Run 6: 2.32679 ms
+Run 7: 2.30992 ms
+Run 8: 2.34158 ms
+Run 9: 2.31929 ms
+Run 10: 2.34325 ms
+Running block with 8 threads...
+Run 1: 1.96513 ms
+Run 2: 1.97617 ms
+Run 3: 1.74658 ms
+Run 4: 1.95538 ms
+Run 5: 1.885 ms
+Run 6: 1.93854 ms
+Run 7: 1.91463 ms
+Run 8: 1.90229 ms
+Run 9: 2.063 ms
+Run 10: 1.98325 ms
+Running block with 16 threads...
+Run 1: 1.611 ms
+Run 2: 4.91908 ms
+Run 3: 1.58454 ms
+Run 4: 1.50371 ms
+Run 5: 1.60038 ms
+Run 6: 1.57342 ms
+Run 7: 1.50275 ms
+Run 8: 1.52313 ms
+Run 9: 1.65508 ms
+Run 10: 1.55492 ms
+Running linear with 2 threads...
+Run 1: 4.96417 ms
+Run 2: 4.98796 ms
+Run 3: 4.98313 ms
+Run 4: 4.99929 ms
+Run 5: 4.94937 ms
+Run 6: 4.94062 ms
+Run 7: 4.89363 ms
+Run 8: 4.8875 ms
+Run 9: 4.995 ms
+Run 10: 4.87962 ms
+Running linear with 4 threads...
+Run 1: 2.52625 ms
+Run 2: 2.6655 ms
+Run 3: 2.68096 ms
+Run 4: 2.59921 ms
+Run 5: 2.63017 ms
+Run 6: 2.5245 ms
+Run 7: 2.53333 ms
+Run 8: 2.54279 ms
+Run 9: 2.56292 ms
+Run 10: 2.52562 ms
+Running linear with 8 threads...
+Run 1: 2.23163 ms
+Run 2: 2.17617 ms
+Run 3: 2.12092 ms
+Run 4: 2.13125 ms
+Run 5: 2.10029 ms
+Run 6: 2.08646 ms
+Run 7: 2.09071 ms
+Run 8: 2.51692 ms
+Run 9: 2.06933 ms
+Run 10: 2.0985 ms
+Running linear with 16 threads...
+Run 1: 1.59067 ms
+Run 2: 1.89542 ms
+Run 3: 1.65112 ms
+Run 4: 1.76342 ms
+Run 5: 1.54104 ms
+Run 6: 1.669 ms
+Run 7: 1.74762 ms
+Run 8: 1.83767 ms
+Run 9: 2.08312 ms
+Run 10: 1.71075 ms
+Running cyclic with 2 threads...
+Run 1: 5.33117 ms
+Run 2: 5.32867 ms
+Run 3: 5.63071 ms
+Run 4: 5.30471 ms
+Run 5: 5.35275 ms
+Run 6: 5.67021 ms
+Run 7: 5.71808 ms
+Run 8: 5.6695 ms
+Run 9: 5.54737 ms
+Run 10: 5.41208 ms
+Running cyclic with 4 threads...
+Run 1: 3.47967 ms
+Run 2: 2.90921 ms
+Run 3: 3.06408 ms
+Run 4: 3.22096 ms
+Run 5: 3.05633 ms
+Run 6: 3.157 ms
+Run 7: 2.96217 ms
+Run 8: 2.95333 ms
+Run 9: 3.09142 ms
+Run 10: 3.0065 ms
+Running cyclic with 8 threads...
+Run 1: 2.32437 ms
+Run 2: 2.40125 ms
+Run 3: 2.35862 ms
+Run 4: 2.38029 ms
+Run 5: 2.20325 ms
+Run 6: 2.39767 ms
+Run 7: 2.24967 ms
+Run 8: 2.33183 ms
+Run 9: 2.50646 ms
+Run 10: 2.33838 ms
+Running cyclic with 16 threads...
+Run 1: 1.95154 ms
+Run 2: 1.89267 ms
+Run 3: 1.89288 ms
+Run 4: 2.36354 ms
+Run 5: 1.88417 ms
+Run 6: 2.71254 ms
+Run 7: 2.30208 ms
+Run 8: 1.96588 ms
+Run 9: 2.22333 ms
+Run 10: 2.44975 ms
+
+Java
+Running sequential...
+Run 1: 14.721708 ms
+Run 2: 14.898333 ms
+Run 3: 14.571667 ms
+Run 4: 14.590708 ms
+Run 5: 14.562375 ms
+Run 6: 14.608083 ms
+Run 7: 14.544875 ms
+Run 8: 14.840125 ms
+Run 9: 14.49025 ms
+Run 10: 14.506709 ms
+Running horizontal with 2 threads...
+Run 1: 14.46625 ms
+Run 2: 14.552292 ms
+Run 3: 14.659542 ms
+Run 4: 20.344792 ms
+Run 5: 14.482625 ms
+Run 6: 14.900958 ms
+Run 7: 14.311833 ms
+Run 8: 14.317875 ms
+Run 9: 14.568583 ms
+Run 10: 14.522208 ms
+Running horizontal with 4 threads...
+Run 1: 14.350333 ms
+Run 2: 14.598833 ms
+Run 3: 14.5685 ms
+Run 4: 15.049 ms
+Run 5: 15.57875 ms
+Run 6: 15.120083 ms
+Run 7: 15.439042 ms
+Run 8: 13.65925 ms
+Run 9: 15.4185 ms
+Run 10: 15.674625 ms
+Running horizontal with 8 threads...
+Run 1: 24.645583 ms
+Run 2: 25.425292 ms
+Run 3: 24.567208 ms
+Run 4: 25.396 ms
+Run 5: 25.839875 ms
+Run 6: 19.363834 ms
+Run 7: 23.293792 ms
+Run 8: 22.997334 ms
+Run 9: 22.837125 ms
+Run 10: 26.19625 ms
+Running horizontal with 16 threads...
+Run 1: 29.178042 ms
+Run 2: 28.872916 ms
+Run 3: 24.570292 ms
+Run 4: 35.656125 ms
+Run 5: 32.052459 ms
+Run 6: 27.83075 ms
+Run 7: 44.91775 ms
+Run 8: 28.672125 ms
+Run 9: 34.509333 ms
+Run 10: 30.787333 ms
+Running vertical with 2 threads...
+Run 1: 16.411416 ms
+Run 2: 16.539833 ms
+Run 3: 16.12525 ms
+Run 4: 16.203916 ms
+Run 5: 16.26 ms
+Run 6: 16.82 ms
+Run 7: 16.436875 ms
+Run 8: 16.328791 ms
+Run 9: 15.993458 ms
+Run 10: 17.012708 ms
+Running vertical with 4 threads...
+Run 1: 16.163375 ms
+Run 2: 15.568917 ms
+Run 3: 15.746958 ms
+Run 4: 14.464667 ms
+Run 5: 14.263542 ms
+Run 6: 15.649958 ms
+Run 7: 15.648542 ms
+Run 8: 15.631042 ms
+Run 9: 18.345 ms
+Run 10: 15.518209 ms
+Running vertical with 8 threads...
+Run 1: 27.373625 ms
+Run 2: 31.048208 ms
+Run 3: 26.0595 ms
+Run 4: 23.239833 ms
+Run 5: 26.486208 ms
+Run 6: 22.640542 ms
+Run 7: 24.822875 ms
+Run 8: 27.037 ms
+Run 9: 25.321709 ms
+Run 10: 24.710291 ms
+Running vertical with 16 threads...
+Run 1: 37.887209 ms
+Run 2: 29.88675 ms
+Run 3: 40.05675 ms
+Run 4: 35.022959 ms
+Run 5: 59.009417 ms
+Run 6: 37.83075 ms
+Run 7: 46.695666 ms
+Run 8: 38.698292 ms
+Run 9: 37.954625 ms
+Run 10: 57.580459 ms
+Running block with 2 threads...
+Run 1: 15.352708 ms
+Run 2: 15.298042 ms
+Run 3: 14.877541 ms
+Run 4: 14.856375 ms
+Run 5: 14.779292 ms
+Run 6: 14.807625 ms
+Run 7: 14.785875 ms
+Run 8: 14.708708 ms
+Run 9: 14.948792 ms
+Run 10: 16.065 ms
+Running block with 4 threads...
+Run 1: 13.508833 ms
+Run 2: 14.043333 ms
+Run 3: 13.366875 ms
+Run 4: 13.429708 ms
+Run 5: 13.606583 ms
+Run 6: 13.482375 ms
+Run 7: 13.607916 ms
+Run 8: 13.359917 ms
+Run 9: 13.501 ms
+Run 10: 13.887916 ms
+Running block with 8 threads...
+Run 1: 21.60125 ms
+Run 2: 22.241208 ms
+Run 3: 20.0185 ms
+Run 4: 24.517833 ms
+Run 5: 24.224166 ms
+Run 6: 23.085459 ms
+Run 7: 22.628292 ms
+Run 8: 22.175 ms
+Run 9: 22.816959 ms
+Run 10: 20.537333 ms
+Running block with 16 threads...
+Run 1: 41.208792 ms
+Run 2: 26.4535 ms
+Run 3: 28.647875 ms
+Run 4: 26.322917 ms
+Run 5: 25.772792 ms
+Run 6: 23.879042 ms
+Run 7: 20.913042 ms
+Run 8: 28.925667 ms
+Run 9: 24.623542 ms
+Run 10: 33.57075 ms
+Running linear with 2 threads...
+Run 1: 14.123292 ms
+Run 2: 14.267958 ms
+Run 3: 14.227291 ms
+Run 4: 13.847917 ms
+Run 5: 14.166333 ms
+Run 6: 16.728583 ms
+Run 7: 14.152334 ms
+Run 8: 14.549958 ms
+Run 9: 13.832083 ms
+Run 10: 14.309291 ms
+Running linear with 4 threads...
+Run 1: 13.876875 ms
+Run 2: 13.027708 ms
+Run 3: 13.497292 ms
+Run 4: 12.635584 ms
+Run 5: 12.7465 ms
+Run 6: 13.497375 ms
+Run 7: 13.231541 ms
+Run 8: 13.069834 ms
+Run 9: 13.428167 ms
+Run 10: 13.047708 ms
+Running linear with 8 threads...
+Run 1: 23.346583 ms
+Run 2: 22.554125 ms
+Run 3: 21.4905 ms
+Run 4: 24.337667 ms
+Run 5: 23.327584 ms
+Run 6: 21.856417 ms
+Run 7: 24.038958 ms
+Run 8: 22.034583 ms
+Run 9: 23.628 ms
+Run 10: 22.427 ms
+Running linear with 16 threads...
+Run 1: 23.172875 ms
+Run 2: 25.47575 ms
+Run 3: 26.210292 ms
+Run 4: 24.614 ms
+Run 5: 35.055 ms
+Run 6: 30.286125 ms
+Run 7: 33.158709 ms
+Run 8: 24.538458 ms
+Run 9: 34.479917 ms
+Run 10: 24.948792 ms
+Running cyclic with 2 threads...
+Run 1: 14.974958 ms
+Run 2: 15.033833 ms
+Run 3: 15.3485 ms
+Run 4: 14.367625 ms
+Run 5: 14.548 ms
+Run 6: 14.577625 ms
+Run 7: 14.138417 ms
+Run 8: 14.224333 ms
+Run 9: 14.635958 ms
+Run 10: 14.097625 ms
+Running cyclic with 4 threads...
+Run 1: 12.745834 ms
+Run 2: 13.946541 ms
+Run 3: 13.553791 ms
+Run 4: 12.763541 ms
+Run 5: 13.161042 ms
+Run 6: 12.880333 ms
+Run 7: 13.174958 ms
+Run 8: 12.892459 ms
+Run 9: 13.87225 ms
+Run 10: 13.179708 ms
+Running cyclic with 8 threads...
+Run 1: 24.875209 ms
+Run 2: 25.092417 ms
+Run 3: 20.594542 ms
+Run 4: 23.382125 ms
+Run 5: 22.790167 ms
+Run 6: 19.245833 ms
+Run 7: 21.413 ms
+Run 8: 20.797958 ms
+Run 9: 19.666542 ms
+Run 10: 22.485667 ms
+Running cyclic with 16 threads...
+Run 1: 26.0375 ms
+Run 2: 28.232041 ms
+Run 3: 28.106916 ms
+Run 4: 22.554375 ms
+Run 5: 25.839125 ms
+Run 6: 27.375875 ms
+Run 7: 33.282417 ms
+Run 8: 45.807959 ms
+Run 9: 35.227084 ms
+Run 10: 25.148333 ms
+
+====================================
+Testing 10x10000_k5
+====================================
+
+C++ - static
+Running sequential...
+Run 1: 2.05617 ms
+Run 2: 1.99737 ms
+Run 3: 2.07046 ms
+Run 4: 1.99212 ms
+Run 5: 2.00408 ms
+Run 6: 2.05362 ms
+Run 7: 2.12242 ms
+Run 8: 2.00292 ms
+Run 9: 1.9865 ms
+Run 10: 1.98896 ms
+Running horizontal with 2 threads...
+Run 1: 1.077 ms
+Run 2: 1.07458 ms
+Run 3: 1.12083 ms
+Run 4: 1.0745 ms
+Run 5: 1.15271 ms
+Run 6: 1.07858 ms
+Run 7: 1.06862 ms
+Run 8: 1.07242 ms
+Run 9: 1.06979 ms
+Run 10: 1.08925 ms
+Running horizontal with 4 threads...
+Run 1: 0.696375 ms
+Run 2: 0.703167 ms
+Run 3: 0.84675 ms
+Run 4: 0.694 ms
+Run 5: 0.691542 ms
+Run 6: 0.697583 ms
+Run 7: 0.689916 ms
+Run 8: 0.824208 ms
+Run 9: 0.694917 ms
+Run 10: 0.711209 ms
+Running horizontal with 8 threads...
+Run 1: 0.495541 ms
+Run 2: 0.505959 ms
+Run 3: 0.596833 ms
+Run 4: 0.576792 ms
+Run 5: 0.512917 ms
+Run 6: 0.513 ms
+Run 7: 0.507916 ms
+Run 8: 0.503458 ms
+Run 9: 0.502125 ms
+Run 10: 0.513625 ms
+Running horizontal with 16 threads...
+Run 1: 0.467292 ms
+Run 2: 0.494708 ms
+Run 3: 0.633125 ms
+Run 4: 0.51075 ms
+Run 5: 0.490333 ms
+Run 6: 0.464667 ms
+Run 7: 0.524167 ms
+Run 8: 0.483917 ms
+Run 9: 0.468917 ms
+Run 10: 0.472458 ms
+Running vertical with 2 threads...
+Run 1: 1.12575 ms
+Run 2: 1.10542 ms
+Run 3: 1.09958 ms
+Run 4: 1.0725 ms
+Run 5: 1.08129 ms
+Run 6: 1.15942 ms
+Run 7: 1.08875 ms
+Run 8: 1.0685 ms
+Run 9: 1.09563 ms
+Run 10: 1.0815 ms
+Running vertical with 4 threads...
+Run 1: 0.589958 ms
+Run 2: 0.589667 ms
+Run 3: 0.68125 ms
+Run 4: 0.5865 ms
+Run 5: 0.584542 ms
+Run 6: 0.782667 ms
+Run 7: 0.59625 ms
+Run 8: 0.589958 ms
+Run 9: 0.58875 ms
+Run 10: 0.598625 ms
+Running vertical with 8 threads...
+Run 1: 0.508208 ms
+Run 2: 0.512666 ms
+Run 3: 0.536833 ms
+Run 4: 0.561917 ms
+Run 5: 0.5495 ms
+Run 6: 0.520542 ms
+Run 7: 0.519459 ms
+Run 8: 0.537709 ms
+Run 9: 0.528042 ms
+Run 10: 0.509792 ms
+Running vertical with 16 threads...
+Run 1: 0.430125 ms
+Run 2: 0.441458 ms
+Run 3: 0.530458 ms
+Run 4: 0.415292 ms
+Run 5: 0.420833 ms
+Run 6: 0.454875 ms
+Run 7: 0.484791 ms
+Run 8: 0.471291 ms
+Run 9: 0.433084 ms
+Run 10: 0.442083 ms
+Running block with 2 threads...
+Run 1: 1.07767 ms
+Run 2: 1.06346 ms
+Run 3: 1.07046 ms
+Run 4: 1.07812 ms
+Run 5: 1.07737 ms
+Run 6: 1.09192 ms
+Run 7: 1.12433 ms
+Run 8: 1.07354 ms
+Run 9: 1.08129 ms
+Run 10: 1.05913 ms
+Running block with 4 threads...
+Run 1: 0.581209 ms
+Run 2: 0.576709 ms
+Run 3: 0.58 ms
+Run 4: 0.605041 ms
+Run 5: 0.655166 ms
+Run 6: 0.582375 ms
+Run 7: 0.581708 ms
+Run 8: 0.577125 ms
+Run 9: 0.584625 ms
+Run 10: 0.579209 ms
+Running block with 8 threads...
+Run 1: 0.486375 ms
+Run 2: 0.498459 ms
+Run 3: 0.509875 ms
+Run 4: 0.505625 ms
+Run 5: 0.492334 ms
+Run 6: 0.508041 ms
+Run 7: 0.492542 ms
+Run 8: 0.498167 ms
+Run 9: 0.492292 ms
+Run 10: 0.4975 ms
+Running block with 16 threads...
+Run 1: 0.439125 ms
+Run 2: 0.420208 ms
+Run 3: 0.545041 ms
+Run 4: 0.508959 ms
+Run 5: 0.445 ms
+Run 6: 0.404625 ms
+Run 7: 0.419 ms
+Run 8: 0.471125 ms
+Run 9: 0.428833 ms
+Run 10: 0.408334 ms
+Running linear with 2 threads...
+Run 1: 1.10721 ms
+Run 2: 1.09875 ms
+Run 3: 1.13067 ms
+Run 4: 1.13229 ms
+Run 5: 1.11867 ms
+Run 6: 1.15333 ms
+Run 7: 1.1465 ms
+Run 8: 1.13671 ms
+Run 9: 1.101 ms
+Run 10: 1.10529 ms
+Running linear with 4 threads...
+Run 1: 0.6 ms
+Run 2: 0.609541 ms
+Run 3: 0.598042 ms
+Run 4: 0.607625 ms
+Run 5: 0.609833 ms
+Run 6: 0.602291 ms
+Run 7: 0.623958 ms
+Run 8: 0.603709 ms
+Run 9: 0.601083 ms
+Run 10: 0.612125 ms
+Running linear with 8 threads...
+Run 1: 0.511709 ms
+Run 2: 0.517667 ms
+Run 3: 0.516292 ms
+Run 4: 0.53325 ms
+Run 5: 0.515666 ms
+Run 6: 0.509959 ms
+Run 7: 0.684583 ms
+Run 8: 0.547542 ms
+Run 9: 0.518791 ms
+Run 10: 0.523542 ms
+Running linear with 16 threads...
+Run 1: 0.44375 ms
+Run 2: 0.430083 ms
+Run 3: 0.445833 ms
+Run 4: 0.414167 ms
+Run 5: 0.429583 ms
+Run 6: 0.424583 ms
+Run 7: 0.479416 ms
+Run 8: 0.467709 ms
+Run 9: 0.431208 ms
+Run 10: 0.405458 ms
+Running cyclic with 2 threads...
+Run 1: 1.136 ms
+Run 2: 1.15725 ms
+Run 3: 1.12942 ms
+Run 4: 1.13596 ms
+Run 5: 1.14621 ms
+Run 6: 1.25988 ms
+Run 7: 1.13108 ms
+Run 8: 1.14992 ms
+Run 9: 1.13392 ms
+Run 10: 1.12929 ms
+Running cyclic with 4 threads...
+Run 1: 0.641375 ms
+Run 2: 0.633875 ms
+Run 3: 0.645375 ms
+Run 4: 0.638291 ms
+Run 5: 0.626667 ms
+Run 6: 0.625083 ms
+Run 7: 0.62525 ms
+Run 8: 0.631541 ms
+Run 9: 0.62675 ms
+Run 10: 0.6365 ms
+Running cyclic with 8 threads...
+Run 1: 0.55225 ms
+Run 2: 0.532167 ms
+Run 3: 0.541917 ms
+Run 4: 0.536542 ms
+Run 5: 0.528375 ms
+Run 6: 0.619125 ms
+Run 7: 0.534125 ms
+Run 8: 0.53325 ms
+Run 9: 0.530875 ms
+Run 10: 0.536583 ms
+Running cyclic with 16 threads...
+Run 1: 0.486083 ms
+Run 2: 0.437792 ms
+Run 3: 0.45 ms
+Run 4: 0.440167 ms
+Run 5: 0.4265 ms
+Run 6: 0.433958 ms
+Run 7: 0.435417 ms
+Run 8: 0.42575 ms
+Run 9: 0.484084 ms
+Run 10: 0.431791 ms
+
+C++ - dynamic
+Running sequential...
+Run 1: 1.97442 ms
+Run 2: 1.98225 ms
+Run 3: 2.11046 ms
+Run 4: 2.00608 ms
+Run 5: 1.97913 ms
+Run 6: 1.97971 ms
+Run 7: 2.09883 ms
+Run 8: 1.99733 ms
+Run 9: 1.98771 ms
+Run 10: 1.97437 ms
+Running horizontal with 2 threads...
+Run 1: 1.07662 ms
+Run 2: 1.083 ms
+Run 3: 1.13871 ms
+Run 4: 1.09004 ms
+Run 5: 1.06875 ms
+Run 6: 1.06838 ms
+Run 7: 1.08275 ms
+Run 8: 1.07296 ms
+Run 9: 1.13171 ms
+Run 10: 1.13283 ms
+Running horizontal with 4 threads...
+Run 1: 0.70425 ms
+Run 2: 0.716958 ms
+Run 3: 0.864709 ms
+Run 4: 0.723 ms
+Run 5: 0.696042 ms
+Run 6: 0.696333 ms
+Run 7: 0.68875 ms
+Run 8: 0.713958 ms
+Run 9: 0.686917 ms
+Run 10: 0.733458 ms
+Running horizontal with 8 threads...
+Run 1: 0.50175 ms
+Run 2: 0.501709 ms
+Run 3: 0.51175 ms
+Run 4: 0.514167 ms
+Run 5: 0.502125 ms
+Run 6: 0.516667 ms
+Run 7: 0.506458 ms
+Run 8: 0.50325 ms
+Run 9: 0.575292 ms
+Run 10: 0.509958 ms
+Running horizontal with 16 threads...
+Run 1: 0.466583 ms
+Run 2: 0.470208 ms
+Run 3: 0.486583 ms
+Run 4: 0.485166 ms
+Run 5: 0.487291 ms
+Run 6: 0.513667 ms
+Run 7: 0.487291 ms
+Run 8: 0.468208 ms
+Run 9: 0.515125 ms
+Run 10: 0.533792 ms
+Running vertical with 2 threads...
+Run 1: 1.06379 ms
+Run 2: 1.07204 ms
+Run 3: 1.0795 ms
+Run 4: 1.07192 ms
+Run 5: 1.06175 ms
+Run 6: 1.09029 ms
+Run 7: 1.15608 ms
+Run 8: 1.06425 ms
+Run 9: 1.10058 ms
+Run 10: 1.06917 ms
+Running vertical with 4 threads...
+Run 1: 0.578792 ms
+Run 2: 0.581167 ms
+Run 3: 0.593792 ms
+Run 4: 0.588542 ms
+Run 5: 0.596667 ms
+Run 6: 0.579292 ms
+Run 7: 0.594084 ms
+Run 8: 0.7005 ms
+Run 9: 0.587042 ms
+Run 10: 0.583292 ms
+Running vertical with 8 threads...
+Run 1: 0.506875 ms
+Run 2: 0.518083 ms
+Run 3: 0.522833 ms
+Run 4: 0.52025 ms
+Run 5: 0.519542 ms
+Run 6: 0.516875 ms
+Run 7: 0.529083 ms
+Run 8: 0.521375 ms
+Run 9: 0.518958 ms
+Run 10: 0.523834 ms
+Running vertical with 16 threads...
+Run 1: 0.434792 ms
+Run 2: 0.434291 ms
+Run 3: 0.491042 ms
+Run 4: 0.532042 ms
+Run 5: 0.435584 ms
+Run 6: 0.429 ms
+Run 7: 0.409375 ms
+Run 8: 0.412709 ms
+Run 9: 0.439208 ms
+Run 10: 0.415333 ms
+Running block with 2 threads...
+Run 1: 1.05558 ms
+Run 2: 1.12583 ms
+Run 3: 1.05108 ms
+Run 4: 1.05342 ms
+Run 5: 1.03754 ms
+Run 6: 1.046 ms
+Run 7: 1.05208 ms
+Run 8: 1.10354 ms
+Run 9: 1.0435 ms
+Run 10: 1.05025 ms
+Running block with 4 threads...
+Run 1: 0.568709 ms
+Run 2: 0.565542 ms
+Run 3: 0.57075 ms
+Run 4: 0.568 ms
+Run 5: 0.680417 ms
+Run 6: 0.567833 ms
+Run 7: 0.567041 ms
+Run 8: 0.5625 ms
+Run 9: 1.74663 ms
+Run 10: 0.67325 ms
+Running block with 8 threads...
+Run 1: 0.477667 ms
+Run 2: 0.483958 ms
+Run 3: 0.479166 ms
+Run 4: 0.490459 ms
+Run 5: 0.484583 ms
+Run 6: 0.54625 ms
+Run 7: 0.499292 ms
+Run 8: 0.484417 ms
+Run 9: 0.483292 ms
+Run 10: 0.478834 ms
+Running block with 16 threads...
+Run 1: 0.440042 ms
+Run 2: 0.413791 ms
+Run 3: 0.41275 ms
+Run 4: 0.437375 ms
+Run 5: 0.473583 ms
+Run 6: 0.43025 ms
+Run 7: 0.436583 ms
+Run 8: 0.437458 ms
+Run 9: 0.427333 ms
+Run 10: 0.416083 ms
+Running linear with 2 threads...
+Run 1: 1.11763 ms
+Run 2: 1.10483 ms
+Run 3: 1.11763 ms
+Run 4: 1.11575 ms
+Run 5: 1.16554 ms
+Run 6: 1.11267 ms
+Run 7: 1.11271 ms
+Run 8: 1.10133 ms
+Run 9: 1.11379 ms
+Run 10: 1.10242 ms
+Running linear with 4 threads...
+Run 1: 0.609 ms
+Run 2: 0.608458 ms
+Run 3: 0.603042 ms
+Run 4: 0.619708 ms
+Run 5: 0.598375 ms
+Run 6: 0.650541 ms
+Run 7: 0.649208 ms
+Run 8: 0.607125 ms
+Run 9: 0.601625 ms
+Run 10: 0.597834 ms
+Running linear with 8 threads...
+Run 1: 0.527875 ms
+Run 2: 0.56375 ms
+Run 3: 0.517833 ms
+Run 4: 0.51925 ms
+Run 5: 0.520042 ms
+Run 6: 0.518292 ms
+Run 7: 0.524625 ms
+Run 8: 0.523958 ms
+Run 9: 0.524292 ms
+Run 10: 0.528667 ms
+Running linear with 16 threads...
+Run 1: 0.437917 ms
+Run 2: 0.463083 ms
+Run 3: 0.421708 ms
+Run 4: 0.540042 ms
+Run 5: 0.517791 ms
+Run 6: 0.595958 ms
+Run 7: 0.461125 ms
+Run 8: 0.462041 ms
+Run 9: 0.447083 ms
+Run 10: 0.581333 ms
+Running cyclic with 2 threads...
+Run 1: 1.20379 ms
+Run 2: 1.22412 ms
+Run 3: 1.213 ms
+Run 4: 1.16712 ms
+Run 5: 1.21583 ms
+Run 6: 1.17875 ms
+Run 7: 1.21562 ms
+Run 8: 1.21538 ms
+Run 9: 1.21104 ms
+Run 10: 1.18108 ms
+Running cyclic with 4 threads...
+Run 1: 0.643542 ms
+Run 2: 0.648375 ms
+Run 3: 0.661375 ms
+Run 4: 0.647416 ms
+Run 5: 0.68175 ms
+Run 6: 0.644625 ms
+Run 7: 0.6405 ms
+Run 8: 0.668792 ms
+Run 9: 0.637875 ms
+Run 10: 0.63575 ms
+Running cyclic with 8 threads...
+Run 1: 0.5295 ms
+Run 2: 0.541916 ms
+Run 3: 0.53525 ms
+Run 4: 0.53425 ms
+Run 5: 0.544083 ms
+Run 6: 0.536084 ms
+Run 7: 0.5305 ms
+Run 8: 0.526459 ms
+Run 9: 0.504708 ms
+Run 10: 0.545208 ms
+Running cyclic with 16 threads...
+Run 1: 0.450667 ms
+Run 2: 0.447875 ms
+Run 3: 0.426625 ms
+Run 4: 0.438625 ms
+Run 5: 0.454333 ms
+Run 6: 0.429125 ms
+Run 7: 0.496959 ms
+Run 8: 0.444625 ms
+Run 9: 0.480833 ms
+Run 10: 0.697792 ms
+
+Java
+Running sequential...
+Run 1: 12.253042 ms
+Run 2: 11.613333 ms
+Run 3: 12.293041 ms
+Run 4: 11.610042 ms
+Run 5: 12.317167 ms
+Run 6: 12.249958 ms
+Run 7: 8.1965 ms
+Run 8: 8.09025 ms
+Run 9: 7.975 ms
+Run 10: 12.554792 ms
+Running horizontal with 2 threads...
+Run 1: 17.136375 ms
+Run 2: 15.372916 ms
+Run 3: 15.851 ms
+Run 4: 15.164541 ms
+Run 5: 15.738667 ms
+Run 6: 15.034125 ms
+Run 7: 15.847042 ms
+Run 8: 16.050875 ms
+Run 9: 14.8785 ms
+Run 10: 15.749958 ms
+Running horizontal with 4 threads...
+Run 1: 18.571667 ms
+Run 2: 18.494 ms
+Run 3: 18.586333 ms
+Run 4: 22.231208 ms
+Run 5: 20.423042 ms
+Run 6: 20.993292 ms
+Run 7: 22.196084 ms
+Run 8: 18.440417 ms
+Run 9: 19.196458 ms
+Run 10: 19.944292 ms
+Running horizontal with 8 threads...
+Run 1: 19.932667 ms
+Run 2: 22.683416 ms
+Run 3: 20.714125 ms
+Run 4: 20.103167 ms
+Run 5: 20.70025 ms
+Run 6: 16.626541 ms
+Run 7: 19.375334 ms
+Run 8: 19.64975 ms
+Run 9: 18.42225 ms
+Run 10: 19.190125 ms
+Running horizontal with 16 threads...
+Run 1: 23.960708 ms
+Run 2: 19.703 ms
+Run 3: 20.712041 ms
+Run 4: 22.972875 ms
+Run 5: 19.593333 ms
+Run 6: 20.36575 ms
+Run 7: 19.166125 ms
+Run 8: 21.756583 ms
+Run 9: 22.60325 ms
+Run 10: 22.504125 ms
+Running vertical with 2 threads...
+Run 1: 10.0955 ms
+Run 2: 9.928458 ms
+Run 3: 10.428958 ms
+Run 4: 9.49625 ms
+Run 5: 9.703792 ms
+Run 6: 10.035542 ms
+Run 7: 10.39975 ms
+Run 8: 10.766917 ms
+Run 9: 10.058292 ms
+Run 10: 10.604333 ms
+Running vertical with 4 threads...
+Run 1: 11.287208 ms
+Run 2: 11.214167 ms
+Run 3: 11.437 ms
+Run 4: 12.318208 ms
+Run 5: 11.226292 ms
+Run 6: 11.332833 ms
+Run 7: 13.58575 ms
+Run 8: 10.680333 ms
+Run 9: 11.699292 ms
+Run 10: 11.661834 ms
+Running vertical with 8 threads...
+Run 1: 19.220125 ms
+Run 2: 18.944333 ms
+Run 3: 18.629208 ms
+Run 4: 20.598042 ms
+Run 5: 20.61275 ms
+Run 6: 18.951125 ms
+Run 7: 16.604542 ms
+Run 8: 17.4095 ms
+Run 9: 20.011083 ms
+Run 10: 16.928125 ms
+Running vertical with 16 threads...
+Run 1: 32.500541 ms
+Run 2: 28.113584 ms
+Run 3: 26.358125 ms
+Run 4: 30.383791 ms
+Run 5: 23.683583 ms
+Run 6: 24.221459 ms
+Run 7: 22.800916 ms
+Run 8: 22.737 ms
+Run 9: 36.434375 ms
+Run 10: 24.955084 ms
+Running block with 2 threads...
+Run 1: 17.706833 ms
+Run 2: 11.03675 ms
+Run 3: 11.728958 ms
+Run 4: 15.970167 ms
+Run 5: 10.62125 ms
+Run 6: 10.630667 ms
+Run 7: 17.658125 ms
+Run 8: 10.213584 ms
+Run 9: 11.492792 ms
+Run 10: 10.718417 ms
+Running block with 4 threads...
+Run 1: 12.355917 ms
+Run 2: 18.948084 ms
+Run 3: 12.02375 ms
+Run 4: 18.198875 ms
+Run 5: 11.523 ms
+Run 6: 19.211167 ms
+Run 7: 19.422042 ms
+Run 8: 19.655458 ms
+Run 9: 13.3555 ms
+Run 10: 13.514416 ms
+Running block with 8 threads...
+Run 1: 21.494667 ms
+Run 2: 56.552708 ms
+Run 3: 22.224833 ms
+Run 4: 19.618583 ms
+Run 5: 19.029458 ms
+Run 6: 61.954375 ms
+Run 7: 20.07525 ms
+Run 8: 19.344459 ms
+Run 9: 23.980792 ms
+Run 10: 22.119584 ms
+Running block with 16 threads...
+Run 1: 20.292959 ms
+Run 2: 57.872792 ms
+Run 3: 38.578458 ms
+Run 4: 30.714167 ms
+Run 5: 110.395583 ms
+Run 6: 32.50725 ms
+Run 7: 19.875459 ms
+Run 8: 23.658042 ms
+Run 9: 26.995875 ms
+Run 10: 39.685458 ms
+Running linear with 2 threads...
+Run 1: 15.436333 ms
+Run 2: 15.022833 ms
+Run 3: 15.657 ms
+Run 4: 15.598125 ms
+Run 5: 15.425709 ms
+Run 6: 15.57525 ms
+Run 7: 16.184042 ms
+Run 8: 15.061958 ms
+Run 9: 14.721 ms
+Run 10: 16.17825 ms
+Running linear with 4 threads...
+Run 1: 17.903083 ms
+Run 2: 11.412875 ms
+Run 3: 16.979625 ms
+Run 4: 18.545375 ms
+Run 5: 11.546083 ms
+Run 6: 17.189459 ms
+Run 7: 12.159417 ms
+Run 8: 16.742875 ms
+Run 9: 16.114125 ms
+Run 10: 18.285125 ms
+Running linear with 8 threads...
+Run 1: 17.000625 ms
+Run 2: 19.544375 ms
+Run 3: 18.812542 ms
+Run 4: 20.491167 ms
+Run 5: 17.770708 ms
+Run 6: 18.195458 ms
+Run 7: 19.130458 ms
+Run 8: 17.095958 ms
+Run 9: 22.949625 ms
+Run 10: 21.244292 ms
+Running linear with 16 threads...
+Run 1: 12.372917 ms
+Run 2: 15.354083 ms
+Run 3: 13.791917 ms
+Run 4: 21.851583 ms
+Run 5: 20.19375 ms
+Run 6: 21.255709 ms
+Run 7: 17.680208 ms
+Run 8: 22.162209 ms
+Run 9: 27.539917 ms
+Run 10: 33.041792 ms
+Running cyclic with 2 threads...
+Run 1: 15.283958 ms
+Run 2: 15.190917 ms
+Run 3: 15.402208 ms
+Run 4: 11.037375 ms
+Run 5: 11.688416 ms
+Run 6: 11.160833 ms
+Run 7: 15.109041 ms
+Run 8: 15.587333 ms
+Run 9: 10.571042 ms
+Run 10: 15.588666 ms
+Running cyclic with 4 threads...
+Run 1: 12.120667 ms
+Run 2: 11.697542 ms
+Run 3: 11.11775 ms
+Run 4: 11.567417 ms
+Run 5: 12.150083 ms
+Run 6: 11.276084 ms
+Run 7: 11.412208 ms
+Run 8: 11.671 ms
+Run 9: 11.9335 ms
+Run 10: 12.036583 ms
+Running cyclic with 8 threads...
+Run 1: 21.963292 ms
+Run 2: 19.194583 ms
+Run 3: 24.283292 ms
+Run 4: 20.27975 ms
+Run 5: 20.003917 ms
+Run 6: 18.570208 ms
+Run 7: 18.124208 ms
+Run 8: 19.587166 ms
+Run 9: 19.621958 ms
+Run 10: 23.106708 ms
+Running cyclic with 16 threads...
+Run 1: 62.73025 ms
+Run 2: 20.708833 ms
+Run 3: 38.739208 ms
+Run 4: 38.851917 ms
+Run 5: 37.051667 ms
+Run 6: 33.816458 ms
+Run 7: 12.853208 ms
+Run 8: 25.3995 ms
+Run 9: 38.240958 ms
+Run 10: 37.980833 ms
+
+====================================
+Testing 10000x10_k5
+====================================
+
+C++ - static
+Running sequential...
+Run 1: 11.6158 ms
+Run 2: 12.1862 ms
+Run 3: 12.1269 ms
+Run 4: 11.7988 ms
+Run 5: 12.0985 ms
+Run 6: 12.4803 ms
+Run 7: 12.4536 ms
+Run 8: 14.3244 ms
+Run 9: 14.2865 ms
+Run 10: 13.5492 ms
+Running horizontal with 2 threads...
+Run 1: 7.62212 ms
+Run 2: 7.86512 ms
+Run 3: 9.42075 ms
+Run 4: 7.99667 ms
+Run 5: 7.60121 ms
+Run 6: 7.796 ms
+Run 7: 8.60508 ms
+Run 8: 7.63529 ms
+Run 9: 7.9385 ms
+Run 10: 7.77787 ms
+Running horizontal with 4 threads...
+Run 1: 4.08675 ms
+Run 2: 4.28996 ms
+Run 3: 4.28067 ms
+Run 4: 4.26842 ms
+Run 5: 4.07433 ms
+Run 6: 4.18267 ms
+Run 7: 4.48142 ms
+Run 8: 4.60467 ms
+Run 9: 4.53046 ms
+Run 10: 4.33283 ms
+Running horizontal with 8 threads...
+Run 1: 4.1665 ms
+Run 2: 3.91921 ms
+Run 3: 3.91233 ms
+Run 4: 4.05288 ms
+Run 5: 4.00121 ms
+Run 6: 3.80892 ms
+Run 7: 4.12863 ms
+Run 8: 4.00242 ms
+Run 9: 3.77446 ms
+Run 10: 3.86825 ms
+Running horizontal with 16 threads...
+Run 1: 4.69775 ms
+Run 2: 4.72487 ms
+Run 3: 4.58229 ms
+Run 4: 4.60304 ms
+Run 5: 4.59383 ms
+Run 6: 4.62283 ms
+Run 7: 4.4465 ms
+Run 8: 4.59104 ms
+Run 9: 4.54754 ms
+Run 10: 4.654 ms
+Running vertical with 2 threads...
+Run 1: 15.8972 ms
+Run 2: 14.7263 ms
+Run 3: 14.6473 ms
+Run 4: 15.0073 ms
+Run 5: 14.6045 ms
+Run 6: 14.5154 ms
+Run 7: 14.7193 ms
+Run 8: 16.0254 ms
+Run 9: 15.315 ms
+Run 10: 15.5173 ms
+Running vertical with 4 threads...
+Run 1: 15.6015 ms
+Run 2: 20.0817 ms
+Run 3: 23.2225 ms
+Run 4: 15.8965 ms
+Run 5: 16.1242 ms
+Run 6: 16.5703 ms
+Run 7: 16.5705 ms
+Run 8: 16.0548 ms
+Run 9: 16.3307 ms
+Run 10: 20.9336 ms
+Running vertical with 8 threads...
+Run 1: 23.2165 ms
+Run 2: 23.77 ms
+Run 3: 26.1867 ms
+Run 4: 23.9858 ms
+Run 5: 24.4843 ms
+Run 6: 24.7034 ms
+Run 7: 23.828 ms
+Run 8: 23.7174 ms
+Run 9: 23.7368 ms
+Run 10: 25.5822 ms
+Running vertical with 16 threads...
+Run 1: 29.0867 ms
+Run 2: 28.0332 ms
+Run 3: 28.6618 ms
+Run 4: 28.5 ms
+Run 5: 28.5241 ms
+Run 6: 28.8645 ms
+Run 7: 27.9365 ms
+Run 8: 29.5433 ms
+Run 9: 27.9579 ms
+Run 10: 28.5959 ms
+Running block with 2 threads...
+Run 1: 11.6182 ms
+Run 2: 11.8604 ms
+Run 3: 11.8048 ms
+Run 4: 11.9098 ms
+Run 5: 11.7392 ms
+Run 6: 11.8265 ms
+Run 7: 11.8228 ms
+Run 8: 12.3046 ms
+Run 9: 11.7901 ms
+Run 10: 11.926 ms
+Running block with 4 threads...
+Run 1: 6.75358 ms
+Run 2: 6.45083 ms
+Run 3: 6.75608 ms
+Run 4: 6.64121 ms
+Run 5: 6.61808 ms
+Run 6: 6.84142 ms
+Run 7: 6.84625 ms
+Run 8: 6.98212 ms
+Run 9: 6.95508 ms
+Run 10: 7.47508 ms
+Running block with 8 threads...
+Run 1: 9.58812 ms
+Run 2: 9.7775 ms
+Run 3: 10.3654 ms
+Run 4: 10.2793 ms
+Run 5: 10.2355 ms
+Run 6: 10.6125 ms
+Run 7: 9.83496 ms
+Run 8: 10.6433 ms
+Run 9: 10.381 ms
+Run 10: 10.86 ms
+Running block with 16 threads...
+Run 1: 7.82317 ms
+Run 2: 7.70613 ms
+Run 3: 8.56992 ms
+Run 4: 8.00625 ms
+Run 5: 7.97154 ms
+Run 6: 7.75367 ms
+Run 7: 7.71713 ms
+Run 8: 7.87563 ms
+Run 9: 7.60475 ms
+Run 10: 7.57942 ms
+Running linear with 2 threads...
+Run 1: 6.49458 ms
+Run 2: 7.06021 ms
+Run 3: 6.89329 ms
+Run 4: 6.98767 ms
+Run 5: 7.00196 ms
+Run 6: 6.90221 ms
+Run 7: 6.67387 ms
+Run 8: 6.80708 ms
+Run 9: 6.80083 ms
+Run 10: 6.94242 ms
+Running linear with 4 threads...
+Run 1: 3.60383 ms
+Run 2: 3.84488 ms
+Run 3: 3.765 ms
+Run 4: 4.17596 ms
+Run 5: 3.83475 ms
+Run 6: 3.81825 ms
+Run 7: 3.81242 ms
+Run 8: 3.90025 ms
+Run 9: 3.81913 ms
+Run 10: 3.96675 ms
+Running linear with 8 threads...
+Run 1: 3.65721 ms
+Run 2: 3.86963 ms
+Run 3: 3.98163 ms
+Run 4: 3.94442 ms
+Run 5: 4.13829 ms
+Run 6: 3.96583 ms
+Run 7: 4.01863 ms
+Run 8: 3.89808 ms
+Run 9: 3.75783 ms
+Run 10: 4.01938 ms
+Running linear with 16 threads...
+Run 1: 4.12646 ms
+Run 2: 4.24571 ms
+Run 3: 4.34525 ms
+Run 4: 4.21267 ms
+Run 5: 4.25992 ms
+Run 6: 4.51175 ms
+Run 7: 4.203 ms
+Run 8: 4.27492 ms
+Run 9: 4.38338 ms
+Run 10: 4.41713 ms
+Running cyclic with 2 threads...
+Run 1: 11.5164 ms
+Run 2: 11.8328 ms
+Run 3: 11.9398 ms
+Run 4: 12.0855 ms
+Run 5: 12.0093 ms
+Run 6: 11.9848 ms
+Run 7: 11.8952 ms
+Run 8: 12.0663 ms
+Run 9: 11.9397 ms
+Run 10: 12.1462 ms
+Running cyclic with 4 threads...
+Run 1: 14.5398 ms
+Run 2: 14.7629 ms
+Run 3: 14.7273 ms
+Run 4: 14.5046 ms
+Run 5: 14.9921 ms
+Run 6: 14.8472 ms
+Run 7: 14.3447 ms
+Run 8: 14.4153 ms
+Run 9: 14.9327 ms
+Run 10: 14.968 ms
+Running cyclic with 8 threads...
+Run 1: 21.5566 ms
+Run 2: 16.5365 ms
+Run 3: 22.0069 ms
+Run 4: 22.4821 ms
+Run 5: 23.9707 ms
+Run 6: 22.6695 ms
+Run 7: 20.4002 ms
+Run 8: 24.7622 ms
+Run 9: 21.645 ms
+Run 10: 22.308 ms
+Running cyclic with 16 threads...
+Run 1: 33.0719 ms
+Run 2: 32.3396 ms
+Run 3: 31.6063 ms
+Run 4: 32.4431 ms
+Run 5: 30.5321 ms
+Run 6: 31.0397 ms
+Run 7: 32.7927 ms
+Run 8: 31.485 ms
+Run 9: 32.2044 ms
+Run 10: 31.8027 ms
+
+C++ - dynamic
+Running sequential...
+Run 1: 2.05687 ms
+Run 2: 2.04729 ms
+Run 3: 2.06492 ms
+Run 4: 2.12412 ms
+Run 5: 2.04475 ms
+Run 6: 2.05496 ms
+Run 7: 2.03538 ms
+Run 8: 2.15413 ms
+Run 9: 2.12354 ms
+Run 10: 2.02846 ms
+Running horizontal with 2 threads...
+Run 1: 1.12271 ms
+Run 2: 1.12779 ms
+Run 3: 1.14379 ms
+Run 4: 1.19354 ms
+Run 5: 1.11696 ms
+Run 6: 1.11658 ms
+Run 7: 1.12229 ms
+Run 8: 1.13363 ms
+Run 9: 1.12517 ms
+Run 10: 1.11987 ms
+Running horizontal with 4 threads...
+Run 1: 0.602625 ms
+Run 2: 0.595917 ms
+Run 3: 0.589833 ms
+Run 4: 0.614042 ms
+Run 5: 0.593458 ms
+Run 6: 0.606792 ms
+Run 7: 0.678958 ms
+Run 8: 0.595792 ms
+Run 9: 0.589209 ms
+Run 10: 0.593542 ms
+Running horizontal with 8 threads...
+Run 1: 0.506792 ms
+Run 2: 0.524792 ms
+Run 3: 0.515875 ms
+Run 4: 0.509625 ms
+Run 5: 0.500916 ms
+Run 6: 0.506875 ms
+Run 7: 0.506916 ms
+Run 8: 0.505667 ms
+Run 9: 0.510708 ms
+Run 10: 0.542417 ms
+Running horizontal with 16 threads...
+Run 1: 0.442458 ms
+Run 2: 0.426208 ms
+Run 3: 0.508292 ms
+Run 4: 0.434083 ms
+Run 5: 0.430917 ms
+Run 6: 0.464791 ms
+Run 7: 0.431084 ms
+Run 8: 0.437708 ms
+Run 9: 0.448792 ms
+Run 10: 0.4545 ms
+Running vertical with 2 threads...
+Run 1: 1.10221 ms
+Run 2: 1.11429 ms
+Run 3: 1.06333 ms
+Run 4: 1.08137 ms
+Run 5: 1.06096 ms
+Run 6: 1.07208 ms
+Run 7: 1.09712 ms
+Run 8: 1.05987 ms
+Run 9: 1.06438 ms
+Run 10: 1.06279 ms
+Running vertical with 4 threads...
+Run 1: 0.720333 ms
+Run 2: 0.686042 ms
+Run 3: 0.693709 ms
+Run 4: 0.717125 ms
+Run 5: 0.688875 ms
+Run 6: 0.687667 ms
+Run 7: 0.690875 ms
+Run 8: 0.70875 ms
+Run 9: 0.691417 ms
+Run 10: 0.712208 ms
+Running vertical with 8 threads...
+Run 1: 0.484375 ms
+Run 2: 0.4955 ms
+Run 3: 0.495666 ms
+Run 4: 0.491625 ms
+Run 5: 0.494083 ms
+Run 6: 0.6425 ms
+Run 7: 0.495167 ms
+Run 8: 0.556041 ms
+Run 9: 0.496917 ms
+Run 10: 0.488833 ms
+Running vertical with 16 threads...
+Run 1: 0.475584 ms
+Run 2: 0.467542 ms
+Run 3: 0.47525 ms
+Run 4: 0.476 ms
+Run 5: 0.488333 ms
+Run 6: 0.490334 ms
+Run 7: 0.47975 ms
+Run 8: 0.4855 ms
+Run 9: 0.468 ms
+Run 10: 0.474375 ms
+Running block with 2 threads...
+Run 1: 1.07513 ms
+Run 2: 1.096 ms
+Run 3: 1.08479 ms
+Run 4: 1.07158 ms
+Run 5: 1.07833 ms
+Run 6: 1.06908 ms
+Run 7: 1.07275 ms
+Run 8: 1.07196 ms
+Run 9: 1.10213 ms
+Run 10: 1.27267 ms
+Running block with 4 threads...
+Run 1: 0.580708 ms
+Run 2: 1.51654 ms
+Run 3: 0.595792 ms
+Run 4: 0.594083 ms
+Run 5: 0.604041 ms
+Run 6: 0.584708 ms
+Run 7: 0.60225 ms
+Run 8: 0.74575 ms
+Run 9: 0.592584 ms
+Run 10: 0.5865 ms
+Running block with 8 threads...
+Run 1: 0.518542 ms
+Run 2: 0.534291 ms
+Run 3: 0.541584 ms
+Run 4: 0.498583 ms
+Run 5: 0.522917 ms
+Run 6: 0.533625 ms
+Run 7: 0.533042 ms
+Run 8: 0.546667 ms
+Run 9: 0.524 ms
+Run 10: 0.539458 ms
+Running block with 16 threads...
+Run 1: 0.4085 ms
+Run 2: 0.420958 ms
+Run 3: 0.438375 ms
+Run 4: 0.429792 ms
+Run 5: 0.468167 ms
+Run 6: 0.405459 ms
+Run 7: 0.435708 ms
+Run 8: 0.51825 ms
+Run 9: 0.420209 ms
+Run 10: 0.416834 ms
+Running linear with 2 threads...
+Run 1: 1.14958 ms
+Run 2: 1.135 ms
+Run 3: 1.12725 ms
+Run 4: 1.214 ms
+Run 5: 1.1255 ms
+Run 6: 1.13433 ms
+Run 7: 1.14804 ms
+Run 8: 1.10858 ms
+Run 9: 1.09917 ms
+Run 10: 1.09946 ms
+Running linear with 4 threads...
+Run 1: 0.60175 ms
+Run 2: 0.593459 ms
+Run 3: 0.602459 ms
+Run 4: 0.608625 ms
+Run 5: 0.6075 ms
+Run 6: 0.628041 ms
+Run 7: 0.668833 ms
+Run 8: 0.610541 ms
+Run 9: 0.640583 ms
+Run 10: 0.640125 ms
+Running linear with 8 threads...
+Run 1: 0.534167 ms
+Run 2: 0.530583 ms
+Run 3: 0.532833 ms
+Run 4: 0.542 ms
+Run 5: 0.531833 ms
+Run 6: 0.531125 ms
+Run 7: 0.532584 ms
+Run 8: 0.538584 ms
+Run 9: 0.529375 ms
+Run 10: 0.544667 ms
+Running linear with 16 threads...
+Run 1: 0.424625 ms
+Run 2: 0.430333 ms
+Run 3: 5.19917 ms
+Run 4: 0.671084 ms
+Run 5: 0.647875 ms
+Run 6: 0.7685 ms
+Run 7: 0.443625 ms
+Run 8: 0.44675 ms
+Run 9: 0.444167 ms
+Run 10: 0.431917 ms
+Running cyclic with 2 threads...
+Run 1: 1.17304 ms
+Run 2: 1.15613 ms
+Run 3: 1.18388 ms
+Run 4: 1.16279 ms
+Run 5: 1.19392 ms
+Run 6: 1.16967 ms
+Run 7: 1.15413 ms
+Run 8: 1.13483 ms
+Run 9: 1.12579 ms
+Run 10: 1.12179 ms
+Running cyclic with 4 threads...
+Run 1: 0.626833 ms
+Run 2: 0.620709 ms
+Run 3: 0.623583 ms
+Run 4: 0.690166 ms
+Run 5: 0.624458 ms
+Run 6: 0.651542 ms
+Run 7: 0.62625 ms
+Run 8: 0.618834 ms
+Run 9: 0.623167 ms
+Run 10: 0.622834 ms
+Running cyclic with 8 threads...
+Run 1: 0.542208 ms
+Run 2: 0.539666 ms
+Run 3: 0.539542 ms
+Run 4: 0.538666 ms
+Run 5: 0.532792 ms
+Run 6: 0.531083 ms
+Run 7: 0.538292 ms
+Run 8: 0.573583 ms
+Run 9: 0.553291 ms
+Run 10: 0.521417 ms
+Running cyclic with 16 threads...
+Run 1: 0.416666 ms
+Run 2: 0.433167 ms
+Run 3: 0.423958 ms
+Run 4: 0.433125 ms
+Run 5: 0.428959 ms
+Run 6: 0.457458 ms
+Run 7: 0.44475 ms
+Run 8: 0.474916 ms
+Run 9: 0.457375 ms
+Run 10: 0.45 ms
+
+Java
+Running sequential...
+Run 1: 7.713666 ms
+Run 2: 8.384625 ms
+Run 3: 8.799 ms
+Run 4: 7.495167 ms
+Run 5: 8.082 ms
+Run 6: 7.972666 ms
+Run 7: 7.559542 ms
+Run 8: 8.73725 ms
+Run 9: 7.913 ms
+Run 10: 7.537708 ms
+Running horizontal with 2 threads...
+Run 1: 10.677541 ms
+Run 2: 10.468584 ms
+Run 3: 10.790042 ms
+Run 4: 10.251959 ms
+Run 5: 11.397459 ms
+Run 6: 10.902667 ms
+Run 7: 10.8105 ms
+Run 8: 11.206667 ms
+Run 9: 10.798625 ms
+Run 10: 10.047291 ms
+Running horizontal with 4 threads...
+Run 1: 11.575583 ms
+Run 2: 11.583459 ms
+Run 3: 11.583084 ms
+Run 4: 11.186125 ms
+Run 5: 11.832958 ms
+Run 6: 12.037333 ms
+Run 7: 11.253875 ms
+Run 8: 11.341042 ms
+Run 9: 11.432125 ms
+Run 10: 11.906833 ms
+Running horizontal with 8 threads...
+Run 1: 18.53775 ms
+Run 2: 17.171875 ms
+Run 3: 19.679375 ms
+Run 4: 19.635375 ms
+Run 5: 16.935167 ms
+Run 6: 17.8885 ms
+Run 7: 18.310791 ms
+Run 8: 19.523917 ms
+Run 9: 18.166542 ms
+Run 10: 17.195334 ms
+Running horizontal with 16 threads...
+Run 1: 16.679333 ms
+Run 2: 25.639666 ms
+Run 3: 60.3575 ms
+Run 4: 22.05675 ms
+Run 5: 21.118416 ms
+Run 6: 17.180292 ms
+Run 7: 20.740625 ms
+Run 8: 14.538875 ms
+Run 9: 19.34175 ms
+Run 10: 19.199333 ms
+Running vertical with 2 threads...
+Run 1: 14.445125 ms
+Run 2: 14.298584 ms
+Run 3: 15.543666 ms
+Run 4: 14.576167 ms
+Run 5: 14.29575 ms
+Run 6: 14.55475 ms
+Run 7: 14.134917 ms
+Run 8: 14.255459 ms
+Run 9: 14.181916 ms
+Run 10: 13.974958 ms
+Running vertical with 4 threads...
+Run 1: 16.850875 ms
+Run 2: 23.620458 ms
+Run 3: 19.130875 ms
+Run 4: 18.062291 ms
+Run 5: 21.259 ms
+Run 6: 18.209166 ms
+Run 7: 17.947959 ms
+Run 8: 16.601417 ms
+Run 9: 16.287583 ms
+Run 10: 17.01975 ms
+Running vertical with 8 threads...
+Run 1: 16.791417 ms
+Run 2: 16.795958 ms
+Run 3: 17.047125 ms
+Run 4: 25.834625 ms
+Run 5: 16.726667 ms
+Run 6: 16.879209 ms
+Run 7: 20.626917 ms
+Run 8: 18.540834 ms
+Run 9: 20.063583 ms
+Run 10: 18.310792 ms
+Running vertical with 16 threads...
+Run 1: 22.650959 ms
+Run 2: 22.555375 ms
+Run 3: 23.740542 ms
+Run 4: 18.852083 ms
+Run 5: 20.429583 ms
+Run 6: 24.403583 ms
+Run 7: 19.911667 ms
+Run 8: 17.473625 ms
+Run 9: 19.96125 ms
+Run 10: 23.426 ms
+Running block with 2 threads...
+Run 1: 10.709708 ms
+Run 2: 10.423667 ms
+Run 3: 11.330042 ms
+Run 4: 10.820375 ms
+Run 5: 10.197583 ms
+Run 6: 10.2805 ms
+Run 7: 11.010292 ms
+Run 8: 11.11175 ms
+Run 9: 10.210458 ms
+Run 10: 10.985584 ms
+Running block with 4 threads...
+Run 1: 12.213625 ms
+Run 2: 11.677209 ms
+Run 3: 13.326125 ms
+Run 4: 11.7445 ms
+Run 5: 14.334458 ms
+Run 6: 11.757084 ms
+Run 7: 11.936083 ms
+Run 8: 13.621042 ms
+Run 9: 13.978333 ms
+Run 10: 13.778792 ms
+Running block with 8 threads...
+Run 1: 62.40525 ms
+Run 2: 19.109708 ms
+Run 3: 23.588208 ms
+Run 4: 27.576417 ms
+Run 5: 64.745417 ms
+Run 6: 20.422625 ms
+Run 7: 19.554416 ms
+Run 8: 24.303875 ms
+Run 9: 23.933167 ms
+Run 10: 18.6985 ms
+Running block with 16 threads...
+Run 1: 23.718083 ms
+Run 2: 42.086417 ms
+Run 3: 21.829166 ms
+Run 4: 19.444583 ms
+Run 5: 24.628667 ms
+Run 6: 19.211542 ms
+Run 7: 62.959875 ms
+Run 8: 42.62075 ms
+Run 9: 32.062 ms
+Run 10: 37.488084 ms
+Running linear with 2 threads...
+Run 1: 10.151459 ms
+Run 2: 9.708709 ms
+Run 3: 10.754083 ms
+Run 4: 10.673333 ms
+Run 5: 9.739125 ms
+Run 6: 11.819167 ms
+Run 7: 12.0255 ms
+Run 8: 11.957292 ms
+Run 9: 11.869791 ms
+Run 10: 12.385959 ms
+Running linear with 4 threads...
+Run 1: 15.75275 ms
+Run 2: 12.326958 ms
+Run 3: 14.536084 ms
+Run 4: 12.190625 ms
+Run 5: 11.479459 ms
+Run 6: 11.178083 ms
+Run 7: 11.058416 ms
+Run 8: 12.291542 ms
+Run 9: 13.71325 ms
+Run 10: 11.186958 ms
+Running linear with 8 threads...
+Run 1: 17.688583 ms
+Run 2: 21.383709 ms
+Run 3: 17.145625 ms
+Run 4: 28.668209 ms
+Run 5: 20.251167 ms
+Run 6: 16.470916 ms
+Run 7: 20.034834 ms
+Run 8: 17.787959 ms
+Run 9: 20.45725 ms
+Run 10: 18.577833 ms
+Running linear with 16 threads...
+Run 1: 21.019042 ms
+Run 2: 20.471083 ms
+Run 3: 37.249208 ms
+Run 4: 28.044917 ms
+Run 5: 58.085208 ms
+Run 6: 24.460208 ms
+Run 7: 30.071709 ms
+Run 8: 25.547334 ms
+Run 9: 16.124542 ms
+Run 10: 15.71175 ms
+Running cyclic with 2 threads...
+Run 1: 10.053292 ms
+Run 2: 10.09125 ms
+Run 3: 10.405083 ms
+Run 4: 10.620584 ms
+Run 5: 10.264958 ms
+Run 6: 9.991916 ms
+Run 7: 10.650125 ms
+Run 8: 10.411167 ms
+Run 9: 10.882291 ms
+Run 10: 9.807167 ms
+Running cyclic with 4 threads...
+Run 1: 11.603958 ms
+Run 2: 11.741833 ms
+Run 3: 11.700208 ms
+Run 4: 11.702292 ms
+Run 5: 10.592958 ms
+Run 6: 12.199834 ms
+Run 7: 11.251542 ms
+Run 8: 13.558708 ms
+Run 9: 11.290792 ms
+Run 10: 11.482917 ms
+Running cyclic with 8 threads...
+Run 1: 19.595375 ms
+Run 2: 20.433292 ms
+Run 3: 18.905375 ms
+Run 4: 22.226125 ms
+Run 5: 17.261917 ms
+Run 6: 17.443125 ms
+Run 7: 21.164708 ms
+Run 8: 18.081 ms
+Run 9: 19.33325 ms
+Run 10: 19.698042 ms
+Running cyclic with 16 threads...
+Run 1: 24.163958 ms
+Run 2: 14.37575 ms
+Run 3: 24.508 ms
+Run 4: 22.395959 ms
+Run 5: 28.376375 ms
+Run 6: 28.417917 ms
+Run 7: 18.327459 ms
+Run 8: 25.747125 ms
+Run 9: 19.55225 ms
+Run 10: 55.633542 ms
+
+====================================
+Testing 10000x10000_k5
+====================================
+
+C++ - static
+Running sequential...
+Run 1: 2027.05 ms
+Run 2: 2085.86 ms
+Run 3: 2009.21 ms
+Run 4: 2016.2 ms
+Run 5: 2016.87 ms
+Run 6: 2012.28 ms
+Run 7: 2021.2 ms
+Run 8: 2011.18 ms
+Run 9: 2020.53 ms
+Run 10: 2017.5 ms
+Running horizontal with 2 threads...
+Run 1: 1050.08 ms
+Run 2: 1046.73 ms
+Run 3: 1078.13 ms
+Run 4: 1061.29 ms
+Run 5: 1135.52 ms
+Run 6: 1067.84 ms
+Run 7: 1049.46 ms
+Run 8: 1052.22 ms
+Run 9: 1091.1 ms
+Run 10: 1051.18 ms
+Running horizontal with 4 threads...
+Run 1: 536.813 ms
+Run 2: 566.79 ms
+Run 3: 556.052 ms
+Run 4: 537.543 ms
+Run 5: 532.111 ms
+Run 6: 555.341 ms
+Run 7: 552.625 ms
+Run 8: 546.836 ms
+Run 9: 533.858 ms
+Run 10: 538.297 ms
+Running horizontal with 8 threads...
+Run 1: 329.811 ms
+Run 2: 957.926 ms
+Run 3: 372.352 ms
+Run 4: 343.762 ms
+Run 5: 329.179 ms
+Run 6: 338.974 ms
+Run 7: 345.874 ms
+Run 8: 349.497 ms
+Run 9: 378.71 ms
+Run 10: 376.046 ms
+Running horizontal with 16 threads...
+Run 1: 269.2 ms
+Run 2: 287.578 ms
+Run 3: 273.022 ms
+Run 4: 294.839 ms
+Run 5: 285.956 ms
+Run 6: 285.171 ms
+Run 7: 280.572 ms
+Run 8: 290.268 ms
+Run 9: 294.547 ms
+Run 10: 280.903 ms
+Running vertical with 2 threads...
+Run 1: 1592.31 ms
+Run 2: 1635.36 ms
+Run 3: 1626.19 ms
+Run 4: 1657.92 ms
+Run 5: 1658.18 ms
+Run 6: 1634.44 ms
+Run 7: 1753.75 ms
+Run 8: 1674.65 ms
+Run 9: 1659.02 ms
+Run 10: 1675.33 ms
+Running vertical with 4 threads...
+Run 1: 895.015 ms
+Run 2: 1060.8 ms
+Run 3: 1019.4 ms
+Run 4: 934.469 ms
+Run 5: 1304.58 ms
+Run 6: 1062.99 ms
+Run 7: 918.88 ms
+Run 8: 931.089 ms
+Run 9: 1081.47 ms
+Run 10: 964.46 ms
+Running vertical with 8 threads...
+Run 1: 618.886 ms
+Run 2: 703.64 ms
+Run 3: 644.179 ms
+Run 4: 661.517 ms
+Run 5: 679.297 ms
+Run 6: 672.685 ms
+Run 7: 665.234 ms
+Run 8: 788.02 ms
+Run 9: 658.076 ms
+Run 10: 658.393 ms
+Running vertical with 16 threads...
+Run 1: 569.447 ms
+Run 2: 807.251 ms
+Run 3: 599.844 ms
+Run 4: 695.729 ms
+Run 5: 623.214 ms
+Run 6: 608.213 ms
+Run 7: 608.159 ms
+Run 8: 563.874 ms
+Run 9: 695.017 ms
+Run 10: 587.681 ms
+Running block with 2 threads...
+Run 1: 1034.12 ms
+Run 2: 1057.29 ms
+Run 3: 1043.81 ms
+Run 4: 1125.79 ms
+Run 5: 1057.07 ms
+Run 6: 1037.4 ms
+Run 7: 1073.05 ms
+Run 8: 1040.74 ms
+Run 9: 1036.57 ms
+Run 10: 1040.33 ms
+Running block with 4 threads...
+Run 1: 529.419 ms
+Run 2: 530.546 ms
+Run 3: 528.071 ms
+Run 4: 527.319 ms
+Run 5: 531.815 ms
+Run 6: 547.033 ms
+Run 7: 545.131 ms
+Run 8: 528.933 ms
+Run 9: 532.232 ms
+Run 10: 528.917 ms
+Running block with 8 threads...
+Run 1: 334.477 ms
+Run 2: 383.334 ms
+Run 3: 342.929 ms
+Run 4: 330.476 ms
+Run 5: 339.206 ms
+Run 6: 352.064 ms
+Run 7: 331.651 ms
+Run 8: 373.401 ms
+Run 9: 359.551 ms
+Run 10: 330.984 ms
+Running block with 16 threads...
+Run 1: 286.47 ms
+Run 2: 337.783 ms
+Run 3: 301.136 ms
+Run 4: 303.422 ms
+Run 5: 295.351 ms
+Run 6: 315.666 ms
+Run 7: 303.602 ms
+Run 8: 310.55 ms
+Run 9: 328.101 ms
+Run 10: 323.327 ms
+Running linear with 2 threads...
+Run 1: 1082.75 ms
+Run 2: 1080.7 ms
+Run 3: 1114.52 ms
+Run 4: 1086.26 ms
+Run 5: 1078.44 ms
+Run 6: 1099.59 ms
+Run 7: 1077.61 ms
+Run 8: 1077.01 ms
+Run 9: 1128.33 ms
+Run 10: 1080.41 ms
+Running linear with 4 threads...
+Run 1: 553.978 ms
+Run 2: 595.548 ms
+Run 3: 551.829 ms
+Run 4: 569.339 ms
+Run 5: 570.768 ms
+Run 6: 585.427 ms
+Run 7: 556.617 ms
+Run 8: 561.151 ms
+Run 9: 582.237 ms
+Run 10: 641.296 ms
+Running linear with 8 threads...
+Run 1: 382.778 ms
+Run 2: 349.729 ms
+Run 3: 342.794 ms
+Run 4: 361.332 ms
+Run 5: 359.273 ms
+Run 6: 375.692 ms
+Run 7: 367.632 ms
+Run 8: 348.803 ms
+Run 9: 356.031 ms
+Run 10: 360.774 ms
+Running linear with 16 threads...
+Run 1: 283.763 ms
+Run 2: 295.792 ms
+Run 3: 286.694 ms
+Run 4: 283.401 ms
+Run 5: 284.839 ms
+Run 6: 306.12 ms
+Run 7: 293.518 ms
+Run 8: 342.373 ms
+Run 9: 316.639 ms
+Run 10: 291.693 ms
+Running cyclic with 2 threads...
+Run 1: 1121.44 ms
+Run 2: 1200.02 ms
+Run 3: 1177.84 ms
+Run 4: 1135.11 ms
+Run 5: 1116.78 ms
+Run 6: 1111.39 ms
+Run 7: 1170.43 ms
+Run 8: 1109.85 ms
+Run 9: 1110.65 ms
+Run 10: 1118.57 ms
+Running cyclic with 4 threads...
+Run 1: 600.163 ms
+Run 2: 604.323 ms
+Run 3: 594.988 ms
+Run 4: 593.743 ms
+Run 5: 584.904 ms
+Run 6: 599.849 ms
+Run 7: 592.137 ms
+Run 8: 612.071 ms
+Run 9: 598.118 ms
+Run 10: 596.027 ms
+Running cyclic with 8 threads...
+Run 1: 364.42 ms
+Run 2: 374.423 ms
+Run 3: 356.983 ms
+Run 4: 352.861 ms
+Run 5: 359.862 ms
+Run 6: 348.99 ms
+Run 7: 355.155 ms
+Run 8: 350.611 ms
+Run 9: 351.457 ms
+Run 10: 348.291 ms
+Running cyclic with 16 threads...
+Run 1: 308.448 ms
+Run 2: 323.864 ms
+Run 3: 300.181 ms
+Run 4: 361.555 ms
+Run 5: 366.01 ms
+Run 6: 338.128 ms
+Run 7: 328.132 ms
+Run 8: 320.094 ms
+Run 9: 327.301 ms
+Run 10: 298.603 ms
+
+C++ - dynamic
+Running sequential...
+Run 1: 1994.41 ms
+Run 2: 2002.27 ms
+Run 3: 2066.65 ms
+Run 4: 1994.14 ms
+Run 5: 2002.21 ms
+Run 6: 2035.32 ms
+Run 7: 2045.5 ms
+Run 8: 1995.32 ms
+Run 9: 2002.65 ms
+Run 10: 1996.42 ms
+Running horizontal with 2 threads...
+Run 1: 1047.17 ms
+Run 2: 1064.44 ms
+Run 3: 1048.99 ms
+Run 4: 1053.54 ms
+Run 5: 1040.48 ms
+Run 6: 1051.08 ms
+Run 7: 1079.87 ms
+Run 8: 1047.57 ms
+Run 9: 1048.48 ms
+Run 10: 1049.7 ms
+Running horizontal with 4 threads...
+Run 1: 535.372 ms
+Run 2: 535.631 ms
+Run 3: 537.211 ms
+Run 4: 535.96 ms
+Run 5: 551.872 ms
+Run 6: 535.723 ms
+Run 7: 535.307 ms
+Run 8: 537.22 ms
+Run 9: 536.156 ms
+Run 10: 536.654 ms
+Running horizontal with 8 threads...
+Run 1: 331.184 ms
+Run 2: 337.41 ms
+Run 3: 336.364 ms
+Run 4: 352.565 ms
+Run 5: 361.173 ms
+Run 6: 337.134 ms
+Run 7: 339.537 ms
+Run 8: 348.628 ms
+Run 9: 340.852 ms
+Run 10: 330.38 ms
+Running horizontal with 16 threads...
+Run 1: 272.054 ms
+Run 2: 280.635 ms
+Run 3: 272.414 ms
+Run 4: 291.404 ms
+Run 5: 288.359 ms
+Run 6: 289.966 ms
+Run 7: 291.114 ms
+Run 8: 273.492 ms
+Run 9: 295.181 ms
+Run 10: 305.981 ms
+Running vertical with 2 threads...
+Run 1: 1584.31 ms
+Run 2: 1865.87 ms
+Run 3: 1747.24 ms
+Run 4: 1587.99 ms
+Run 5: 1686.55 ms
+Run 6: 1670.19 ms
+Run 7: 1612.76 ms
+Run 8: 1657.64 ms
+Run 9: 1683.67 ms
+Run 10: 1717.41 ms
+Running vertical with 4 threads...
+Run 1: 915.411 ms
+Run 2: 964.75 ms
+Run 3: 929.045 ms
+Run 4: 1052.18 ms
+Run 5: 911.457 ms
+Run 6: 1005.61 ms
+Run 7: 969.863 ms
+Run 8: 1035.43 ms
+Run 9: 927.15 ms
+Run 10: 1144.04 ms
+Running vertical with 8 threads...
+Run 1: 625.051 ms
+Run 2: 691.275 ms
+Run 3: 731.681 ms
+Run 4: 655.586 ms
+Run 5: 840.725 ms
+Run 6: 637.939 ms
+Run 7: 620.532 ms
+Run 8: 631.54 ms
+Run 9: 656.914 ms
+Run 10: 649.174 ms
+Running vertical with 16 threads...
+Run 1: 548.408 ms
+Run 2: 616.453 ms
+Run 3: 696.407 ms
+Run 4: 612.119 ms
+Run 5: 566.147 ms
+Run 6: 559.564 ms
+Run 7: 587.914 ms
+Run 8: 559.68 ms
+Run 9: 778.641 ms
+Run 10: 559.518 ms
+Running block with 2 threads...
+Run 1: 1010.9 ms
+Run 2: 1061.17 ms
+Run 3: 1017.58 ms
+Run 4: 1051.11 ms
+Run 5: 1016.56 ms
+Run 6: 1045.72 ms
+Run 7: 1015.51 ms
+Run 8: 1015.99 ms
+Run 9: 1016.47 ms
+Run 10: 1031.04 ms
+Running block with 4 threads...
+Run 1: 518.538 ms
+Run 2: 536.778 ms
+Run 3: 516.213 ms
+Run 4: 518.956 ms
+Run 5: 519.244 ms
+Run 6: 518.88 ms
+Run 7: 517.781 ms
+Run 8: 532.485 ms
+Run 9: 522.768 ms
+Run 10: 518.731 ms
+Running block with 8 threads...
+Run 1: 323.119 ms
+Run 2: 330.163 ms
+Run 3: 319.791 ms
+Run 4: 371.382 ms
+Run 5: 324.457 ms
+Run 6: 333.495 ms
+Run 7: 346.091 ms
+Run 8: 326.565 ms
+Run 9: 333.191 ms
+Run 10: 335.771 ms
+Running block with 16 threads...
+Run 1: 269.7 ms
+Run 2: 273.034 ms
+Run 3: 276.55 ms
+Run 4: 289.132 ms
+Run 5: 278.804 ms
+Run 6: 278.466 ms
+Run 7: 280.435 ms
+Run 8: 272.14 ms
+Run 9: 280.341 ms
+Run 10: 275.404 ms
+Running linear with 2 threads...
+Run 1: 1083.44 ms
+Run 2: 1117.25 ms
+Run 3: 1083.17 ms
+Run 4: 1085.61 ms
+Run 5: 1082.9 ms
+Run 6: 1124.29 ms
+Run 7: 1083.44 ms
+Run 8: 1091.34 ms
+Run 9: 1089.38 ms
+Run 10: 1083.57 ms
+Running linear with 4 threads...
+Run 1: 553.365 ms
+Run 2: 554.638 ms
+Run 3: 554.511 ms
+Run 4: 554.733 ms
+Run 5: 554.982 ms
+Run 6: 553.503 ms
+Run 7: 553.867 ms
+Run 8: 553.26 ms
+Run 9: 553.911 ms
+Run 10: 553.819 ms
+Running linear with 8 threads...
+Run 1: 345.056 ms
+Run 2: 356.972 ms
+Run 3: 356.712 ms
+Run 4: 344.983 ms
+Run 5: 343.478 ms
+Run 6: 344.662 ms
+Run 7: 350.302 ms
+Run 8: 348.501 ms
+Run 9: 341.384 ms
+Run 10: 355.149 ms
+Running linear with 16 threads...
+Run 1: 297.312 ms
+Run 2: 287.061 ms
+Run 3: 285.85 ms
+Run 4: 295.678 ms
+Run 5: 286.415 ms
+Run 6: 280.135 ms
+Run 7: 283.858 ms
+Run 8: 328.987 ms
+Run 9: 303.391 ms
+Run 10: 306.603 ms
+Running cyclic with 2 threads...
+Run 1: 1127.63 ms
+Run 2: 1111.39 ms
+Run 3: 1114.03 ms
+Run 4: 1112.67 ms
+Run 5: 1116.37 ms
+Run 6: 1110.83 ms
+Run 7: 1103.28 ms
+Run 8: 1114.64 ms
+Run 9: 1106.6 ms
+Run 10: 1109.94 ms
+Running cyclic with 4 threads...
+Run 1: 581.805 ms
+Run 2: 640.595 ms
+Run 3: 593.237 ms
+Run 4: 590.89 ms
+Run 5: 590.101 ms
+Run 6: 595.386 ms
+Run 7: 592.216 ms
+Run 8: 594.143 ms
+Run 9: 604.545 ms
+Run 10: 599.805 ms
+Running cyclic with 8 threads...
+Run 1: 375.763 ms
+Run 2: 371.752 ms
+Run 3: 360.796 ms
+Run 4: 349.089 ms
+Run 5: 354.045 ms
+Run 6: 360.203 ms
+Run 7: 373.178 ms
+Run 8: 354.44 ms
+Run 9: 362.267 ms
+Run 10: 352.316 ms
+Running cyclic with 16 threads...
+Run 1: 306.039 ms
+Run 2: 315.91 ms
+Run 3: 315.885 ms
+Run 4: 297.248 ms
+Run 5: 312.181 ms
+Run 6: 308.297 ms
+Run 7: 310.273 ms
+Run 8: 322.879 ms
+Run 9: 311.18 ms
+Run 10: 316.399 ms
+
+Java
+Running sequential...
+Run 1: 1886.105459 ms
+Run 2: 2045.861167 ms
+Run 3: 1949.517292 ms
+Run 4: 2016.180333 ms
+Run 5: 2012.327209 ms
+Run 6: 1935.413333 ms
+Run 7: 1915.906917 ms
+Run 8: 1914.980125 ms
+Run 9: 1979.208541 ms
+Run 10: 1960.354917 ms
+Running horizontal with 2 threads...
+Run 1: 970.282875 ms
+Run 2: 1015.584833 ms
+Run 3: 1007.490292 ms
+Run 4: 1041.361833 ms
+Run 5: 1024.777416 ms
+Run 6: 1024.529333 ms
+Run 7: 1045.560375 ms
+Run 8: 984.475208 ms
+Run 9: 984.447292 ms
+Run 10: 1010.612583 ms
+Running horizontal with 4 threads...
+Run 1: 509.3605 ms
+Run 2: 518.380833 ms
+Run 3: 530.884375 ms
+Run 4: 557.388917 ms
+Run 5: 541.8705 ms
+Run 6: 545.521583 ms
+Run 7: 519.423833 ms
+Run 8: 630.820333 ms
+Run 9: 528.190833 ms
+Run 10: 517.270291 ms
+Running horizontal with 8 threads...
+Run 1: 341.415542 ms
+Run 2: 340.970958 ms
+Run 3: 360.17325 ms
+Run 4: 390.027208 ms
+Run 5: 376.495375 ms
+Run 6: 346.342584 ms
+Run 7: 338.824667 ms
+Run 8: 429.444541 ms
+Run 9: 340.02125 ms
+Run 10: 378.132666 ms
+Running horizontal with 16 threads...
+Run 1: 308.684709 ms
+Run 2: 289.562542 ms
+Run 3: 318.983083 ms
+Run 4: 392.902583 ms
+Run 5: 354.534958 ms
+Run 6: 432.897208 ms
+Run 7: 303.877584 ms
+Run 8: 295.16725 ms
+Run 9: 300.366542 ms
+Run 10: 301.768125 ms
+Running vertical with 2 threads...
+Run 1: 1796.616708 ms
+Run 2: 1802.447958 ms
+Run 3: 1804.123625 ms
+Run 4: 2014.104291 ms
+Run 5: 1822.632708 ms
+Run 6: 1998.014042 ms
+Run 7: 2064.632666 ms
+Run 8: 1844.459125 ms
+Run 9: 1827.223 ms
+Run 10: 1805.22175 ms
+Running vertical with 4 threads...
+Run 1: 1026.835541 ms
+Run 2: 1115.97 ms
+Run 3: 1023.816958 ms
+Run 4: 1176.06 ms
+Run 5: 1247.196209 ms
+Run 6: 1038.328833 ms
+Run 7: 1070.491042 ms
+Run 8: 1022.795709 ms
+Run 9: 1025.914583 ms
+Run 10: 1012.8025 ms
+Running vertical with 8 threads...
+Run 1: 800.812084 ms
+Run 2: 805.917625 ms
+Run 3: 873.171166 ms
+Run 4: 966.404708 ms
+Run 5: 1056.638417 ms
+Run 6: 931.271541 ms
+Run 7: 958.08025 ms
+Run 8: 851.292292 ms
+Run 9: 806.77675 ms
+Run 10: 858.666292 ms
+Running vertical with 16 threads...
+Run 1: 829.620458 ms
+Run 2: 845.610375 ms
+Run 3: 1228.934375 ms
+Run 4: 893.552958 ms
+Run 5: 1140.106833 ms
+Run 6: 1084.137083 ms
+Run 7: 873.886541 ms
+Run 8: 1131.532583 ms
+Run 9: 1101.059292 ms
+Run 10: 863.536666 ms
+Running block with 2 threads...
+Run 1: 994.467125 ms
+Run 2: 1046.943291 ms
+Run 3: 976.487458 ms
+Run 4: 1078.44325 ms
+Run 5: 1061.795167 ms
+Run 6: 1019.879542 ms
+Run 7: 1071.040583 ms
+Run 8: 992.641125 ms
+Run 9: 978.200167 ms
+Run 10: 993.828625 ms
+Running block with 4 threads...
+Run 1: 530.715292 ms
+Run 2: 515.030417 ms
+Run 3: 576.511708 ms
+Run 4: 554.787791 ms
+Run 5: 539.681333 ms
+Run 6: 543.292584 ms
+Run 7: 527.047417 ms
+Run 8: 520.569125 ms
+Run 9: 539.543834 ms
+Run 10: 556.020666 ms
+Running block with 8 threads...
+Run 1: 381.145125 ms
+Run 2: 374.647291 ms
+Run 3: 425.341458 ms
+Run 4: 382.141958 ms
+Run 5: 362.790458 ms
+Run 6: 383.569208 ms
+Run 7: 355.064666 ms
+Run 8: 388.592875 ms
+Run 9: 360.281167 ms
+Run 10: 369.498667 ms
+Running block with 16 threads...
+Run 1: 311.922542 ms
+Run 2: 347.731625 ms
+Run 3: 330.202083 ms
+Run 4: 402.573625 ms
+Run 5: 319.69275 ms
+Run 6: 322.840125 ms
+Run 7: 345.46125 ms
+Run 8: 316.73375 ms
+Run 9: 325.918083 ms
+Run 10: 318.571958 ms
+Running linear with 2 threads...
+Run 1: 984.385042 ms
+Run 2: 997.065875 ms
+Run 3: 1011.469084 ms
+Run 4: 1024.170042 ms
+Run 5: 1023.626208 ms
+Run 6: 1043.072209 ms
+Run 7: 1017.865041 ms
+Run 8: 1000.016708 ms
+Run 9: 1038.307667 ms
+Run 10: 1016.643 ms
+Running linear with 4 threads...
+Run 1: 537.375333 ms
+Run 2: 518.366541 ms
+Run 3: 524.52775 ms
+Run 4: 591.069958 ms
+Run 5: 516.704208 ms
+Run 6: 517.702875 ms
+Run 7: 518.562208 ms
+Run 8: 543.885083 ms
+Run 9: 810.349875 ms
+Run 10: 516.610917 ms
+Running linear with 8 threads...
+Run 1: 329.571083 ms
+Run 2: 358.027583 ms
+Run 3: 343.158917 ms
+Run 4: 380.504916 ms
+Run 5: 345.589542 ms
+Run 6: 347.147375 ms
+Run 7: 354.202333 ms
+Run 8: 405.401541 ms
+Run 9: 381.645792 ms
+Run 10: 361.511625 ms
+Running linear with 16 threads...
+Run 1: 383.055083 ms
+Run 2: 364.322125 ms
+Run 3: 374.85525 ms
+Run 4: 349.26 ms
+Run 5: 382.135084 ms
+Run 6: 311.913209 ms
+Run 7: 332.721417 ms
+Run 8: 384.077541 ms
+Run 9: 315.904208 ms
+Run 10: 378.373708 ms
+Running cyclic with 2 threads...
+Run 1: 1034.655625 ms
+Run 2: 1025.262125 ms
+Run 3: 1072.4975 ms
+Run 4: 1140.127792 ms
+Run 5: 1107.299875 ms
+Run 6: 1112.13525 ms
+Run 7: 1045.433667 ms
+Run 8: 1085.543625 ms
+Run 9: 1033.983917 ms
+Run 10: 1084.281917 ms
+Running cyclic with 4 threads...
+Run 1: 656.02075 ms
+Run 2: 571.028917 ms
+Run 3: 570.7825 ms
+Run 4: 665.796167 ms
+Run 5: 646.117458 ms
+Run 6: 579.962583 ms
+Run 7: 551.078459 ms
+Run 8: 617.17225 ms
+Run 9: 566.008708 ms
+Run 10: 608.223583 ms
+Running cyclic with 8 threads...
+Run 1: 368.585834 ms
+Run 2: 393.712583 ms
+Run 3: 404.586333 ms
+Run 4: 383.082208 ms
+Run 5: 517.107625 ms
+Run 6: 497.626 ms
+Run 7: 450.757333 ms
+Run 8: 403.187167 ms
+Run 9: 377.447791 ms
+Run 10: 377.037958 ms
+Running cyclic with 16 threads...
+Run 1: 375.607916 ms
+Run 2: 385.796 ms
+Run 3: 384.426292 ms
+Run 4: 324.236375 ms
+Run 5: 340.384083 ms
+Run 6: 350.454083 ms
+Run 7: 346.134542 ms
+Run 8: 349.092042 ms
+Run 9: 393.440917 ms
+Run 10: 333.536084 ms
+
+====================================
+Benchmark completed!
+====================================
+C++ results: /Users/ale/Desktop/education/ubb cs/sem 5/ppd/lab2/results/cpp_results.csv
+Java results: /Users/ale/Desktop/education/ubb cs/sem 5/ppd/lab2/results/java_results.csv

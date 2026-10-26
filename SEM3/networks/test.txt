@@ -1,0 +1,36 @@
+1. switch interface gig1/0 to "up" on router 11 using "no shutdown"
+2. switched interface on router 12 gig 0/0 on
+3. router 7 gig 0/0 and gig 1/0
+4. added  A record for server-1 on dns server2
+5. added server3 record on dns server 1
+6. renamed server2.web to server-2.web
+7. in dns server 1 changed ip of server 1 from 193.213.... to 193.231...
+8. changed dns server in dns server 1 (the ip there  was its own ip)
+9. web server http and https on
+10. dhcp server turned service on
+11. web server 2 changed ipv4 address from 8.8.4.5 to 8.8.4.4
+12. added ip helper-address 193.224.60.130 to router 15 and added a new server pool for dhcp to reach devices behind router 15
+13. added rip on router 1
+14. router 10 changed ipv4 to 4.4.60.129 from 4.4.60.1
+
+(format t "hello world")
+
+(defun fib(n)
+"print nth fibo number"
+(if (< n 2)
+  n
+  (+ (fib(- n 1))
+     (fib(- n 2))
+  )
+))
+
+(print(fib 30))
+
+;; Write a function to return the n-th element of a list, or NIL if such an element does not exist
+(defun nth-elem(x n)
+  (cond ((null x)
+      NIL)
+      ((= n 1) (car x))
+  (t (nth-elem (cdr x) (- n 1)))))
+  
+(print (nth-elem '(1 2 3 4 5) 3))

@@ -1,0 +1,804 @@
+#include <pthread.h>
+#include <stdio.h>
+int count = 0;
+pthread_t tid[1000];
+pthread_mutex_t exclusiv;
+
+void* inc(void* nume) {
+        for (int i = 0; i < 1000; i++) {
+                pthread_mutex_lock(&exclusiv);
+                int temp = count;
+                temp++;
+                count = temp;
+                pthread_mutex_unlock(&exclusiv);
+        }
+        return NULL;
+}
+
+int main(int argc, char* argv[]) {
+        int i;
+        for (i = 0; i < 1000; i++)
+                pthread_create(&tid[i],NULL,inc,NULL);
+        for (i = 0; i < 1000; i++)
+                pthread_join(tid[i],NULL);
+        printf("count=%d\n", count);
+}
+1
+---------------------------------------------------------------------------------------------------------------------
+#include <pthread.h> 
+
+#include <stdio.h> 
+
+#include <stdlib.h> 
+
+#define MAXLINIE 1000 
+
+typedef struct {char*n1; char*n2;} PERECHE; 
+
+pthread_t tid[100]; 
+
+PERECHE pereche[100]; 
+
+pthread_mutex_t mut = PTHREAD_MUTEX_INITIALIZER; 
+
+int pare = 0, impare = 0, nenum = 0; 
+
+void* tippereche(void* pereche) { 
+
+    int n1 = atoi(((PERECHE*)pereche)->n1); 
+
+    int n2 = atoi(((PERECHE*)pereche)->n2); 
+
+    if (n1 == 0 || n2 == 0) { 
+
+        pthread_mutex_lock(&mut); 
+
+        nenum++; 
+
+        pthread_mutex_unlock(&mut); 
+
+    } else if ((n1 + n2) % 2 == 0) { 
+
+        pthread_mutex_lock(&mut); 
+
+        pare++; 
+
+        pthread_mutex_unlock(&mut); 
+
+    } else { 
+
+        pthread_mutex_lock(&mut); 
+
+        impare++; 
+
+        pthread_mutex_unlock(&mut); 
+
+    } 
+
+} 
+
+int main(int argc, char* argv[]) { 
+
+    int i, p, n = (argc-1)/2; 
+
+    for (i = 1, p = 0; p < n; i += 2, p++) { 
+
+        pereche[p].n1 = argv[i]; 
+
+        pereche[p].n2 = argv[i+1]; 
+
+        pthread_create(&tid[p], NULL, tippereche, (void*)&pereche[p]); 
+
+    } 
+
+    for (i=0; i < n; i++) pthread_join(tid[i], NULL); 
+
+    printf("perechi=%d pare=%d impare=%d nenum=%d\n",n,pare,impare,nenum);  
+
+} 
+2
+-------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <pthread.h>
+
+pthread_t t[6];
+
+int a=1, b=2, c=3, d=4, r1, r2, r3, r4, E;
+
+void * f1 (void * x) {r1 = b * c; return NULL;}
+
+void * f2 (void * x) {r2 = a + r1; return NULL;}
+
+void * f3 (void * x) {r3 = d * a; return NULL;}
+
+void * f4 (void * x) {r4 = r3 + c; return NULL;}
+
+void * f5 (void * x) {E = r2 + r4; return NULL;}
+
+int main() {
+          pthread_create(&t[1], NULL, f1, NULL);
+
+    pthread_create(&t[3], NULL, f3, NULL);
+
+    pthread_join(t[1], NULL);
+
+    pthread_join(t[3], NULL);
+
+    pthread_create(&t[2], NULL, f2, NULL);
+
+    pthread_create(&t[4], NULL, f4, NULL);
+
+    pthread_join(t[2], NULL);
+
+    pthread_join(t[4], NULL);
+
+    pthread_create(&t[5], NULL, f5, NULL);
+
+    pthread_join(t[5], NULL);
+
+
+
+    printf("E = %d\n", E);
+}
+3
+-------------------------------------------------------------------------------------------------------------------------------
+
+/*se se scrie un program care citeste o propozitie de la tastatura format din cel putin 6 cuvinte, 
+creeaza 5 thread-uri care primesc ca si parametru acea propozitie. 
+Fiecare thread va lua un cuvant din propozitie, si il va pune pe o noua pozitie astfel incat dupa ce fiecare thread isi incheie executia, 
+propozitia este complet inversata. Thread-ul principal va afisa rezultatul.
+Exemplu: Ana are multe mere foarte frumoase -> frumoase foarte mere multe are Ana*/
+
+#include <stdio.h>
+#include <pthread.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define NUM_THREADS 5
+#define MAX_LENGTH 1024
+char sentence[MAX_LENGTH];
+char *words[MAX_LENGTH / 2];
+char *reversed_words[MAX_LENGTH / 2];
+int word_count;
+
+void *reverse_word(void *arg) {
+        int index = *(int*)arg;
+        reversed_words[word_count - index - 1] = words[index];
+        return NULL;
+}
+
+int main() {
+        printf("Enter the sentence with at least 6 words");
+        fgets(sentence, MAX_LENGTH, stdin);
+        int len = strlen(sentence);
+
+        if (len > 0 && sentence[len-1]=='\n') sentence[len-1] = '\0';
+
+        word_count = 0;
+        char *token = strtok(sentence, " ");
+        while (token != NULL) {
+                words[word_count] = token;
+                word_count++;
+                token = strtok(NULL, " ");
+        }
+
+        pthread_t threads[NUM_THREADS];
+        int indices[NUM_THREADS];
+        for (int i = 0; i < NUM_THREADS; i++) {
+                indices[i] = i;
+                pthread_create(&threads[i], NULL, reverse_word, &indices[i]);
+        }
+
+        for (int i = NUM_THREADS; i < word_count; i++)
+                reversed_words[word_count - i - 1] = words[i];
+
+
+        for (int i = 0; i < NUM_THREADS; i++) {
+                pthread_join(threads[i], NULL);
+        }
+
+        // Print the reversed sentence
+        printf("Reversed sentence: ");
+        for (int i = 0; i < word_count; i++) {
+                printf("%s ", reversed_words[i]);
+        }
+        printf("\n");
+ }
+
+4
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+#include <pthread.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+typedef struct {
+    int *letters, *digits, *specials;
+    pthread_mutex_t *mutexes;
+    char *str;
+} data;
+
+void *func(void *arg) {
+    data dt = *((data *) arg);
+    int l = 0, d = 0, s = 0;
+    int i, len = strlen(dt.str);
+    for (i = 0; i < len; i++) {
+        if ((dt.str[i] >= 'a' && dt.str[i] <= 'z') || (dt.str[i] >= 'A' && dt.str[i] <= 'Z'))
+            l++;
+        else if (dt.str[i] >= '0' && dt.str[i] <= '9')
+            d++;
+        else
+            s++;
+    }
+    if (l > 0) {
+        pthread_mutex_lock(&dt.mutexes[0]);
+        *(dt.letters) += l;
+        pthread_mutex_unlock(&dt.mutexes[0]);
+    }
+    if (d > 0) {
+        pthread_mutex_lock(&dt.mutexes[1]);
+        *(dt.digits) += d;
+        pthread_mutex_unlock(&dt.mutexes[1]);
+    }
+    if (s > 0) {
+        pthread_mutex_lock(&dt.mutexes[2]);
+        *(dt.specials) += s;
+        pthread_mutex_unlock(&dt.mutexes[2]);
+    }
+    return NULL;
+}
+
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Please provide at least one argument.\n");
+        exit(1);
+    }
+    int *letters = malloc(sizeof(int));
+    int *digits = malloc(sizeof(int));
+    int *specials = malloc(sizeof(int));
+    pthread_t *thrds = malloc(sizeof(pthread_t) * (argc - 1));
+    data *args = malloc(sizeof(data) * (argc - 1));
+    pthread_mutex_t *mutexes = malloc(sizeof(pthread_mutex_t) * 3);
+    int i;
+    for (i = 0; i < 3; i++) {
+        if (0 > pthread_mutex_init(&mutexes[i], NULL)) {
+            perror("Error on creating mutexes");
+            exit(1);
+        }
+    }
+    *letters = 0;
+    *digits = 0;
+    *specials = 0;
+    for (i = 0; i < argc - 1;i++) {
+        args[i].letters = letters;
+        args[i].digits = digits;
+        args[i].specials = specials;
+        args[i].mutexes = mutexes;
+        args[i].str = argv[i+1];
+        if (0 > pthread_create(&thrds[i], NULL, func, (void *) &args[i])) {
+            perror("Error on create thread");
+        }
+    }
+
+    for (i = 0; i < argc - 1;i++) {
+        if (0 > pthread_join(thrds[i], NULL)) {
+            perror("Error waiting for thread");
+        }
+    }
+
+    printf("Total letters: %d\nTotal digits: %d\nTotal special characters: %d\n", *letters, *digits, *specials);
+    for (i = 0; i < 3; i++) {
+        pthread_mutex_destroy(&mutexes[i]);
+    }
+    free(args);
+    free(thrds);
+    free(mutexes);
+    free(letters);
+    free(digits);
+    free(specials);
+    return 0;
+}
+5
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * recieve integers as argumets.
+ * keep frequency vector for all digits
+ * create a thread for each arg, that counts the nr of occurences of each digit and adds the result tp the freq vector.
+ *
+ * */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <pthread.h>
+#include <ctype.h>
+
+typedef struct {
+        pthread_mutex_t *mutex;
+        char *str;
+        int *freq_vector;
+}data;
+
+void *func(void *arg) {
+        data dt = *((data *)arg);
+        int local_freq[10] = {0};
+
+        for (int i = 0; i < strlen(dt.str); ++i) {
+                char c = dt.str[i];
+                if (isdigit(c))
+                        local_freq[c - '0']++;
+
+        }
+
+        pthread_mutex_lock(dt.mutex);
+        for (int i = 0; i < 10; ++i)
+                dt.freq_vector[i] += local_freq[i];
+        pthread_mutex_unlock(dt.mutex);
+        return NULL;
+}
+int main(int argc, char *argv[]) {
+        int *freq_vector = malloc(sizeof(int) * 10);
+        pthread_mutex_t *mutex = malloc(sizeof(pthread_mutex_t));
+
+        for (int i = 0; i < 10; ++i)
+                freq_vector[i] = 0;
+
+        pthread_mutex_init(mutex, NULL);
+        pthread_t *tr = malloc(sizeof(pthread_t) * (argc - 1));
+
+        data *dt = malloc(sizeof(data) * (argc - 1));
+
+        for (int i = 0; i < argc - 1; ++i) {
+                dt[i].freq_vector = freq_vector;
+                dt[i].str = argv[i + 1];
+                dt[i].mutex = mutex;
+                pthread_create(&tr[i], NULL, func, (void *)&dt[i]);
+        }
+
+        for (int i = 0; i < argc - 1; ++i)
+                pthread_join(tr[i], NULL);
+
+        for (int i = 0; i < 10; i++)
+                printf("%d -> %d\n", i, freq_vector[i]);
+        pthread_mutex_destroy(mutex);
+        free(freq_vector);
+        free(mutex);
+        free(tr);
+        free(dt);
+        return 0;
+}
+6
+-------------------------------------------------------------------------------------------------------------------------------
+ * Scrieti un program C care primeste un numar N ca argument la linia de comanda. 
+Programul va crea N thread-uri si le va da cate un id distinct fiecaruia dintre ele. 
+Thread-urile vor executa urmatorii pasi: 
+1. Fiecare thread genereaza 3 numere- intre 1 si 10 (inclusiv), le afiseaza pe ecran impreuna cu id-ul lui. 
+2. Fiecare thread asteapta ca toate celelalte thread-uri sa execute pasul 1. 
+3. Fiecare thread aduna numerele impare generate de el La • suma globala si scade din aceeasi suma toate numere le pare pe care le-a generat. 
+Dupa ce toate thread-urile se incheie, procesul principal afiseaza valoarea sumei globale. Folositi mecanisme de sincronizare adecvate.
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include "pthread_barrier.h"
+
+typedef struct {
+    int id;
+} data;
+
+pthread_mutex_t mtx;
+pthread_barrier_t b;
+int sum = 0;
+
+void *f(void *arg) {
+    data d = *(data *)arg;
+
+    int arr[3];
+    for (int i = 0; i < 3; ++i) {
+        arr[i]= rand() % 10 + 1;
+    }
+
+    printf("Thread %d has generated numbers %4d | %4d | %4d\n", d.id, arr[0], arr[1], arr[2]);;
+
+    pthread_barrier_wait(&b);
+
+    int add = 0, substract = 0;
+
+    for (int i = 0; i < 3; ++i) {
+        if (arr[i] & 1) {
+            add += arr[i];
+        } else {
+            substract += arr[i];
+        }
+    }
+
+    int total = add - substract;
+
+    pthread_mutex_lock(&mtx);
+    sum += total;
+    pthread_mutex_unlock(&mtx);
+    return NULL;
+}
+
+int main(int argc, char **argv) {
+    if (argc != 2) {
+        perror("wrong number of arguments");
+        exit(1);
+    }
+
+    int n = atoi(argv[1]);
+    srand(time(NULL));
+
+    pthread_mutex_init(&mtx, NULL);
+    pthread_barrier_init(&b, NULL, n);
+    pthread_t *threads = (pthread_t *)malloc(n * sizeof(pthread_t));
+    data *args = (data *)malloc(n * sizeof(data));
+
+    for (int i = 0; i < n; ++i) {
+        args[i].id = i;
+        pthread_create(&threads[i], NULL, f, &args[i]);
+    }
+
+    for (int i = 0; i < n; ++i) {
+        pthread_join(threads[i], NULL);
+    }
+
+    printf("Final sum is %d\n", sum);
+
+    free(threads);
+    free(args);
+    pthread_mutex_destroy(&mtx);
+    pthread_barrier_destroy(&b);
+    return 0;
+}
+7
+-------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * Write a C program that creates N threads (N is a command line argument).
+Each thread will receive a unique index I from the main process between 0 and N-1 inclusively.
+Each thread will execute M rounds (M also a command line argument) with the following steps:
+    - generate 2 random numbers (A - between 1 and 20, B - between 1 and 3) and will add A*B to a thread local variable and will print its new value
+    - increment the appropriate position in a shared frequency vector for the values of A
+    - increment the appropriate position in a shared frequency vector for the values of B
+    - wait for all the threads to finish their current round before beginning a new one
+Once all threads terminate the main process will print the frequency vectors for A and B.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include "pthread_barrier.h"
+#include <string.h>
+
+typedef struct {
+    int *a;
+    int *b;
+    int m;
+    int sum;
+    pthread_mutex_t *mutex;
+    pthread_barrier_t *barrier;
+} data;
+
+void *f(void *args) {
+    data d = *(data *)args;
+
+    for (int i = 0; i < d.m; ++i) {
+        pthread_barrier_wait(d.barrier);
+        int a = rand() % 20 + 1, b = rand() % 3 + 1;
+        d.sum += a * b;
+        printf("Generated numbers: [%d] and [%d] ->> The local sum is now %d\n", a,b, d.sum);
+        pthread_mutex_lock(d.mutex);
+        d.a[a - 1] += 1;
+        d.b[b - 1] += 1;
+        pthread_mutex_unlock(d.mutex);
+    } 
+
+    return NULL;
+}
+
+int main(int argc, char **argv) {
+    if (argc != 3) {
+        printf("Usage: %s N M\n", argv[0]);
+        return 1;
+    }
+    int n = atoi(argv[1]), m = atoi(argv[2]);
+
+    srand(time(NULL));
+
+    pthread_t *threads = (pthread_t *)malloc(n * sizeof(pthread_t));
+    data *args = (data *)malloc(n * sizeof(data));
+    pthread_barrier_t barrier;
+    pthread_barrier_init(&barrier, NULL, n);
+
+    pthread_mutex_t mutex;
+    pthread_mutex_init(&mutex, NULL);
+
+    int *a = (int *)malloc(20 * sizeof(int));
+    int *b = (int *)malloc(3 * sizeof(int));
+    memset(a, 0, 20 * sizeof(int));
+    memset(b, 0, 3 * sizeof(int));
+
+    for (int i = 0; i < n; ++i) {
+        args[i].a = a;
+        args[i].b = b;
+        args[i].sum = 0;
+        args[i].mutex = &mutex;
+        args[i].barrier = &barrier;
+        args[i].m = m;
+        pthread_create(&threads[i], NULL, f, &args[i]);
+    }
+
+    for (int i = 0; i < n; ++i) {
+        pthread_join(threads[i], NULL);
+    }
+
+    for (int i = 0; i < 20; ++i) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for (int i = 0; i < 3; ++i) {
+        printf("%d ", b[i]);
+    }
+    printf("\n");
+
+    free(threads);
+    free(args);
+    free(a);
+    free(b);
+    pthread_barrier_destroy(&barrier);
+    pthread_mutex_destroy(&mutex);
+    return 0;
+}
+8
+-------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+
+typedef struct {
+    int a;
+    int b;
+    int id;
+} Result;
+
+void *f(void *arg) {
+    srand(pthread_self());
+    int n = rand() % 100 + 1;
+    int m = rand() % 100 + 1;
+
+    Result *ans = (Result *) malloc(sizeof(Result));
+    ans->a = n;
+    ans->b = m;
+    ans->id = pthread_self();
+
+    printf("Thread (%d), generated numbers: [ %d ] and [ %d ]\n", pthread_self(), n, m);
+    return ans;
+}
+
+int main(int argc, char **argv) {
+    if (argc != 2) {
+        perror("Usage: ./a.out <number>");
+        exit(1);
+    }
+
+    int n = atoi(argv[1]);
+
+    int p2c[2];
+
+    if (-1 == pipe(p2c)) {
+      perror("pipe"); 
+      exit(1);
+    }
+
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        perror("fork error");
+        exit(1);
+    } else if (pid == 0) {
+        // we are in the child
+
+        close(p2c[1]);
+
+        for (int i = 0; i < n; ++i) {
+            Result *r; 
+
+            read(p2c[0], r, sizeof(Result));
+
+            double avg = (double) (r->a + r->b) / 2.0;
+
+            printf("C::> Thread(%d), average is %f\n", r->id, avg);
+        }
+
+
+        close(p2c[0]);
+    } else {
+        // we are in the parent
+
+        close(p2c[0]);
+        pthread_t *threads = (pthread_t *)malloc(n * sizeof(pthread_t));
+
+        for (int i = 0; i < n; ++i) {
+            pthread_create(&threads[i], NULL, f, NULL);
+        }
+
+        for (int i = 0; i < n; ++i) {
+            Result *r;
+            pthread_join(threads[i], (void**)&r);
+
+            write(p2c[1], r, sizeof(Result));
+
+            free(r);
+        }
+
+        close(p2c[1]);
+        free(threads);
+    }
+
+    return 0;
+
+}
+9
+-------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#define FIFO_AtoB "fifo_a_to_b"
+#define FIFO_BtoA "fifo_b_to_a"
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s <initial_n>\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+
+    int n = atoi(argv[1]);
+    if (n <= 0) {
+        fprintf(stderr, "Please enter a positive integer for n.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    mkfifo(FIFO_AtoB, 0666);
+    mkfifo(FIFO_BtoA, 0666);
+
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        // Process A (Parent)
+        int fd_write, fd_read;
+        while (n < 35) {
+            printf("(A) -> %d\n", n);
+
+            fd_write = open(FIFO_AtoB, O_WRONLY);
+            write(fd_write, &n, sizeof(int));
+            close(fd_write);
+
+            fd_read = open(FIFO_BtoA, O_RDONLY);
+            int n1, n3;
+            read(fd_read, &n1, sizeof(int));
+            read(fd_read, &n3, sizeof(int));
+            close(fd_read);
+
+            printf("(B) -> %d, %d\n", n1, n3);
+            n = n1 + n3;
+        }
+        printf("(A) -> %d\n", n);
+
+        unlink(FIFO_AtoB);
+        unlink(FIFO_BtoA);
+    } else if (pid == 0) {
+        // Process B (Child)
+        int fd_read, fd_write;
+        while (1) {
+            int n;
+            fd_read = open(FIFO_AtoB, O_RDONLY);
+            read(fd_read, &n, sizeof(int));
+            close(fd_read);
+
+            if (n >= 35) break;
+
+            int n1 = n + 1;
+            int n3 = n + 3;
+
+            fd_write = open(FIFO_BtoA, O_WRONLY);
+            write(fd_write, &n1, sizeof(int));
+            write(fd_write, &n3, sizeof(int));
+            close(fd_write);
+        }
+        exit(0);
+    }
+
+    return 0;
+}
+FIFO
+-------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s <initial_n>\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+
+    int n = atoi(argv[1]);
+    if (n <= 0) {
+        fprintf(stderr, "Please enter a positive integer for n.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    int pipeAtoB[2]; // A writes to B
+    int pipeBtoA[2]; // B writes to A
+
+    pipe(pipeAtoB);
+    pipe(pipeBtoA);
+
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        // Process A (Parent)
+        close(pipeAtoB[0]); // close read end
+        close(pipeBtoA[1]); // close write end
+
+        while (n < 35) {
+            printf("(A) -> %d\n", n);
+
+            write(pipeAtoB[1], &n, sizeof(int));
+
+            int n1, n3;
+            read(pipeBtoA[0], &n1, sizeof(int));
+            read(pipeBtoA[0], &n3, sizeof(int));
+
+            printf("(B) -> %d, %d\n", n1, n3);
+            n = n1 + n3;
+        }
+
+        printf("(A) -> %d\n", n);
+
+        close(pipeAtoB[1]);
+        close(pipeBtoA[0]);
+    } else if (pid == 0) {
+        // Process B (Child)
+        close(pipeAtoB[1]); // close write end
+        close(pipeBtoA[0]); // close read end
+
+        while (1) {
+            int received;
+            if (read(pipeAtoB[0], &received, sizeof(int)) <= 0) {
+                break;
+            }
+
+            if (received >= 35)
+                break;
+
+            int n1 = received + 1;
+            int n3 = received + 3;
+
+            write(pipeBtoA[1], &n1, sizeof(int));
+            write(pipeBtoA[1], &n3, sizeof(int));
+        }
+
+        close(pipeAtoB[0]);
+        close(pipeBtoA[1]);
+        exit(0);
+    }
+
+    return 0;
+}
+PIPE
+-------------------------------------------------------------------------------------------------------------------------------

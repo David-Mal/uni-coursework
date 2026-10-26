@@ -1,0 +1,29 @@
+# Program 2 - Position finder (illustrative data)
+roster = Squad([
+  { name: "Ter Stegen", pos: "GK", goals: 0, assists: 0 },
+  { name: "Araujo",     pos: "DF", goals: 2, assists: 1 },
+  { name: "Pedri",      pos: "MF", goals: 5, assists: 8 },
+  { name: "Yamal",      pos: "FW", goals: 12, assists: 9 }
+])
+benchPlayers = Squad([])
+trend = -2
+scout wanted
+found = roster ? pos == wanted
+if found
+  tagged = found + checked = "yes" - assists
+  for p in tagged -> (name, checked)
+    announce p
+  end
+else
+  announce "No players in that position."
+  everyone = roster -> (name, pos)
+  announce everyone
+end
+attackers = roster ? (pos == "FW" or pos == "MF") and goals > 3
+announce attackers -> (name, goals)
+if benchPlayers
+  announce benchPlayers
+else
+  announce "The bench list is empty."
+end
+announce trend

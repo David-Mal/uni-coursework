@@ -1,0 +1,98 @@
+import socket
+import select
+import random
+
+HOST = "127.0.0.1"
+PORT = 7000
+
+WORDS = ["python", "socket", "network", "hangman", "client"]
+MAX_WRONG = 6  # number of allowed wrong guesses
+
+def broadcast(clients, message):
+    """Send message to all connected clients."""
+    for c in clients:
+        try:
+            c.sendall(message.encode())
+        except:
+            pass
+
+def masked_word(word, guesses):
+    """Return word with unguessed letters replaced by underscores."""
+    return " ".join([ch if ch in guesses else "_" for ch in word])
+
+def main():
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind((HOST, PORT))
+    server.listen()
+    print(f"🧩 Hangman Server running on {HOST}:{PORT}")
+
+    clients = []
+    word = random.choice(WORDS)
+    guesses = set()
+    wrong = 0
+    state = "playing"
+
+    print(f"Secret word: {word}")
+
+    while True:
+        readable, _, exceptional = select.select([server] + clients, [], clients, 0.5)
+
+        for s in readable:
+            if s is server:
+                conn, addr = server.accept()
+                clients.append(conn)
+                print(f"🧍 Client joined from {addr}")
+                conn.sendall(f"Welcome to Hangman!\nWord: {masked_word(word, guesses)}\n".encode())
+                continue
+
+            try:
+                data = s.recv(1024)
+                if not data:
+                    clients.remove(s)
+                    s.close()
+                    continue
+
+                letter = data.decode().strip().lower()
+                if len(letter) != 1 or not letter.isalpha():
+                    s.sendall("Please send a single letter.\n".encode())
+                    continue
+
+                if state != "playing":
+                    s.sendall("Round is over! Wait for a new game.\n".encode())
+                    continue
+
+                if letter in guesses:
+                    s.sendall("You already tried that letter!\n".encode())
+                    continue
+
+                guesses.add(letter)
+                if letter in word:
+                    msg = f"✅ Correct! Letter '{letter}' is in the word.\n"
+                else:
+                    wrong += 1
+                    msg = f"❌ Wrong! Letter '{letter}' not in word. ({wrong}/{MAX_WRONG})\n"
+
+                # Check win/loss
+                if all(ch in guesses for ch in word):
+                    state = "win"
+                    broadcast(clients, f"🎉 Word guessed: {word.upper()}! You win!\n")
+                elif wrong >= MAX_WRONG:
+                    state = "lose"
+                    broadcast(clients, f"💀 You lost! The word was: {word.upper()}\n")
+                else:
+                    broadcast(clients, f"{msg}Word: {masked_word(word, guesses)}\n")
+
+            except Exception as e:
+                print("Error:", e)
+                if s in clients:
+                    clients.remove(s)
+                s.close()
+
+        for s in exceptional:
+            if s in clients:
+                clients.remove(s)
+            s.close()
+
+if __name__ == "__main__":
+    main()

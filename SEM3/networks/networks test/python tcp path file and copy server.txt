@@ -1,0 +1,46 @@
+import socket
+import os
+import struct
+
+HOST = '127.0.0.1'
+PORT = 7000
+
+def handle_client(conn):
+    try:
+        # Receive length of path first
+        data = conn.recv(4)
+        if not data:
+            return
+        path_len = int.from_bytes(data, 'big')
+
+        # Receive the actual file path
+        file_path = conn.recv(path_len).decode()
+        print(f"Client requested file: {file_path}")
+
+        if os.path.isfile(file_path):
+            with open(file_path, 'rb') as f:
+                content = f.read()
+            length = len(content)
+            # Send length first
+            conn.send(length.to_bytes(4, 'big', signed=True))
+            # Send content
+            conn.sendall(content)
+        else:
+            # File does not exist
+            conn.send((-1).to_bytes(4, 'big', signed=True))
+
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((HOST, PORT))
+    s.listen(5)
+    print(f"Server listening on {HOST}:{PORT}")
+
+    while True:
+        conn, addr = s.accept()
+        print(f"Client connected: {addr}")
+        handle_client(conn)

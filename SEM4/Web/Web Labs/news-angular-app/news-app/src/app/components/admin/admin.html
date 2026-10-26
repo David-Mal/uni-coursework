@@ -1,0 +1,52 @@
+<div class="admin-page">
+  <h2>Admin Panel &mdash; Manage News</h2>
+  <p class="welcome">Welcome, <strong>{{ auth.getUsername() }}</strong></p>
+
+  <div class="form-card">
+    <h3>{{ form.id ? 'Edit Article' : 'Add New Article' }}</h3>
+
+    <input [(ngModel)]="form.title" placeholder="Title (min 5 chars)" minlength="5" required>
+    <textarea [(ngModel)]="form.text" placeholder="News text (min 10 chars)" rows="4" minlength="10" required></textarea>
+    <input [(ngModel)]="form.producer" placeholder="Producer">
+    <input type="date" [(ngModel)]="form.date" required>
+    <select [(ngModel)]="form.category">
+      @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat | titlecase }}</option>
+      }
+    </select>
+
+    <div class="form-actions">
+      <button class="btn-save" (click)="save()"
+              [disabled]="!form.title || !form.text || !form.date">
+        {{ form.id ? 'Update' : 'Save' }} News
+      </button>
+      <button class="btn-cancel" (click)="reset()">Cancel</button>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (a of articles; track a.id) {
+        <tr>
+          <td>{{ a.title }}</td>
+          <td class="cap">{{ a.category }}</td>
+          <td>{{ a.date }}</td>
+          <td class="actions">
+            <button class="btn-edit" (click)="edit(a)">Edit</button>
+            <button class="btn-del" (click)="delete(a.id)">Delete</button>
+          </td>
+        </tr>
+      } @empty {
+        <tr><td colspan="4" class="empty">No articles yet.</td></tr>
+      }
+    </tbody>
+  </table>
+</div>

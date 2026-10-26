@@ -1,0 +1,88 @@
+import socket
+import select
+import sys
+import time
+import random
+import threading
+import queue
+import msvcrt  # Windows only
+
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 5000
+SEND_INTERVAL = 1.5  # seconds between auto guesses
+
+
+def input_thread(q):
+    """Background thread to capture user input."""
+    while True:
+        if msvcrt.kbhit():
+            ch = input()
+            q.put(ch)
+
+
+def main():
+    mode = input("Choose mode: [A]uto or [M]anual? ").strip().lower()
+    auto_mode = mode != "m"
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((SERVER_IP, SERVER_PORT))
+    sock.setblocking(False)
+
+    print(f"Connected to server {SERVER_IP}:{SERVER_PORT}")
+
+    last_send = 0
+    input_queue = queue.Queue()
+    my_turn = False  # updated by server messages
+
+    # Start input thread if manual
+    if not auto_mode:
+        threading.Thread(target=input_thread, args=(input_queue,), daemon=True).start()
+
+    while True:
+        readable, _, _ = select.select([sock], [], [], 0.5)
+
+        for s in readable:
+            data = s.recv(1024)
+            if not data:
+                print("Server closed connection.")
+                return
+            msg = data.decode().strip()
+
+            # handle server messages
+            for line in msg.split("\n"):
+                if not line:
+                    continue
+                if "Your turn" in line or "Client 1's turn" in line:  # broad pattern
+                    if "your" in line.lower():
+                        my_turn = True
+                        print(">>> It's your turn! <<<")
+                    else:
+                        print(line)
+                else:
+                    print(line)
+                    # detect if it’s our turn by number (hacky)
+                    if "It is now" in line and "Client" in line:
+                        # optional improvement if client IDs known
+                        pass
+
+        # if auto and it's our turn, guess a random number
+        now = time.time()
+        if my_turn and (auto_mode and now - last_send >= SEND_INTERVAL):
+            last_send = now
+            num = random.randint(1, 1000)
+            sock.sendall(f"{num}\n".encode())
+            print(f"Auto-guessed {num}")
+            my_turn = False
+
+        # if manual and our turn, wait for user input
+        if my_turn and not auto_mode:
+            if not input_queue.empty():
+                guess = input_queue.get()
+                if not guess.isdigit():
+                    print("Please enter a number between 1 and 1000.")
+                    continue
+                sock.sendall(f"{guess}\n".encode())
+                my_turn = False
+
+if __name__ == "__main__":
+    main()

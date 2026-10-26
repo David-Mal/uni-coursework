@@ -1,0 +1,26 @@
+Tool ales: 
+Am ales Flex deoarece este un generator de analizoare lexicale industrial, 
+optimizat pentru viteză și conceput să funcționeze perfect cu cod C încorporat. 
+Acest lucru permite implementarea performantă a Tabelei de Simboluri (ST) prin 
+structuri de date native C, așa cum cere specificația temei.
+Detectarea Token-urilor:Expresiile regulate extrag elementele pe baza celei mai 
+lungi potriviri.Cuvintele cheie (ex. Squad, if, announce) și operatorii/separatorii sunt 
+verificați direct și adăugați în PIF cu codul specific de Tabela de Simboluri -1.   
+Identificatorii (ID) încep obligatoriu cu o literă și sunt urmați de litere, cifre sau 
+underscore _. Aceștia sunt adăugați în PIF cu valoarea id și adresa din ST.   
+Constantele (NUMBER și STRING) includ suport pentru numere întregi, 
+numere negative (un minus opțional urmat de cifre nenule și cifre) și șiruri de caractere 
+cuprinse între ghilimele, fără alte ghilimele interioare. 
+Sunt trecute în PIF cu denumirea const și indexul din ST.   
+Comentariile care încep cu # și spațiile albe (spațiu, tab, linie nouă) sunt ignorate 
+și nu sunt trimise către PIF.   Managementul Tabelei de Simboluri (ST): 
+A fost implementat folosind un Hash Table cu chaining 
+(rezolvarea coliziunilor prin liste înlănțuite simple).
+Operații: Se bazează pe o singură funcție combinată insertST(char* token).
+La apel, se calculează hash-ul token-ului folosind algoritmul djb2.
+Se parcurge lista de la indexul corespunzător: dacă string-ul există deja, 
+se returnează id-ul unic salvat; dacă nu, se alocă memorie pentru un nou nod, 
+se stochează valoarea, se atribuie un id unic auto-incrementat, 
+este plasat în hash table și i se returnează id-ul. 
+Această abordare garantează unicitatea fiecărei constante/identificator și operare în 
+complexitate constantă O(1) pe caz mediu.

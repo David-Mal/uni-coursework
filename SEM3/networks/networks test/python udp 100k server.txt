@@ -1,0 +1,26 @@
+import socket
+import sys
+
+if len(sys.argv) < 2:
+    print("Usage: python server.py <port>")
+    sys.exit(1)
+
+port = sys.argv[1]
+if not port.isdigit():
+    print("Port must be integer.")
+    sys.exit(2)
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(("", int(port)))
+
+print(f"Listening on port {port}...")
+
+while True:
+    prev = -1
+    for i in range(10000):
+        data, addr = sock.recvfrom(4)
+        num = int.from_bytes(data, "big")
+        if num != prev + 1:
+            print(f"Out of order at {i}: expected {prev + 1}, got {num}")
+        print(f"Received from {addr[0]}: {num}")
+        prev = num

@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: news_db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+  web:
+    image: php:8.2-apache
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/var/www/html
+    command: sh -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"

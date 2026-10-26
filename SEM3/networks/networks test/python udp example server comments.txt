@@ -1,0 +1,88 @@
+import socket
+import select
+import time
+import sys
+
+# ---------------- CONFIGURATION ----------------
+HOST = "0.0.0.0"
+PORT = 5000
+MIN_CLIENTS = 3          # minimum number of clients required
+SWITCH_AFTER = 100       # switch between even/odd after this many data points
+STOP_THRESHOLD = 9000    # stop collecting after total sum exceeds this
+STATE_BROADCAST_INTERVAL = 1.0  # seconds between broadcasts
+# ------------------------------------------------
+
+
+def broadcast(sock, clients, message):
+    """Send a broadcast message to all known clients."""
+    for addr in clients:
+        try:
+            sock.sendto(message.encode(), addr)
+        except Exception:
+            pass
+
+
+def main():
+    server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    server.bind((HOST, PORT))
+    server.setblocking(False)
+
+    print(f"UDP Server listening on {HOST}:{PORT}")
+
+    clients = set()
+    total_sum = 0
+    collected_count = 0
+    last_broadcast = 0
+    state = "standby"
+
+    while True:
+        readable, _, _ = select.select([server], [], [], 0.5)
+
+        for s in readable:
+            try:
+                data, addr = s.recvfrom(1024)
+            except BlockingIOError:
+                continue
+
+            if addr not in clients:
+                clients.add(addr)
+                print(f"New client: {addr}")
+
+            try:
+                num = int(data.decode().strip())
+                total_sum += num
+                collected_count += 1
+                print(f"Received {num} from {addr} | Total: {total_sum}")
+
+                # Switch between even/odd
+                if collected_count >= SWITCH_AFTER:
+                    collected_count = 0
+                    state = "even" if state == "odd" else "odd"
+                    broadcast(server, clients, f"STATE:{state}")
+                    print(f"Switched to {state.upper()} mode")
+
+                # Stop condition
+                if total_sum > STOP_THRESHOLD:
+                    broadcast(server, clients, "STATE:stop")
+                    print("Reached total > 9000, stopping collection.")
+                    server.close()
+                    return
+
+            except ValueError:
+                # Ignore invalid data
+                continue
+
+        # Periodic state broadcast
+        now = time.time()
+        if now - last_broadcast > STATE_BROADCAST_INTERVAL:
+            last_broadcast = now
+            if len(clients) < MIN_CLIENTS:
+                state = "standby"
+            elif state == "standby":
+                state = "even"  # start from even
+
+            broadcast(server, clients, f"STATE:{state}")
+
+
+if __name__ == "__main__":
+    main()

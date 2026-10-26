@@ -1,0 +1,33 @@
+import socket
+
+def merge(a, b):
+    i = j = 0
+    result = ""
+    while i < len(a) and j < len(b):
+        if a[i] < b[j]:
+            result += a[i]
+            i += 1
+        else:
+            result += b[j]
+            j += 1
+    return result + a[i:] + b[j:]
+
+s = socket.socket()
+s.bind(('127.0.0.1', 1276))
+s.listen(1)
+
+print("Waiting for clients...")
+while True:
+    conn, addr = s.accept()
+
+    len1 = int.from_bytes(conn.recv(4), 'big')
+    arr1 = conn.recv(len1).decode()
+
+    len2 = int.from_bytes(conn.recv(4), 'big')
+    arr2 = conn.recv(len2).decode()
+
+    print("Received:", arr1, arr2)
+
+    merged = merge(arr1, arr2)
+    conn.send(merged.encode())
+    conn.close()

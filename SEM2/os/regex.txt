@@ -1,0 +1,136 @@
+1. grep "economica" ex3 | grep "Sun" | awk '{print $1}' | sort | uniq
+2. grep -E '23:.. \-' ex3 | awk '{print $1}' | sort | uniq
+3. grep -E '^m' ex1 | awk -F ':' '$3 % 7 == 0 {print $5}'
+4. grep '^root' ex2 | awk '{print $6}' | sort | uniq
+5. grep '^.*88:' ex1 | awk -F ':' '{print $5}'
+6. grep '^.*:x:23[0-9]:' ex1 | awk -F ':' '{print $5}'	sau	awk -F ':' '$3 ~/23./{print $5}' ex1
+7. grep 'pts/9' ex3 | grep '^t' | awk '{print $1}' | sort | uniq	sau	awk '$2 ~/pts\/9/ && $1 ~ /^t/ {print $1}' ex3 | sort | uniq
+8. awk '$1 ~ /^r/{print $1} ' ex2 | sort | uniq | sed 's/[aeiou]/&&/g'
+9. sed 's/[a-zA-Z0-9 ]//g' ex1 | sort | uniq
+10. sed 's/[^r]//g' ex1 | sort | uniq
+11. awk '{sum += $2; count++} END {if (count > 0) print sum / count}' ex2
+
+
+Numarul de grupe care contin studenti numiti Dan cu numar matricol par:
+grep "Dan" passwd.fake | awk -F ':' '$3 % 2==0 {print $6}' | awk -F '/' '{print $4}' | uniq | awk 'END {print NR}'
+
+-----> extragerea url
+#!/bin/bash
+for f in `find -type f -name '*.txt'`; do
+    if grep -iq '\w\+@\w\+\.\w\+' "$f"; then
+        grep -io 'https\?://[a-z0-9_./%+]\+' "$f"
+    fi
+done
+
+----->nr mediu de linii
+#!/bin/bash
+export sum=0
+export cnt=0
+find -type f | ( while read f; do
+    if file "$f" | grep -q "ASCII text"; then
+        c=`cat "$f"|wc -l`
+        sum=$(($sum+$c))
+        cnt=$(($cnt+1))
+    fi
+done
+echo "sum: $sum; cnt: $cnt; avg: $(($sum/$cnt))" )
+
+
+
+
+
+----->să se afișeze cuvintele din toate fișierele date ca parametri in linia de comandă �n ordinea descrescătoare a numărului de apariții:
+#!/bin/bash
+for f in $*; do
+    grep -io '\b[a-z]\+\b' $f
+done|sort|uniq -c|sort -r -n -k1|awk '{ print $NF }'
+
+
+
+count=0
+for f in `find $1 -type f -name "*.c"`; do
+        tmp=`cat $f | wc -l`
+        if test $tmp -ge 500; then
+                echo "Filename $f has $tmp lines"
+                let count=$count+1
+        fi
+        if test $count -eq 2; then
+                exit
+        fi
+done
+
+
+
+
+
+
+
+#!/bin/bash
+
+ARGS=$@
+
+while true; do
+	read FILE
+	WORDS=""
+	for WORD in $ARGS; do
+		if ! grep -E -q "\<$WORD\>" $FILE; then
+			WORDS+="$WORD "
+		fi
+	done
+	ARGS=$WORDS
+	if test ! -n "$ARGS"; then
+		exit
+	fi
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+#Scrie un program simplu în Shell care primește oricâte directoare ca parametri, și afișează pentru fiecare dintre ele:
+#Director XXXXXX
+#fișiere executabile: număr
+#Fișiere neexecutabile: număr
+#Directoare : număr
+#Se vor efectua toate validările necesare
+
+if [ $# -eq 0 ]; then
+        echo "nu ai argumente"
+        exit
+fi
+
+count=0
+while [ $# -ne 0 ]; do
+        dir=$1
+        if [ ! -d $dir ]; then
+                echo "nu e director"
+                shift 1
+                continue
+        else
+                echo "Directory: $dir"
+                count=$((count + 1))
+                echo "Numar directoare $count"
+                # Număr fișiere executabile (excludem directoarele)
+                exec_files=$(find "$dir" -maxdepth 1 -type f -executable | wc -l)
+
+                # Număr fișiere neexecutabile (doar fișiere)
+                non_exec_files=$(find "$dir" -maxdepth 1 -type f ! -executable | wc -l)
+
+                # Număr subdirectoare (excludem directorul în sine)
+                subdirs=$(find "$dir" -mindepth 1 -maxdepth 1 -type d | wc -l)
+                echo "Executabile: $exec_files"
+                echo "Neexecutabile: $non_exec_files"
+                echo "subdirs: $subdirs"
+        fi
+        shift 1
+done

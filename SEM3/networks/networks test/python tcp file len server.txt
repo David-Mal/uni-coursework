@@ -1,0 +1,24 @@
+import socket
+
+server_address = ('127.0.0.1', 1276)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(server_address)
+s.listen(5)
+
+while True:
+    print('Waiting for clients:')
+    connection, client_address = s.accept()
+    data = connection.recv(4)  # first 4 bytes = length of file
+    file_length = int.from_bytes(data, 'big')
+
+    # Receive the file content
+    file_data = connection.recv(file_length).decode("utf-8")
+    print(f"Received file content:\n{file_data}")
+
+    # Save the file
+    with open("received_file.txt", "w") as f:
+        f.write(file_data)
+
+    # Send back the length
+    connection.send(len(file_data).to_bytes(4, 'big'))
+    connection.close()

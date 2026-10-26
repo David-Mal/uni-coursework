@@ -1,0 +1,17 @@
+import socket
+
+s = socket.socket()
+s.connect(('127.0.0.1', 1276))
+
+a = input("Array 1 (sorted chars): ")
+b = input("Array 2 (sorted chars): ")
+
+s.send(len(a).to_bytes(4, 'big'))
+s.send(a.encode())
+s.send(len(b).to_bytes(4, 'big'))
+s.send(b.encode())
+
+merged = s.recv(len(a) + len(b)).decode()
+print("Merged:", merged)
+
+s.close()

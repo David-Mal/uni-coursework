@@ -1,0 +1,11 @@
+package type;
+
+import value.IValue;
+
+public interface IType {
+    boolean equals(Object other);
+
+    IType deepCopy();
+
+    IValue defaultValue();
+}

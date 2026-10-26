@@ -1,0 +1,131 @@
+import socket
+import select
+import random
+import time
+
+HOST = "127.0.0.1"
+PORT = 7002
+
+QUESTIONS = [
+    ("What color is the sky?", ["blue", "green", "red", "yellow"], "blue"),
+    ("How many legs does a spider have?", ["4", "6", "8", "10"], "8"),
+    ("What planet is known as the Red Planet?", ["Earth", "Mars", "Venus", "Saturn"], "Mars"),
+    ("Which animal barks?", ["Cat", "Dog", "Bird", "Cow"], "Dog"),
+    ("What is 3 + 5?", ["5", "7", "8", "9"], "8")
+]
+
+ROUNDS = 3
+ANSWER_TIMEOUT = 5  # seconds to wait for answers per round
+
+def broadcast(clients, message):
+    """Send message to all clients."""
+    for c in clients:
+        try:
+            c.sendall(message.encode())
+        except:
+            pass
+
+
+def main():
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind((HOST, PORT))
+    server.listen()
+    print(f"🧠 Quiz Battle Server running on {HOST}:{PORT}")
+
+    clients = []
+    scores = {}
+    round_active = False
+    question, correct = None, None
+    answers = {}
+
+    next_question_time = time.time() + 3  # give time for clients to join
+    current_round = 0
+
+    while True:
+        readable, _, _ = select.select([server] + clients, [], [], 0.5)
+
+        for s in readable:
+            if s is server:
+                conn, addr = server.accept()
+                print(f"🎮 Player connected from {addr}")
+                clients.append(conn)
+                scores[conn] = 0
+                conn.sendall("WELCOME:Waiting for next question...\n".encode())
+                continue
+
+            try:
+                data = s.recv(1024)
+                if not data:
+                    print("🔌 Player disconnected.")
+                    clients.remove(s)
+                    del scores[s]
+                    if s in answers:
+                        del answers[s]
+                    s.close()
+                    continue
+
+                msg = data.decode().strip()
+                if msg.startswith("ANSWER:") and round_active:
+                    ans = msg.split(":", 1)[1].strip()
+                    answers[s] = ans
+
+            except Exception as e:
+                print("Error:", e)
+                if s in clients:
+                    clients.remove(s)
+                    del scores[s]
+                s.close()
+
+        # Handle quiz logic
+        now = time.time()
+
+        # Start new round
+        if now >= next_question_time and not round_active and current_round < ROUNDS:
+            current_round += 1
+            question, options, correct = random.choice(QUESTIONS)
+            correct = correct.lower()
+            answers = {}
+            round_active = True
+            round_end = now + ANSWER_TIMEOUT
+            q_text = f"QUESTION:{current_round}:{question}|{'/'.join(options)}\n"
+            broadcast(clients, q_text)
+            print(f"\n📢 Round {current_round}: {question}")
+            next_question_time = float('inf')
+
+        # End of round
+        if round_active and now >= round_end:
+            round_active = False
+            # Evaluate answers
+            for c in clients:
+                ans = answers.get(c, None)
+                if ans and ans.lower() == correct:
+                    scores[c] += 1
+                    c.sendall("RESULT:CORRECT\n".encode())
+                else:
+                    c.sendall(f"RESULT:WRONG (Correct: {correct})\n".encode())
+
+            # Show leaderboard
+            board = "\n".join([f"Player {i+1}: {score} pts" for i, (c, score) in enumerate(scores.items())])
+            broadcast(clients, f"SCORES:\n{board}\n")
+
+            print("🏁 Round over. Current scores:")
+            for i, (c, score) in enumerate(scores.items()):
+                print(f"   Player {i+1}: {score}")
+
+            # Schedule next question or finish
+            if current_round < ROUNDS:
+                next_question_time = now + 5  # 5 seconds until next question
+            else:
+                broadcast(clients, "GAME_OVER\n")
+                print("🎉 Game finished.")
+                break
+
+    # End all connections
+    for c in clients:
+        c.close()
+    server.close()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,18 @@
+void *fd = FOPEN(char *file_name, *access_mode);
+		         "w" sau "r"
+FPRINTF(void *file_handle, char *format);
+
+FREAD(char *destination,  size_int, int count, void *file_handle);
+
+rezultatul functiilor e tot timpul in eax
+
+push dw[fh]
+push dw 100
+push dw 1
+push s
+call [fread]
+
+
+//citeste ceva de 100 de caractere
+char s[100]
+fread(s, 1, 

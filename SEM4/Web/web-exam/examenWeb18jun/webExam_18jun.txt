@@ -1,0 +1,70 @@
+Write a web application in java for an adaptive language learning platfrom.the application should use the following 3 tables:
+Table User: id(int),username(string),nativeLanguage(string)
+table Exercise: id(int),prompt(string),correctAnswer(string),difficulty(int),topic(string) (difficulty is 1 2 3 (as in easy medium hard)
+table Result: id(int),userId(int),exerciseId(int),givenAnswer(string),correct(int),atteptedAt(datetime)
+The user should authentificate prior to using the applicaion by specifying their username (we assume the username wxists in the USer table,no checks are required)
+
+Learner Profile
+When the user logs in ,the application must fetch their complete result history from the Result table and compute,for each topic,a score between 0 and 100
+reflecting their historical accuracy on that topic,This per-topic score map is sent to the client as part of the login response and stored on the
+client side for the duration of the working session.
+The user can start submiting answers to exercises.after each submitted answer the client  or server updates the score ,ap locally:
+correct: new_score = old_score+10
+incorrect:new_score=old_score - old_score x 0.8
+scroer are between 0 and 100
+        When the user request the next exercise, the current score map is sent to the server. The server identifies the topic with the lowest score, then selects
+        an useen exercise (not present in the Result Table), from that topic whose difficulty matches the user's level:
+        score < 40 - difficulty 1
+        score 40-69 - diff 2
+        score >= 70 diff 3
+        If no useen exercise exists for that topic, the server moves to the topic with the next lowest score. The user submits their answer; the server checks it, saves a
+        Result record, and returns whether it was correct. The client then updates the score map and request the next exercise.
+
+        After each answer the client checks the updated score map. If any topic has just crossed 80 for the first time this session, displat a one time banner:
+        You ve master <topic>! One shown, the badge must not reapper for that topic event if the score later drops and recovers(in the current sesion)
+The summary page displays all topics ranked by current score (lowest first) using the live score map - no database query is made. Topics below 40 are
+highlighted red, 40-69 amber, 70 and amove green.
+The user can also view a log of all their past attempts (from the result table), showing the exercise prompt, their answer, wheter it was correct and the date.
+When the user request the next exercise, the current score map is sent to the server. The server identifies the topic with the lowest score, then selects
+an useen exercise (not present in the Result Table), from that topic whose difficulty matches the user's level:
+    score < 40 - difficulty 1
+    score 40-69 - diff 2
+    score >= 70 diff 3
+    If no useen exercise exists for that topic, the server moves to the topic with the next lowest score. The user submits their answer; the server checks it, saves a
+    Result record, and returns whether it was correct. The client then updates the score map and request the next exercise.
+
+After each answer the client checks the updated score map. If any topic has just crossed 80 for the first time this session, displat a one time banner:
+    You ve master <topic>! One shown, the badge must not reapper for that topic event if the score later drops and recovers(in the current sesion)
+        The summary page displays all topics ranked by current score (lowest first) using the live score map - no database query is made. Topics below 40 are
+        highlighted red, 40-69 amber, 70 and amove green.
+        The user can also view a log of all their past attempts (from the result table), showing the exercise prompt, their answer, wheter it was correct and the date.
+
+USE adaptive_language
+CREATE TABLE User (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
+    nativeLanguage(100)
+);
+
+CREATE TABLE Exercise (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prompt VARCHAR(255),
+    correctAnswer VARCHAR(100),
+    difficulty INT,
+    topic VARCHAR(100)
+);
+
+CREATE TABLE Result (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    exerciseId INT,
+    givenAnswer VARCHAR(100),
+    correct INT,
+    attemptedAt DATETIME
+);
+
+INSERT INTO User (username, nativeLanguage) VALUES ("tibi", "romanian"), ("robert", "english"), ("maria", "french");
+
+INSERT INTO Exercise (prompt, correctAnswer, difficulty, topic) VALUES ("whats in the sky?", "sun", 1, "nature"), ("the color of the sky is...", "blue", "2", "nature"), ("what is on 25 dec?", "christmas", "3", "events");
+
+INSERT INTO Result (userId, exerciseId, givenAnswer, correct, attemptedAt) VALUES (1, 1, "sun", 1, '2026-06-18 10:30:00');

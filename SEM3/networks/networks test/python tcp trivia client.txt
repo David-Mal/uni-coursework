@@ -1,0 +1,57 @@
+import socket
+import select
+import random
+import time
+
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 7002
+RESPONSE_DELAY = (1.0, 3.0)  # seconds between receiving and answering
+
+def main():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((SERVER_IP, SERVER_PORT))
+    sock.setblocking(False)
+    print(f"🤖 Connected to Quiz Battle Server {SERVER_IP}:{SERVER_PORT}")
+
+    next_answer_time = None
+    pending_answer = None
+
+    while True:
+        readable, _, _ = select.select([sock], [], [], 0.5)
+
+        for s in readable:
+            data = s.recv(1024)
+            if not data:
+                print("Server closed connection.")
+                return
+
+            msg = data.decode().strip()
+            print(f"📩 {msg}")
+
+            if msg.startswith("QUESTION:"):
+                try:
+                    _, num, rest = msg.split(":", 2)
+                    question, options_str = rest.split("|")
+                    options = options_str.split("/")
+                    pending_answer = random.choice(options)
+                    delay = random.uniform(*RESPONSE_DELAY)
+                    next_answer_time = time.time() + delay
+                    print(f"🤔 Will answer '{pending_answer}' in {delay:.1f}s")
+                except Exception as e:
+                    print("Parse error:", e)
+
+            elif msg.startswith("GAME_OVER"):
+                print("🎮 Game over, disconnecting.")
+                sock.close()
+                return
+
+        now = time.time()
+        if pending_answer and now >= next_answer_time:
+            sock.sendall(f"ANSWER:{pending_answer}\n".encode())
+            print(f"📤 Sent answer: {pending_answer}")
+            pending_answer = None
+            next_answer_time = None
+
+
+if __name__ == "__main__":
+    main()

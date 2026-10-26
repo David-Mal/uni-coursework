@@ -1,0 +1,47 @@
+import socket
+import subprocess
+import struct
+
+HOST = '127.0.0.1'
+PORT = 6000
+
+def handle_client(conn):
+    try:
+        # Receive the length of the command first (4 bytes)
+        data = conn.recv(4)
+        if not data:
+            return
+        cmd_len = int.from_bytes(data, 'big')
+
+        # Receive the actual command string
+        command = conn.recv(cmd_len).decode()
+        print(f"Executing command: {command}")
+
+        # Execute the command
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        output = result.stdout + result.stderr
+        exit_code = result.returncode
+
+        # Send output length and output
+        output_bytes = output.encode()
+        conn.send(len(output_bytes).to_bytes(4, 'big'))
+        conn.send(output_bytes)
+
+        # Send exit code as 4-byte integer
+        conn.send(exit_code.to_bytes(4, 'big', signed=True))
+
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((HOST, PORT))
+    s.listen(5)
+    print(f"Server listening on {HOST}:{PORT}")
+
+    while True:
+        conn, addr = s.accept()
+        print(f"Client connected: {addr}")
+        handle_client(conn)

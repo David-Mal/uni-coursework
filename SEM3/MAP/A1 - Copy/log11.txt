@@ -1,0 +1,1160 @@
+PrgState{
+id=0,
+ exeStack=[(v = 20;(wait(10);print(v * 10)))],
+ symTable={},
+ output=[],
+ originalProgram=(v = 20;(wait(10);print(v * 10))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={},
+ output=[],
+ originalProgram=(v = 20;(wait(10);print(v * 10))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={},
+ output=[],
+ originalProgram=(v = 20;(wait(10);print(v * 10))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(wait(10);print(v * 10))],
+ symTable={},
+ output=[],
+ originalProgram=(v = 20;(wait(10);print(v * 10))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int v;(v = 20;(wait(10);print(v * 10))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 20;(wait(10);print(v * 10)))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 20;(wait(10);print(v * 10)))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 20;(wait(10);print(v * 10)))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 20;(wait(10);print(v * 10)))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(wait(10);print(v * 10))],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(wait(10);print(v * 10))],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(10), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(10), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(10), wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(10), wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(9), wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(9), wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(8), wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(8), wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(7), wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(7), wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(6), wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(6), wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(5), wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(5), wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(4), wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(4), wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(3), wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(3), wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(2), wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(2), wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(1), wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(1), wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int v;(v = 20;(wait(10);print(v * 10))))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 20;(wait(10);print(v * 10)))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int v, (v = 20;(wait(10);print(v * 10)))],
+ symTable={},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 20;(wait(10);print(v * 10)))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(v = 20;(wait(10);print(v * 10)))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[v = 20, (wait(10);print(v * 10))],
+ symTable={v=0},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(wait(10);print(v * 10))],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(wait(10);print(v * 10))],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(10), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(10), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(10), wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(10), wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(9), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(9), wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(9), wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(8), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(8), wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(8), wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(7), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(7), wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(7), wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(6), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(6), wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(6), wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(5), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(5), wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(5), wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(4), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(4), wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(4), wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(3), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(3), wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(3), wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(2), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(2), wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(2), wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(1), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(1), wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(1), wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[wait(0), print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(v * 10)],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={v=20},
+ output=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200],
+ originalProgram=(Int v;(v = 20;(wait(10);print(v * 10)))),
+ fileTable={},
+ heap=Heap is empty
+
+}

@@ -1,0 +1,42 @@
+<div class="about-page">
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+
+  <h2>About This News Service</h2>
+  <p>
+    This platform provides up-to-date news across a range of categories.
+    Our editorial team publishes and updates articles daily to keep you
+    informed on the topics that matter most.
+  </p>
+
+  <h3>Our Coverage</h3>
+  <div class="category-list">
+    @for (cat of categories; track cat) {
+      <span class="cat-tag">{{ cat }}</span>
+    }
+  </div>
+
+  <h3>By the Numbers</h3>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">{{ articleCount }}</div>
+      <div class="stat-label">Articles published</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">{{ categories.length }}</div>
+      <div class="stat-label">Categories covered</div>
+    </div>
+  </div>
+
+  <h3>How It Works</h3>
+  <p>
+    Editors log in using a secure username and password to add or update
+    news articles. Visitors can browse and filter news by date range and
+    category without needing an account. All data is stored in a MySQL
+    database and fetched asynchronously using HTTP requests to the PHP backend.
+  </p>
+
+  <h3>Contact</h3>
+  <p>For editorial inquiries, reach us at <a href="mailto:news@example.com">news&#64;example.com</a>.</p>
+
+  <a routerLink="/" class="back-link">&larr; Back to News</a>
+</div>

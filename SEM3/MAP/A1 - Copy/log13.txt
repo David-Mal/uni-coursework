@@ -1,0 +1,360 @@
+PrgState{
+id=0,
+ exeStack=[(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c)))))))],
+ symTable={},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[bool b, (Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))],
+ symTable={},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[bool b, (Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))],
+ symTable={},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))],
+ symTable={b=false},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))],
+ symTable={b=false},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c)))))],
+ symTable={b=false},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[Int c, (b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c)))))],
+ symTable={b=false},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c)))))],
+ symTable={b=false, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c)))))],
+ symTable={b=false, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[b = true, (c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))],
+ symTable={b=false, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[b = true, (c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))],
+ symTable={b=false, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c=(b)?100:200, (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c=(b)?100:200, (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[if (b) then (c = 100) else (c = 200), (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[if (b) then (c = 100) else (c = 200), (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 100, (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 100, (print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=0},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=100},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(print(c);(c=(false)?100:200;print(c)))],
+ symTable={b=true, c=100},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(c), (c=(false)?100:200;print(c))],
+ symTable={b=true, c=100},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(c), (c=(false)?100:200;print(c))],
+ symTable={b=true, c=100},
+ output=[],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(c=(false)?100:200;print(c))],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[(c=(false)?100:200;print(c))],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c=(false)?100:200, print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c=(false)?100:200, print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[if (false) then (c = 100) else (c = 200), print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[if (false) then (c = 100) else (c = 200), print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 200, print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[c = 200, print(c)],
+ symTable={b=true, c=100},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(c)],
+ symTable={b=true, c=200},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[print(c)],
+ symTable={b=true, c=200},
+ output=[100],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={b=true, c=200},
+ output=[100, 200],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={b=true, c=200},
+ output=[100, 200],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}
+PrgState{
+id=0,
+ exeStack=[],
+ symTable={b=true, c=200},
+ output=[100, 200],
+ originalProgram=(bool b;(Int c;(b = true;(c=(b)?100:200;(print(c);(c=(false)?100:200;print(c))))))),
+ fileTable={},
+ heap=Heap is empty
+
+}

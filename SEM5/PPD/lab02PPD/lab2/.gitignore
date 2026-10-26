@@ -1,0 +1,6 @@
+build/
+inputs/
+output.txt
+results/**/reference.txt
+results/**/output.txt
+__pycache__/

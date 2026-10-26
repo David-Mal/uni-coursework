@@ -1,0 +1,102 @@
+import socket
+import select
+import sys
+import time
+
+# ---------------- CONFIGURATION ----------------
+HOST = "0.0.0.0"
+PORT = 5000
+MIN_CLIENTS = 3          # Minimum number of clients required to start collecting
+SWITCH_AFTER = 100       # Switch between even/odd after this many data points
+STOP_THRESHOLD = 9000    # Stop collecting after sum exceeds this
+STATE_BROADCAST_INTERVAL = 1.0  # seconds between broadcasts
+# ------------------------------------------------
+
+
+def broadcast(clients, message):
+    """Send a message to all connected clients."""
+    for c in clients:
+        try:
+            c.sendall(message.encode())
+        except:
+            pass
+
+
+def main():
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind((HOST, PORT))
+    server.listen()
+
+    print(f"Server listening on {HOST}:{PORT}")
+
+    clients = []
+    total_sum = 0
+    collected_count = 0
+    last_broadcast = 0
+    state = "standby"  # can be "standby", "even", or "odd"
+
+    while True:
+        # Use select to handle multiple clients
+        readable, _, exceptional = select.select([server] + clients, [], clients, 0.5)
+
+        # Handle new connections
+        for s in readable:
+            if s is server:
+                conn, addr = server.accept()
+                clients.append(conn)
+                print(f"Client connected from {addr}")
+                continue
+
+            # Handle data from clients
+            try:
+                data = s.recv(1024)
+                if not data:
+                    print("Client disconnected.")
+                    clients.remove(s)
+                    s.close()
+                    continue
+                # Handle received data
+                num = int(data.decode().strip())
+                total_sum += num
+                collected_count += 1
+                print(f"Received {num} | Total sum: {total_sum}")
+
+                # Switch states every SWITCH_AFTER data points
+                if collected_count >= SWITCH_AFTER:
+                    collected_count = 0
+                    state = "even" if state == "odd" else "odd"
+                    broadcast(clients, f"STATE:{state}\n")
+                    print(f"Switched to {state.upper()} mode.")
+
+                # Stop when total sum exceeds threshold
+                if total_sum > STOP_THRESHOLD:
+                    broadcast(clients, "STATE:stop\n")
+                    print("Reached total > 9000, stopping collection.")
+                    server.close()
+                    return
+
+            except Exception as e:
+                print("Client error:", e)
+                clients.remove(s)
+                s.close()
+
+        # Periodically broadcast state
+        now = time.time()
+        if now - last_broadcast > STATE_BROADCAST_INTERVAL:
+            last_broadcast = now
+
+            if len(clients) < MIN_CLIENTS:
+                state = "standby"
+            elif state == "standby":
+                state = "even"  # start from even when ready
+
+            broadcast(clients, f"STATE:{state}\n")
+
+        for s in exceptional:
+            clients.remove(s)
+            s.close()
+
+
+if __name__ == "__main__":
+    main()

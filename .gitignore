@@ -1,0 +1,64 @@
+# ── Python ───────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+# Virtual environment created directly inside the AI labs folder
+SEM4/AI_Labs/aiclasses/Include/
+SEM4/AI_Labs/aiclasses/Lib/
+SEM4/AI_Labs/aiclasses/Scripts/
+SEM4/AI_Labs/aiclasses/share/
+SEM4/AI_Labs/aiclasses/pyvenv.cfg
+
+# ── C / C++ (CMake, Visual Studio) ───────────────────
+cmake-build-*/
+build/
+x64/
+Debug/
+Release/
+*.o
+*.obj
+*.tlog
+*.pdb
+*.ilk
+*.idb
+*.ipch
+
+# ── Java (Maven, IntelliJ) ───────────────────────────
+target/
+out/
+*.class
+
+# ── C# / .NET ────────────────────────────────────────
+bin/
+obj/
+.vs/
+*.user
+
+# ── JavaScript / TypeScript (npm, Angular, Vite) ─────
+node_modules/
+dist/
+.angular/
+
+# ── Assembly (NASM / OllyDbg outputs) ────────────────
+*.lst
+*.udd
+*.exe
+# Keep the bundled assembler toolchain
+!SEM1/ASC/lab_asc/ASM_tools/**/*.exe
+
+# ── IDEs & OS ────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.vsidx
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Secrets ──────────────────────────────────────────
+.env
+.env.*
+!.env.example
