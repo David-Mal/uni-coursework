@@ -20,6 +20,11 @@ Debug/
 Release/
 *.o
 *.obj
+*.a
+*.dll
+# Keep the bundled assembler toolchain
+!SEM1/ASC/lab_asc/ASM_tools/**/*.dll
+!SEM1/ASC/lab_asc/ASM_tools/**/*.DLL
 *.tlog
 *.pdb
 *.ilk
@@ -52,6 +57,8 @@ dist/
 # ── IDEs & OS ────────────────────────────────────────
 .idea/
 .vscode/
+.qtcreator/
+*.autosave
 *.iml
 *.vsidx
 .DS_Store

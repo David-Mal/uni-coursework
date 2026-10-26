@@ -1,0 +1,21 @@
+0;Me Not;Andrew Thomas
+1;The Who;John James
+2;Most Most;Andrew John
+3;On Most;James John
+4;Good Most;John James
+5;Day Who;James Martin
+6;Good Day;George Thomas
+7;Your Your;John George
+8;Your Day;Martin Martin
+9;Day Us;Thomas Andrew
+10;Good On;George Thomas
+11;Me Who;Martin Thomas
+12;Day Your;John James
+13;Me Not;John John
+14;Your Most;James George
+15;Most On;James George
+16;Not The;John George
+17;Most The;Martin George
+18;Not Us;Martin Thomas
+19;Your Good;Andrew John
+100;Carte;Autor

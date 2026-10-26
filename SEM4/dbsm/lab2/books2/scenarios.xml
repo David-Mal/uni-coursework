@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Scenarios>
+
+	<Scenario name="AuthorsBooks"
+			  FormTitle="Authors and their Books"
+			  ParentTable="Authors"
+			  ParentLabel="Authors (parent)"
+			  ParentPK="AuthorID"
+			  ParentSelect="SELECT * FROM Authors"
+			  ParentInsert="INSERT INTO Authors (Name, Country) VALUES (@Name, @Country)"
+			  ParentUpdate="UPDATE Authors SET Name=@Name, Country=@Country WHERE AuthorID=@AuthorID"
+			  ParentDelete="DELETE FROM Authors WHERE AuthorID=@AuthorID"
+			  ChildTable="Books"
+			  ChildLabel="Books (child)"
+			  ChildPK="BookID"
+			  ChildFK="AuthorID"
+			  ChildSelect="SELECT * FROM Books"
+			  ChildInsert="INSERT INTO Books (Title, Price, PublicationYear, AuthorID) VALUES (@Title, @Price, @PublicationYear, @AuthorID)"
+			  ChildUpdate="UPDATE Books SET Title=@Title, Price=@Price, PublicationYear=@PublicationYear WHERE BookID=@BookID"
+			  ChildDelete="DELETE FROM Books WHERE BookID=@BookID">
+		<ParentFields>
+			<Field Column="Name" Label="Name" />
+			<Field Column="Country" Label="Country" />
+		</ParentFields>
+		<ChildFields>
+			<Field Column="Title" Label="Title" />
+			<Field Column="Price" Label="Price" />
+			<Field Column="PublicationYear" Label="Year" />
+		</ChildFields>
+	</Scenario>
+
+	<Scenario name="CustomersOrders"
+			  FormTitle="Customers and their Orders"
+			  ParentTable="Customers"
+			  ParentLabel="Customers (parent)"
+			  ParentPK="CustomerID"
+			  ParentSelect="SELECT * FROM Customers"
+			  ParentInsert="INSERT INTO Customers (FullName, Email, Phone) VALUES (@FullName, @Email, @Phone)"
+			  ParentUpdate="UPDATE Customers SET FullName=@FullName, Email=@Email, Phone=@Phone WHERE CustomerID=@CustomerID"
+			  ParentDelete="DELETE FROM Customers WHERE CustomerID=@CustomerID"
+			  ChildTable="Orders"
+			  ChildLabel="Orders (child)"
+			  ChildPK="OrderID"
+			  ChildFK="CustomerID"
+			  ChildSelect="SELECT * FROM Orders"
+			  ChildInsert="INSERT INTO Orders (OrderDate, CustomerID) VALUES (@OrderDate, @CustomerID)"
+			  ChildUpdate="UPDATE Orders SET OrderDate=@OrderDate WHERE OrderID=@OrderID"
+			  ChildDelete="DELETE FROM Orders WHERE OrderID=@OrderID">
+		<ParentFields>
+			<Field Column="FullName" Label="Full Name" />
+			<Field Column="Email" Label="Email" />
+			<Field Column="Phone" Label="Phone" />
+		</ParentFields>
+		<ChildFields>
+			<Field Column="OrderDate" Label="Order Date" />
+		</ChildFields>
+	</Scenario>
+
+</Scenarios>
